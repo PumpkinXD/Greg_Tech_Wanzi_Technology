@@ -1,0 +1,165 @@
+StartupEvents.registry("item",event=>{
+    event.create("prts:basic_wanzi","basic");
+    event.create("prts:base_substrate_wanjing","basic");
+    event.create("prts:substrate_dust_wanjing","basic");
+    event.create("prts:waste_material","basic");
+    event.create("prts:type_one_wanjing_etched_substrate","basic");
+    event.create("prts:iron_grit_dust_wanzi","basic");
+    event.create("prts:copper_grit_dust_wanzi","basic");
+    event.create("prts:gold_grit_dust_wanzi","basic");
+    event.create("prts:type_d_conductive_circuit","basic");
+    event.create("prts:type_d_resistor","basic");
+    event.create("prts:type_d_packaging_unit","basic");
+    event.create("prts:type_d_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_d_high_voltage_transformation_component","basic");
+    event.create("prts:type_d_risk_management_unit","basic");
+    event.create("prts:experimental_dsv_component","basic");
+    event.create("prts:basic_wanzi_holder","basic");
+    event.create("prts:basic_wanzi_resistance_plate","basic");
+    event.create("prts:basic_wanzi_redirection_plate","basic");
+    event.create("prts:basic_wanzi_emitter","basic");
+    event.create("prts:basic_wanzi_actuator","basic");
+    event.create("prts:basic_wanzi_absorber_plate","basic");
+    event.create("prts:basic_wanzi_impact_resistant_plate","basic");
+    event.create("prts:basic_wanzi_position_corrector","basic");
+    event.create("prts:basic_wanzi_film_coating_sprayer","basic");
+    event.create("prts:compression_type_wanzi","basic");
+    event.create("prts:basic_wanjing","basic");
+    event.create("prts:micro_plastic_block","basic");
+    event.create("prts:deformable_plastic_block","basic");
+    event.create("prts:densified_iron_dust","basic");
+    event.create("prts:densified_copper_dust","basic");
+    event.create("prts:densified_gold_dust","basic");
+    event.create("prts:densified_tin_dust","basic");
+    event.create("prts:densified_lead_dust","basic");
+    event.create("prts:densified_diamond_dust","basic");
+    event.create("prts:densified_carbon_dust","basic");
+    event.create("prts:densified_steel_dust","basic");
+    event.create("prts:type_d_purified_conductive_circuit","basic");
+    event.create("prts:type_d_purified_resistor","basic");
+    event.create("prts:type_d_purified_packaging_unit","basic");
+    event.create("prts:purified_basic_wanzi","basic");
+    event.create("prts:purified_basic_wanjing","basic");
+    event.create("prts:type_d_purifie_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_d_purifie_high_voltage_transformation_component","basic");
+    event.create("prts:type_d_purifie_risk_management_unit","basic");
+    event.create("prts:low_voltage_wanzi_circuit","basic");
+    event.create("prts:medium_voltage_wanzi_circuit","basic");
+    event.create("prts:type_one_wanzi","basic");
+    event.create("prts:heteromorphic_iron","basic");
+    event.create("prts:heteromorphic_copper","basic");
+    event.create("prts:heteromorphic_gold","basic");
+    event.create("prts:heteromorphic_diamond","basic");
+    event.create("prts:heteromorphic_tin","basic");
+    event.create("prts:heteromorphic_steel","basic");
+    event.create("prts:primary_void_coal","basic");
+    event.create("prts:heterolattice_lapis_lazuli","basic");
+    event.create("prts:crimson_stone","basic");
+    event.create("prts:stable_wanjing_substrate","basic");
+    event.create("prts:stable_wanjing_etched_substrate","basic");
+    event.create("prts:type_c_conductive_circuit","basic");
+    event.create("prts:type_c_resistor","basic");
+    event.create("prts:type_c_packaging_unit","basic");
+    event.create("prts:type_c_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_c_high_voltage_transformation_component","basic");
+    event.create("prts:type_c_risk_management_unit","basic");
+    event.create("prts:dsv_component","basic");
+    event.create("prts:type_c_specialized_circuit_group","basic");
+    event.create("prts:type_c_wanzi_emission_concentrator","basic");
+    event.create("prts:type_c_wire_guide_connection_device","basic");
+    event.create("prts:type_c_directed_chemical_reaction_device","basic");
+    event.create("prts:type_c_phase_change_device","basic");
+    event.create("prts:type_c_purified_conductive_circuit","basic");
+    event.create("prts:type_c_purified_resistor","basic");
+    event.create("prts:type_c_purified_packaging_unit","basic");
+    event.create("prts:type_c_purified_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_c_purified_high_voltage_transformation_component","basic");
+    event.create("prts:type_c_purified_risk_management_unit","basic");
+    event.create("prts:dsv_purified_component","basic");
+    event.create("prts:type_c_purified_specialized_circuit_group","basic");
+    event.create("prts:type_c_purified_wanzi_emission_concentrator","basic");
+    event.create("prts:type_c_purified_wire_guide_connection_device","basic");
+    event.create("prts:type_c_purified_directed_chemical_reaction_device","basic");
+    event.create("prts:type_c_purified_phase_change_device","basic");
+    event.create("prts:adhesive_plastic","basic");
+    event.create("prts:high_efficiency_isolation_component","basic");
+    event.create("prts:general_purpose_circuit_unit","basic");
+    event.create("prts:general_purpose_circuit_information_module","basic");
+    event.create("prts:abnormal_data","basic");
+    event.create("prts:non_conventional_component","basic");
+    event.create("prts:conventional_component","basic");
+    event.create("prts:imitation_conventional_component","basic");
+    event.create("prts:type_one_wanzi_special_alloy","basic");
+    event.create("prts:type_two_wanzi_special_alloy","basic");
+    event.create("prts:type_three_wanzi_special_alloy","basic");
+    event.create("prts:type_four_wanzi_special_alloy","basic");
+    event.create("prts:production_type_wanzi_impact_resistant_plate","basic");
+    event.create("prts:production_type_wanzi_resistor_board","basic");
+    event.create("prts:production_type_wanzi_redirection_plate","basic");
+    event.create("prts:production_type_wanzi_absorber_plate","basic");
+    event.create("prts:production_type_wanzi_position_corrector","basic");
+    event.create("prts:production_type_wanzi_actuator","basic");
+    event.create("prts:production_type_wanzi_emitter","basic");
+    event.create("prts:production_type_wanzi_film_coating_sprayer","basic");
+    event.create("prts:production_type_wanzi_holder","basic");
+    event.create("prts:alpha_wanjing","basic");
+    event.create("prts:alpha_compression_type_wanzi","basic");
+    event.create("prts:purified_type_one_wanzi","basic");
+    event.create("prts:purified_alpha_wanjing","basic");
+    event.create("prts:component_module","basic")
+
+    event.create("prts:basic_wanzi_sword","sword")
+         .speedBaseline(-2.4)           // 攻击速度：1.6
+         .attackDamageBonus(4.0)        // 攻击伤害：7
+         .maxDamage(250)                // 耐久：250
+         .glow(true)
+         .rarity("common")
+    event.create("prts:compression_type_wanzi_sword","sword")
+         .speedBaseline(-2.2)           // 攻击速度：1.8
+         .attackDamageBonus(6.0)        // 攻击伤害：9
+         .maxDamage(400)                // 耐久：400
+         .glow(true)
+         .rarity("common")
+    event.create("prts:type_one_wanzi_sword","sword")
+         .speedBaseline(-2.0)           // 攻击速度：2.0
+         .attackDamageBonus(8.5)        // 攻击伤害：11.5
+         .maxDamage(550)                // 耐久：550
+         .glow(true)
+         .rarity("common")
+    event.create("prts:data_rending_sword","sword")
+         .speedBaseline(-0.1)           // 攻击速度：3.9
+         .attackDamageBonus(10.5)       // 攻击伤害：13.5
+         .maxDamage(500)                // 耐久：500
+         .glow(true)
+         .rarity("uncommon")            //稀有度：少见
+})
+StartupEvents.registry("block",event=>{
+    event.create("prts:crude_etched_iron_block","basic");
+    event.create("prts:crude_etched_copper_block","basic");
+    event.create("prts:crude_etched_gold_block","basic");
+    event.create("prts:refined_etched_iron_block","basic");
+    event.create("prts:refined_etched_copper_block","basic");
+    event.create("prts:refined_etched_gold_block","basic");
+    event.create("prts:zhimitiekuai","basic");
+    event.create("prts:zhimitongkuai","basic");
+    event.create("prts:zhimijinkuai","basic");
+    event.create("prts:zhimixikuai","basic");
+    event.create("prts:zhimiqiankuai","basic");
+    event.create("prts:zhimizuanshikuai","basic");
+    event.create("prts:zhimitankuai","basic");
+    event.create("prts:zhimigangkuai","basic");
+    event.create("prts:teshuhejinkuai","basic");
+    event.create("prts:naweigeshiketiekuai","basic");
+    event.create("prts:naweigeshiketongkuai","basic");
+    event.create("prts:naweigeshikejinkuai","basic");
+    event.create("prts:naweigeshikegangkuai","basic");
+    event.create("prts:naweigeshikelvbaoshikuai","basic");
+    event.create("prts:naweigeshikeqiankuai","basic");
+    event.create("prts:naweigeshikexikuai","basic");
+    event.create("prts:naweigeshiketankuai","basic");
+    event.create("prts:gaoxiaoshuiyayanmofangkuai","basic")
+})
+StartupEvents.registry("fluid",event=>{
+    event.create("prts:jianduduye").thinTexture(0x8a209c).noBlock()
+    event.create("prts:yisanwanzi").thickTexture(0xc3c3c3).noBlock()
+})
