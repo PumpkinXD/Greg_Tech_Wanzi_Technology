@@ -1,0 +1,57 @@
+ServerEvents.recipes((event) => {
+    function basic_model_wanzi_purifier(id,C,I,O,T,E){
+        event.recipes.gtceu.basic_model_wanzi_purifier(id)//别问跑不跑的动，他能跑
+             .circuit(C)
+             .itemInputs(I)
+             .itemOutputs(O)
+             .duration(T)
+             .EUt(E)
+    }//《劲啊！机》代码
+    basic_model_wanzi_purifier('jin_a_1',1,'prts:type_d_conductive_circuit','prts:type_d_purified_conductive_circuit',200,20)
+    basic_model_wanzi_purifier('jin_a_2',1,'prts:type_d_resistor','prts:type_d_purified_resistor',200,20)
+    basic_model_wanzi_purifier('jin_a_3',1,'prts:type_d_packaging_unit','prts:type_d_purified_packaging_unit',200,20)
+    basic_model_wanzi_purifier('jin_a_4',1,'prts:basic_wanzi','prts:purified_basic_wanzi',200,20)
+    basic_model_wanzi_purifier('jin_a_5',1,'prts:basic_wanjing','prts:purified_basic_wanjing',200,20)
+    basic_model_wanzi_purifier('jin_a_6',1,'prts:type_d_circuit_cross_domain_actuator','prts:type_d_purifie_circuit_cross_domain_actuator',200,20)
+    basic_model_wanzi_purifier('jin_a_7',1,'prts:type_d_high_voltage_transformation_component','prts:type_d_purifie_high_voltage_transformation_component',200,20)
+    basic_model_wanzi_purifier('jin_a_8',1,'prts:type_d_risk_management_unit','prts:type_d_purifie_risk_management_unit',200,20)
+    basic_model_wanzi_purifier('jin_a_9',1,'prts:type_c_conductive_circuit','prts:type_c_purified_conductive_circuit',200,80)
+    basic_model_wanzi_purifier('jin_a_10',1,'prts:type_c_resistor','prts:type_c_purified_resistor',200,80)
+    basic_model_wanzi_purifier('jin_a_11',1,'prts:type_c_packaging_unit','prts:type_c_purified_packaging_unit',200,80)
+    basic_model_wanzi_purifier('jin_a_12',1,'prts:type_one_wanzi','prts:purified_type_one_wanzi',200,80)
+    basic_model_wanzi_purifier('jin_a_13',1,'prts:alpha_wanjing','prts:purified_alpha_wanjing',200,80)
+    basic_model_wanzi_purifier('jin_a_14',1,'prts:type_c_circuit_cross_domain_actuator','prts:type_c_purified_circuit_cross_domain_actuator',200,80)
+    basic_model_wanzi_purifier('jin_a_15',1,'prts:type_c_high_voltage_transformation_component','prts:type_c_purified_high_voltage_transformation_component',200,80)
+    basic_model_wanzi_purifier('jin_a_16',1,'prts:type_c_risk_management_unit','prts:type_c_purified_risk_management_unit',200,80)
+    basic_model_wanzi_purifier('jin_a_17',1,'prts:type_c_specialized_circuit_group','prts:type_c_purified_specialized_circuit_group',200,80)
+    basic_model_wanzi_purifier('jin_a_18',1,'prts:type_c_wanzi_emission_concentrator','prts:type_c_purified_wanzi_emission_concentrator',200,80)
+    basic_model_wanzi_purifier('jin_a_19',1,'prts:type_c_wire_guide_connection_device','prts:type_c_purified_wire_guide_connection_device',200,80)
+    basic_model_wanzi_purifier('jin_a_20',1,'prts:type_c_directed_chemical_reaction_device','prts:type_c_purified_directed_chemical_reaction_device',200,80)
+    basic_model_wanzi_purifier('jin_a_21',1,'prts:type_c_phase_change_device','prts:type_c_purified_phase_change_device',200,80)
+    basic_model_wanzi_purifier('jin_a_22',1,'prts:dsv_component','prts:dsv_purified_component',200,80)
+
+    event.shaped('gtceu:lv_basic_model_wanzi_purifier',[
+        "ABA",
+        "CSC",
+        "DED"
+    ],{
+        A:'prts:basic_wanzi_holder',
+        B:'prts:basic_wanzi_impact_resistant_plate',
+        C:'prts:basic_wanzi_absorber_plate',
+        D:'prts:basic_wanzi_redirection_plate',
+        E:'prts:basic_wanzi_emitter',
+        S:'prts:basic_wanzi_film_coating_sprayer'
+    })//基础万子净化机配方
+    event.shaped('gtceu:mv_basic_model_wanzi_purifier',[
+        "ABA",
+        "CSC",
+        "DED"
+    ],{
+        A:'prts:production_type_wanzi_holder',
+        B:'prts:production_type_wanzi_impact_resistant_plate',
+        C:'prts:production_type_wanzi_absorber_plate',
+        D:'prts:production_type_wanzi_redirection_plate',
+        E:'prts:production_type_wanzi_emitter',
+        S:'prts:production_type_wanzi_film_coating_sprayer'
+    })//正式万子净化机配方
+})
