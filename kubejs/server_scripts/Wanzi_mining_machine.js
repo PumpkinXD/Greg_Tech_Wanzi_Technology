@@ -188,7 +188,7 @@ ServerEvents.recipes((event) => {
     )
     basic_model_wanzi_mining_machine('wanzi_mining_11',1,[
         '2x prts:type_one_wanzi',
-        '2x #gtceu:copper_yuan'
+        '2x #gtceu:aluminium'
     ],[
         'prts:heteromorphic_copper',
         'prts:heteromorphic_gold'
@@ -262,7 +262,22 @@ ServerEvents.recipes((event) => {
     'prts:naweigeshikelvbaoshikuai',
     'prts:naweigeshikeqiankuai'
     )
-
+    basic_model_wanzi_mining_machine('wanzi_mining_16',1,[
+        '2x prts:type_one_wanzi',
+        '2x #gtceu:waw_yuan'
+    ],[
+        'prts:heteromorphic_jade',
+        'prts:heterolattice_lapis_lazuli',
+        'prts:crimson_stone'
+    ],20,64,
+        'prts:heteromorphic_jade',
+        'prts:heterolattice_lapis_lazuli',
+        'prts:crimson_stone',
+        'prts:heteromorphic_gold',
+        7500,7500,7500,7500,5000,5000,4000,2000,
+        'prts:naweigeshikeqiankuai',
+        'prts:naweigeshikelvbaoshikuai'
+    )
     event.shaped('gtceu:lv_basic_model_wanzi_mining_machine',[
         "AAA",
         "BSC",

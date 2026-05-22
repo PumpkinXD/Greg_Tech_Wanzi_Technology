@@ -62,6 +62,14 @@ ServerEvents.recipes((event) => {
     .duration(200)
     .EUt(30)//赤石拆解
 
+    event.recipes.gtceu.basic_model_wanzi_disassembler('prts:kuangwulixi_10')
+    .itemInputs('prts:heteromorphic_jade')
+    .itemOutputs('4x gtceu:raw_blue_topaz','4x gtceu:raw_topaz','4x gtceu:raw_chalcocite','4x gtceu:raw_bornite')
+    .chancedOutput('4x gtceu:raw_chalcocite',1500,500)
+    .chancedOutput('4x gtceu:raw_bornite',1500,500)
+    .duration(200)
+    .EUt(30)//异形玉拆解
+
     event.recipes.gtceu.basic_model_wanzi_disassembler('prts:mokuaifenjie_1')
     .itemInputs('prts:component_module')
     .itemOutputs('prts:conventional_component')

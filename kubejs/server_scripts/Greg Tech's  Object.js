@@ -6,7 +6,7 @@ ServerEvents.recipes((event) => {
              .itemInputs(input)//物品输入
              .inputFluids(Fluid.of('gtceu:steam', fluid))//流体输入
              .outputFluids(Fluid.of('minecraft:water',fluid1))//流体输出
-             .duration(60)//持续时间
+             .duration(600)//持续时间
              .EUt(eu)//电压
     }	//大型蒸汽发电配方设置代码块
         large_scale_steam_generator('steamgenerator','minecraft:coal',-HV,288,18,)
@@ -33,12 +33,12 @@ ServerEvents.recipes((event) => {
              .duration(20)
              .EUt(eu)
     }   //大型蒸汽发生配方代码块
-        large_steam_generator_machine('steam_generator','minecraft:coal',20,18,288)
-        large_steam_generator_machine('steam_generator_1','minecraft:charcoal',20,18,288)
-        large_steam_generator_machine('steam_generator_2','gtceu:charcoal_dust',40,36,288)
-        large_steam_generator_machine('steam_generator_3','gtceu:coal_dust',40,36,288)
-        large_steam_generator_machine('steam_generator_4','minecraft:coal_block',10,18,576)
-        large_steam_generator_machine('steam_generator_5','gtceu:charcoal_block',10,18,576)
+        large_steam_generator_machine('steam_generator','minecraft:coal',20,18,28800)
+        large_steam_generator_machine('steam_generator_1','minecraft:charcoal',20,18,28800)
+        large_steam_generator_machine('steam_generator_2','gtceu:charcoal_dust',40,36,28800)
+        large_steam_generator_machine('steam_generator_3','gtceu:coal_dust',40,36,28800)
+        large_steam_generator_machine('steam_generator_4','minecraft:coal_block',10,18,57600)
+        large_steam_generator_machine('steam_generator_5','gtceu:charcoal_block',10,18,57600)
         //大型蒸汽发生配方实现代码块
     
         event.shaped('gtceu:large_steam_generator_machine',[
