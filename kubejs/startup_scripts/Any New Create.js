@@ -47,6 +47,7 @@ StartupEvents.registry("item",event=>{
     event.create("prts:medium_voltage_wanzi_circuit","basic");
     event.create("prts:type_one_wanzi","basic");
     event.create("prts:heteromorphic_iron","basic");
+    event.create("prts:heteromorphic_jade");
     event.create("prts:heteromorphic_copper","basic");
     event.create("prts:heteromorphic_gold","basic");
     event.create("prts:heteromorphic_diamond","basic");
@@ -106,7 +107,9 @@ StartupEvents.registry("item",event=>{
     event.create("prts:alpha_compression_type_wanzi","basic");
     event.create("prts:purified_type_one_wanzi","basic");
     event.create("prts:purified_alpha_wanjing","basic");
-    event.create("prts:component_module","basic")
+    event.create("prts:component_module","basic");
+    event.create("prts:unconventional_sulphur_crystal");
+    event.create("prts:unconventional_crystal_plate")
 
     event.create("prts:basic_wanzi_sword","sword")
          .speedBaseline(-2.4)           // 攻击速度：1.6
@@ -162,4 +165,6 @@ StartupEvents.registry("block",event=>{
 StartupEvents.registry("fluid",event=>{
     event.create("prts:jianduduye").thinTexture(0x8a209c).noBlock()
     event.create("prts:yisanwanzi").thickTexture(0xc3c3c3).noBlock()
+    event.create("prts:magic_water").thickTexture(0x118fb6).noBlock()
+    event.create("prts:magic_ghost_fluid").thickTexture(0x761987).noBlock()
 })

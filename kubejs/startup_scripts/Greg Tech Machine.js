@@ -1,4 +1,5 @@
-const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA;
+
 // 注册机器配方类型
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {//注册一个新的多方块（大型蒸汽发电机）
   event.create('large_scale_steam_generator')//设置机器的名字
@@ -285,7 +286,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event=>{//超高速矿物处理厂
 })
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {//魔魂生成机
-  event.create('liquid_magic_generator')//设置机器的名字
+  event.create('liquid_magic_generator')
     .category('liquid_magic_generator')//设置类型
     .setEUIO('in') 
     .setMaxIOSize(4,6,4,6)//设置机器输入输出个数(物品输入,物品输出,流体输入,流体输出)
@@ -294,30 +295,32 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {//魔魂生成机
     .setMaxTooltips(5)
 })
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('liquid_magic_generator','multiblock')//（魔魂生成器）
+  event.create('liquid_magic_generator_1','multiblock')//（魔魂生成器）
        .rotationState(RotationState.NON_Y_AXIS)
        .recipeType('liquid_magic_generator')
        .appearanceBlock(GCyMBlocks.CASING_INDUSTRIAL_STEAM)
        .pattern(definition => FactoryBlockPattern.start()
-                  .aisle('BBACABB','#B#E#B#','#B###B#','#B###B#','BBDDDBB','##FDF##','###F###','#######')
-                  .aisle('BCADACB','BE###EB','B#####B','B#####B','B##C##B','#FFAFF#','###B###','#######')
-                  .aisle('AAADAAA','#######','#######','#######','D##C##C','FFADAFF','###B###','#######')
-                  .aisle('CDDDDDC','E#####E','#######','#######','DCCACCD','DADDDAD','FBBABBF','###P###')
-                  .aisle('AAADAAA','#######','#######','#######','D##C##C','FFADAFF','###B###','#######')
-                  .aisle('BCADACB','BE###EB','B#####B','B#####B','B##C##B','#FFAFF#','###B###','#######')
-                  .aisle('BBAKABB','#B#E#B#','#B###B#','#B###B#','BBDDDBB','##FDF##','###F###','#######')
+                  .aisle('AA***AA','*AAAAA*','*AAAAA*','*AAAAA*','AA***AA')
+                  .aisle('ABABABA','AD###DA','AF###FA','AD###DA','ABABABA')
+                  .aisle('*AACAA*','A#EEE#A','A#E#E#A','A#EEE#A','*AACAA*')
+                  .aisle('*BCBCB*','A#EBE#A','A##G##A','A#EBE#A','*BCBCB*')
+                  .aisle('*AACAA*','A#EEE#A','A#E#E#A','A#EEE#A','*AACAA*')
+                  .aisle('ABABABA','AD###DA','AF###FA','AD###DA','ABABABA')
+                  .aisle('AA***AA','*AAXAA*','*AAKAA*','*AAAAA*','AA***AA')
                   .where('K',Predicates.controller(Predicates.blocks(definition.get())))
-                  .where('B',Predicates.blocks('botania:polished_livingrock_wall'))
-                  .where('A',Predicates.blocks('botania:azulejo_5')
-                      .or(Predicates.autoAbilities(definition.getRecipeTypes())))
-                  .where('C',Predicates.blocks('botania:azulejo_2'))
-                  .where('D',Predicates.blocks('botania:mana_diamond_block'))
-                  .where('E',Predicates.blocks('botania:mana_pylon'))
-                  .where('F',Predicates.blocks('botania:livingrock_stairs'))
-                  .where('P',Predicates.blocks('botania:natura_pylon'))
-                  .where('#',Predicates.any())
+                  .where('A',Predicates.blocks('botania:polished_livingrock')
+                   .or(Predicates.autoAbilities(definition.getRecipeTypes())))
+                  .where('B',Predicates.blocks('botania:azulejo_1'))
+                  .where('C',Predicates.blocks('botania:azulejo_3'))
+                  .where('D',Predicates.blocks('botania:mana_pylon'))
+                  .where('E',Predicates.blocks('botania:dreamwood_wall'))
+                  .where('F',Predicates.blocks('botania:terrasteel_block'))
+                  .where('G',Predicates.blocks('botania:natura_pylon'))
+                  .where('X',Predicates.abilities(PartAbility.MAINTENANCE))
+                  .where('*',Predicates.any())
+                  .where('#',Predicates.air())
                   .build()
-               ).workableCasingRenderer('gtceu:block/casings/mechanic/machine_casing_turbine_stainless_steel',
+               ).workableCasingRenderer('gtceu:block/botania/polished_livingrock',
                                         'gtceu:block/multiblock/implosion_compressor',
                                         false)//控制器材质，控制器正面样式
 })
