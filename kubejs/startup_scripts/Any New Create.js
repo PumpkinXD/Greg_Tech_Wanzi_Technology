@@ -109,7 +109,31 @@ StartupEvents.registry("item",event=>{
     event.create("prts:purified_alpha_wanjing","basic");
     event.create("prts:component_module","basic");
     event.create("prts:unconventional_sulphur_crystal");
-    event.create("prts:unconventional_crystal_plate")
+    event.create("prts:unconventional_crystal_plate");
+    event.create("prts:type_b_conductive_circuit","basic");
+    event.create("prts:type_b_resistor","basic");
+    event.create("prts:type_b_packaging_unit","basic");
+    event.create("prts:type_b_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_b_high_voltage_transformation_component","basic");
+    event.create("prts:type_b_risk_management_unit","basic");
+    event.create("prts:production_dsv_component","basic");
+    event.create("prts:type_b_specialized_circuit_group","basic");
+    event.create("prts:type_b_wanzi_emission_concentrator","basic");
+    event.create("prts:type_b_wire_guide_connection_device","basic");
+    event.create("prts:type_b_directed_chemical_reaction_device","basic");
+    event.create("prts:type_b_phase_change_device","basic");
+    event.create("prts:type_b_purified_conductive_circuit","basic");
+    event.create("prts:type_b_purified_resistor","basic");
+    event.create("prts:type_b_purified_packaging_unit","basic");
+    event.create("prts:type_b_purified_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_b_purified_high_voltage_transformation_component","basic");
+    event.create("prts:type_b_purified_risk_management_unit","basic");
+    event.create("prts:production_dsv_purified_component","basic");
+    event.create("prts:type_b_purified_specialized_circuit_group","basic");
+    event.create("prts:type_b_purified_wanzi_emission_concentrator","basic");
+    event.create("prts:type_b_purified_wire_guide_connection_device","basic");
+    event.create("prts:type_b_purified_directed_chemical_reaction_device","basic");
+    event.create("prts:type_b_purified_phase_change_device","basic")
 
     event.create("prts:basic_wanzi_sword","sword")
          .speedBaseline(-2.4)           // 攻击速度：1.6
