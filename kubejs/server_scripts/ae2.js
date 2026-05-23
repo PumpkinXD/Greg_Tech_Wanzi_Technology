@@ -42,12 +42,19 @@ ServerEvents.recipes(event => {
     .duration(300)
     .EUt(32)
     //ME无限熔岩单元
+
+    event.shaped('extendedae_plus:infinity_biginteger_cell',[
+        ['prts:production_type_wanzi_impact_resistant_plate','mekanism:ultimate_control_circuit','prts:production_type_wanzi_impact_resistant_plate'],
+        ['gtceu:quantum_eye','megacells:bulk_cell_component','legendblade:god_soul_crystal'],
+        ['prts:production_type_wanzi_impact_resistant_plate','minecraft:netherite_block','prts:production_type_wanzi_impact_resistant_plate']
+    ])//无限盘制作难度增加
     
     event.remove({id:'ae2wtlib:quantum_bridge_card'})
     event.remove({id:'ae2:network/blocks/io_condenser'})
     event.remove({id:'ae2:network/blocks/quantum_ring'})
     event.remove({id:'ae2:network/blocks/pattern_providers_interface'})
     event.remove({id:'ae2:network/blocks/controller'})
+    event.remove({id:'extendedae_plus:infinity_biginteger_cell'})
     //禁用AE2配方↑
 
 });
