@@ -1,28 +1,26 @@
 ServerEvents.recipes(event => {
-    //如果要添加新的机器只需要根据recipes对象的格式添加gtceurecipe的函数即可。
     const recipes = {
-        assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'assembler', id, eu, time, inputs, outputs),
-        sifter: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, time, inputs, outputs),
-        circuit_assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, time, inputs, outputs),
-        chemical_reactor: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, time, inputs, outputs),
-        macerator: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, time, inputs, outputs),
+        assembler: (id, eu, duration, inputs, outputs,) => gtceuRecipe(event, 'assembler', id, eu, inputs, outputs, duration),
+        sifter: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, inputs, outputs, duration),
+        circuit_assembler: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, inputs, outputs, duration),
+        chemical_reactor: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, inputs, outputs, duration),
+        macerator: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, inputs, outputs, duration),
     }
-    //第一个参数为配方ID，第二个参数为EU/t，第三个参数为时间，第四个参数为输入列表，第五个参数为输出列表
-    recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120,
-        [
-            ['item', "2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil"]
-        ],
+    recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120
+    [
+        ['item', "2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil"]
+    ],
         [
             ['item', "3x ae2:fluix_smart_dense_cable"]
         ])
 
 
 
-    // event.recipes.gtceu.assembler('ae2:fluix_smart_dense_cable')
-    //     .itemInputs("2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil")
-    //     .itemOutputs("3x ae2:fluix_smart_dense_cable")
-    //     .duration(120)
-    //     .EUt(24)
+    event.recipes.gtceu.assembler('ae2:fluix_smart_dense_cable')
+        .itemInputs("2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil")
+        .itemOutputs("3x ae2:fluix_smart_dense_cable")
+        .duration(120)
+        .EUt(24)
     //ME致密线缆新合成配方↑
 
     event.recipes.gtceu.chemical_reactor('ae2:sky_dust')
@@ -745,7 +743,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.macerator('gtceu:crushed_diamond_ore1')
         .itemInputs('#forge:ores/diamond')
-        .itemOutputs('6x gtceu:crushed_cobaltite_ore')
+        .itemOutputs('6x gtceu:crushed_diamond_ore')
         .chancedOutput(Item.of('gtceu:graphite_dust'), 5000, 1000)
         .chancedOutput(Item.of('gtceu:stone_dust'), 6000, 1000)
         .duration(100)

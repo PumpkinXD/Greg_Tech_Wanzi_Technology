@@ -1,4 +1,5 @@
 ServerEvents.recipes(event => {
+    //这些全TM是AI写的，除了部分我修正过其他的都没修正
     // 基础万子传动器 - 用于制作传动设备
     event.recipes.gtceu.assembler('gtceu_wanzi_conveyor_boost')
         .notConsumable('prts:basic_wanzi_actuator')

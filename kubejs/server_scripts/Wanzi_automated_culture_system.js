@@ -238,6 +238,134 @@ ServerEvents.recipes((event) => {
     .chancedFluidOutput(Fluid.of('gtceu:biomass',400),4000,3000)
     .duration(400)
     .EUt(15)//红蘑菇培养Ⅱ
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:white_1')
+    .notConsumable('botania:white_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:white_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//白色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:light_gray_1')
+    .notConsumable('botania:light_gray_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:light_gray_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//淡灰色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:gray_1')
+    .notConsumable('botania:gray_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:gray_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//灰色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:black_1')
+    .notConsumable('botania:black_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:black_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//黑色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:brown_1')
+    .notConsumable('botania:brown_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:brown_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//棕色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:red_1')
+    .notConsumable('botania:red_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:red_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//红色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:orange_1')
+    .notConsumable('botania:orange_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:orange_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//橙色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:yellow_1')
+    .notConsumable('botania:yellow_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:yellow_petal')
+    .chancedFluidOutput(Fluid.of('gtceu:biomass',400),4000,3000)
+    .duration(400)
+    .EUt(15)//黄色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:lime_1')
+    .notConsumable('botania:lime_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:lime_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//黄绿色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:green_1')
+    .notConsumable('botania:green_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:green_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//绿色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:cyan_1')
+    .notConsumable('botania:cyan_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:cyan_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//青色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:light_blue_1')
+    .notConsumable('botania:light_blue_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:light_blue_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//淡蓝色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:blue_1')
+    .notConsumable('botania:blue_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:blue_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//蓝色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:purple_1')
+    .notConsumable('botania:purple_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:purple_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//紫色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:magenta_1')
+    .notConsumable('botania:magenta_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:magenta_petal')
+    .chancedFluidOutput(Fluid.of('prts:magic_water',400),4000,3000)
+    .duration(400)
+    .EUt(15)//品红色神秘花花瓣培养
+
+    event.recipes.gtceu.wanzi_automated_culture_system('prts:pink_1')
+    .notConsumable('botania:pink_petal')
+    .inputFluids(Fluid.of('prts:yisanwanzi',1280))
+    .itemOutputs('32x botania:pink_petal')
+    .chancedFluidOutput(Fluid.of('gtceu:biomass',400),4000,3000)
+    .duration(400)
+    .EUt(15)//粉红色神秘花花瓣培养
 })
 ServerEvents.recipes((event) => {
     event.shaped('gtceu:lv_wanzi_automated_culture_system',[
