@@ -1,18 +1,21 @@
 ServerEvents.recipes(event => {
+    //如果要添加新的配方类型，请在下面的recipes对象中添加对应的函数，并且函数参数需要按照gtceuRecipe函数的参数顺序进行编写
     const recipes = {
-        assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'assembler', id, eu, inputs, outputs, time),
-        sifter: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, inputs, outputs, time),
-        circuit_assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, inputs, outputs, time),
-        chemical_reactor: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, inputs, outputs, time),
-        macerator: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, inputs, outputs, time),
+        assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'assembler', id, eu, time, inputs, outputs),
+        sifter: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, time, inputs, outputs),
+        circuit_assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, time, inputs, outputs),
+        chemical_reactor: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, time, inputs, outputs),
+        macerator: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, time, inputs, outputs),
     }
-    recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120,
-        [
-            ['item', "2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil"]
-        ],
-        [
-            ['item', "3x ae2:fluix_smart_dense_cable"]
-        ])
+    //以下为配方编写区，编写时请按照recipes对象中函数的参数顺序进行编写，参数说明如下：
+    //第一个参数id为配方输出的物品ID，第二个参数eu为配方所需的EU/t，第三个参数time为配方所需的时间（tick），第四个参数inputs为一个二维数组，数组内每个元素也是一个数组，包含三个元素，分别是输入类型（item或fluid）、输入数量和输入ID，第五个参数outputs与第四个参数格式相同，但表示输出
+    // recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120,
+    //     [
+    //         ['item', "2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil"]
+    //     ],
+    //     [
+    //         ['item', "3x ae2:fluix_smart_dense_cable"]
+    //     ])
 
 
 
