@@ -1,7 +1,7 @@
-function gtceuRecipe(event, type, id, eu, inputs, outputs, duration) {
+function gtceuRecipe(event, type, id, eu, time, inputs, outputs) {
     const gtceu = event.recipes.gtceu;
 
-    let recipe = gtceu[type](id).duration(duration).EUt(eu);
+    let recipe = gtceu[type](id).duration(time).EUt(eu);
 
     // 处理输入
     let itemInputs = [];
