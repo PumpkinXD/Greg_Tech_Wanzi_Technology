@@ -1,15 +1,15 @@
 ServerEvents.recipes(event => {
     const recipes = {
-        assembler: (id, eu, duration, inputs, outputs,) => gtceuRecipe(event, 'assembler', id, eu, inputs, outputs, duration),
-        sifter: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, inputs, outputs, duration),
-        circuit_assembler: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, inputs, outputs, duration),
-        chemical_reactor: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, inputs, outputs, duration),
-        macerator: (id, eu, duration, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, inputs, outputs, duration),
+        assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'assembler', id, eu, inputs, outputs, time),
+        sifter: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, inputs, outputs, time),
+        circuit_assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, inputs, outputs, time),
+        chemical_reactor: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, inputs, outputs, time),
+        macerator: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, inputs, outputs, time),
     }
-    recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120
-    [
-        ['item', "2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil"]
-    ],
+    recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120,
+        [
+            ['item', "2x ae2:fluix_covered_cable", "2x gtceu:polyvinyl_chloride_foil"]
+        ],
         [
             ['item', "3x ae2:fluix_smart_dense_cable"]
         ])
