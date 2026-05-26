@@ -1361,7 +1361,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:salt_dust','9x gtceu:borax_dust','9x gtceu:rock_salt_dust')
     .duration(20)
     .EUt(16)//精炼盐矿石高速处理
-    //粗盐、盐矿石增幅后产出
 
     kc('prts:crushed_saltpeter_ore_1')
     .itemInputs('#forge:ores/saltpeter')
@@ -1388,7 +1387,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:saltpeter_dust','9x gtceu:salt_dust','9x gtceu:potassium_dust')
     .duration(20)
     .EUt(16)//精炼硝石矿石高速处理
-    //粗硝石、硝石矿石增幅后产出
 
     kc('prts:crushed_sapphire_ore_1')
     .itemInputs('#forge:ores/sapphire')
@@ -1415,7 +1413,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:sapphire_dust','9x gtceu:green_sapphire_dust','9x gtceu:aluminium_dust')
     .duration(20)
     .EUt(16)//精炼蓝宝石矿石高速处理
-    //粗蓝宝石、蓝宝石矿石增幅后产出
 
     kc('prts:crushed_scheelite_ore_1')
     .itemInputs('#forge:ores/scheelite')
@@ -1442,7 +1439,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:scheelite_dust','6x gtceu:calcium_dust','6x gtceu:molybdenum_dust','6x gtceu:manganese_dust')
     .duration(20)
     .EUt(16)//精炼白钨矿矿石高速处理
-    //粗白钨矿、白钨矿矿石增幅后产出
 
     kc('prts:crushed_sodalite_ore_1')
     .itemInputs('#forge:ores/sodalite')
@@ -1469,7 +1465,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('16x gtceu:sodalite_dust','8x gtceu:lapis_dust','8x gtceu:lazurite_dust')
     .duration(20)
     .EUt(16)//精炼方纳石矿石高速处理
-    //粗方纳石、方纳石矿石增幅后产出
 
     kc('prts:crushed_tungstate_ore_1')
     .itemInputs('#forge:ores/tungstate')
@@ -1496,7 +1491,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:tungstate_dust','6x gtceu:lithium_dust','6x gtceu:silver_dust','6x gtceu:manganese_dust')
     .duration(20)
     .EUt(16)//精炼钨酸锂矿矿石高速处理
-    //粗钨酸锂矿、钨酸锂矿矿石增产后产出
 
     kc('prts:crushed_topaz_ore_1')
     .itemInputs('#forge:ores/topaz')
@@ -1523,7 +1517,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:topaz_dust','18x gtceu:blue_topaz_dust')
     .duration(20)
     .EUt(16)//精炼黄玉矿石高速处理
-    //粗黄玉、黄玉矿石增产后产出
 
     kc('prts:crushed_tetrahedrite_ore_1')
     .itemInputs('#forge:ores/tetrahedrite')
@@ -1555,7 +1548,6 @@ ServerEvents.recipes((event) => {
     .inputFluids(Fluid.of('gtceu:nitric_acid',50))
     .duration(20)
     .EUt(16)//精炼黝铜矿矿石高速处理
-    //粗黝铜矿、黝铜矿矿石增产后产出
 
     kc('prts:crushed_stibnite_ore_1')
     .itemInputs('#forge:ores/stibnite')
@@ -1582,7 +1574,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:stibnite_dust','6x gtceu:cinnabar_dust','6x gtceu:antimony_dust','6x gtceu:antimony_trioxide_dust')
     .duration(20)
     .EUt(16)//精炼辉锑矿矿石高速处理
-    //粗辉锑矿、辉锑矿矿石增产后产出
 
     kc('prts:crushed_sphalerite_ore_1')
     .itemInputs('#forge:ores/sphalerite')
@@ -1609,7 +1600,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:sphalerite_dust','6x gtceu:cadmium_dust','6x gtceu:gallium_dust','6x gtceu:yellow_garnet_dust')
     .duration(20)
     .EUt(16)//精炼闪锌矿矿石高速处理
-    //粗闪锌矿、闪锌矿矿石增产后产出
 
     kc('prts:crushed_spessartine_ore_1')
     .itemInputs('#forge:ores/spessartine')
@@ -1636,7 +1626,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:spessartine_dust','9x gtceu:manganese_dust','9x gtceu:red_garnet_dust')
     .duration(20)
     .EUt(16)//精炼锰铝榴石矿石高速处理
-    //粗锰铝榴石、锰铝榴石矿石增产后产出
 
     kc('prts:crushed_tantalite_ore_1')
     .itemInputs('#forge:ores/tantalite')
@@ -1663,7 +1652,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:tantalite_dust','6x gtceu:tantalum_dust','6x gtceu:niobium_dust','6x gtceu:manganese_dust')
     .duration(20)
     .EUt(16)//精炼钽铁矿矿石高速处理
-    //粗钽铁矿、钽铁矿矿石增产后产出
 
     kc('prts:crushed_uraninite_ore_1')
     .itemInputs('#forge:ores/uraninite')
@@ -1690,7 +1678,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:uraninite_dust','9x gtceu:silver_dust','9x gtceu:thorium_dust')
     .duration(20)
     .EUt(16)//精炼晶质铀矿矿石高速处理
-    //粗晶质铀矿、晶质铀矿矿石增产后产出
 
     kc('prts:crushed_wulfenite_ore_1')
     .itemInputs('#forge:ores/wulfenite')
@@ -1717,7 +1704,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:wulfenite_dust','9x gtceu:manganese_dust','9x gtceu:iron_dust')
     .duration(20)
     .EUt(16)//精炼钼铅矿矿石高速处理
-    //粗钼铅矿、钼铅矿矿石增产后产出
 
     kc('prts:crushed_yellow_limonite_ore_1')
     .itemInputs('#forge:ores/yellow_limonite')
@@ -1744,7 +1730,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:yellow_limonite_dust','6x gtceu:cobalt_oxide_dust','6x gtceu:goethite_dust','6x gtceu:nickel_dust')
     .duration(20)
     .EUt(16)//精炼黄褐铁矿矿石高速处理
-    //粗黄褐铁矿、黄褐铁矿矿石增产后产出
 
     kc('prts:crushed_nether_quartz_ore_1')
     .itemInputs('#forge:ores/nether_quartz')
@@ -1771,7 +1756,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:nether_quartz_dust','18x gtceu:quartzite_dust')
     .duration(20)
     .EUt(16)//精炼下界石英岩矿石高速处理
-    //粗下界石英岩、下界石英岩矿石增产后产出
 
     kc('prts:crushed_certus_quartz_ore_1')
     .itemInputs('#forge:ores/certus_quartz')
@@ -1798,7 +1782,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:certus_quartz_dust','9x gtceu:barite_dust','9x gtceu:nether_quartz_dust')
     .duration(20)
     .EUt(16)//精炼赛特斯石英岩矿石矿石高速处理
-    //粗赛特斯石英岩矿石、赛特斯石英岩矿石矿石增产后产出
 
     kc('prts:crushed_quartzite_ore_1')
     .itemInputs('#forge:ores/quartzite')
@@ -1825,7 +1808,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:quartzite_dust','9x gtceu:barite_dust','9x gtceu:certus_quartz_dust')
     .duration(20)
     .EUt(16)//精炼石英岩矿石矿石高速处理
-    //粗石英岩矿石、石英岩矿石矿石增产后产出
 
     kc('prts:crushed_graphite_ore_1')
     .itemInputs('#forge:ores/graphite')
@@ -1852,7 +1834,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:graphite_dust','18x gtceu:carbon_dust')
     .duration(20)
     .EUt(16)//精炼石墨矿石高速处理
-    //粗石墨、石墨矿石增产后产出
 
     kc('prts:crushed_lepidolite_ore_1')
     .itemInputs('#forge:ores/lepidolite')
@@ -1879,7 +1860,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:lepidolite_dust','6x gtceu:boron_dust','6x gtceu:caesium_dust','6x gtceu:lithium_dust')
     .duration(20)
     .EUt(16)//精炼锂云母矿石高速处理
-    //粗锂云母、锂云母矿石增产后产出
 
     kc('prts:crushed_spodumene_ore_1')
     .itemInputs('#forge:ores/spodumene')
@@ -1906,7 +1886,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:spodumene_dust','9x gtceu:lithium_dust','9x gtceu:aluminium_dust')
     .duration(20)
     .EUt(16)//精炼锂辉矿矿石高速处理
-    //粗锂辉矿、锂辉矿矿石增产后产出
 
     kc('prts:crushed_pentlandite_ore_1')
     .itemInputs('#forge:ores/pentlandite')
@@ -1933,7 +1912,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:pentlandite_dust','6x gtceu:cobalt_dust','6x gtceu:sulfur_dust','6x gtceu:iron_dust')
     .duration(20)
     .EUt(16)//精炼镍黄铁矿矿石高速处理
-    //粗镍黄铁矿、镍黄铁矿矿石增产后产出
 
     kc('prts:crushed_bastnasite_ore_1')
     .itemInputs('#forge:ores/bastnasite')
@@ -1960,7 +1938,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:bastnasite_dust','9x gtceu:rare_earth_dust','9x gtceu:neodymium_dust')
     .duration(20)
     .EUt(16)//精炼氟碳镧铈矿矿石高速处理
-    //粗氟碳镧铈矿、氟碳镧铈矿矿石增产后产出
 
     kc('prts:crushed_realgar_ore_1')
     .itemInputs('#forge:ores/realgar')
@@ -1987,7 +1964,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:realgar_dust','6x gtceu:barite_dust','6x gtceu:antimony_dust','6x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//精炼雄黄矿矿石高速处理
-    //粗雄黄矿、粗雄黄矿石增产后产出
 
     kc('prts:crushed_chalcocite_ore_1')
     .itemInputs('#forge:ores/chalcocite')
@@ -2019,7 +1995,6 @@ ServerEvents.recipes((event) => {
     .inputFluids(Fluid.of('gtceu:nitric_acid',50))
     .duration(20)
     .EUt(16)//精炼辉铜矿矿石高速处理
-    //粗辉铜矿、辉铜矿矿石增产后产出
 
     kc('prts:crushed_bornite_ore_1')
     .itemInputs('#forge:ores/bornite')
@@ -2051,7 +2026,6 @@ ServerEvents.recipes((event) => {
     .inputFluids(Fluid.of('gtceu:nitric_acid',50))
     .duration(20)
     .EUt(16)//精炼斑铜矿矿石高速处理
-    //粗斑铜矿、斑铜矿矿石增产后产出
 
     kc('prts:crushed_glauconite_sand_ore_1')
     .itemInputs('#forge:ores/glauconite_sand')
@@ -2078,7 +2052,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:glauconite_sand_dust','6x gtceu:iron_dust','6x gtceu:aluminium_dust','6x gtceu:sodium_dust')
     .duration(20)
     .EUt(16)//精炼海绿石砂矿石高速处理
-    //粗海绿石砂、海绿石砂矿石增产后产出
 
     kc('prts:crushed_malachite_ore_1')
     .itemInputs('#forge:ores/malachite')
@@ -2105,7 +2078,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:malachite_dust','6x gtceu:zincite_dust','6x gtceu:calcite_dust','6x gtceu:goethite_dust')
     .duration(20)
     .EUt(16)//精炼孔雀石矿石高速处理
-    //粗孔雀石、孔雀石矿石增产后产出
 
     kc('prts:crushed_mica_ore_1')
     .itemInputs('#forge:ores/mica')
@@ -2132,7 +2104,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:mica_dust','9x gtceu:aluminium_dust','9x gtceu:potassium_dust')
     .duration(20)
     .EUt(16)//精炼云母矿石高速处理
-    //粗云母、云母矿石增产后产出
 
     kc('prts:crushed_barite_ore_1')
     .itemInputs('#forge:ores/barite')
@@ -2159,7 +2130,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('36x gtceu:barite_dust')
     .duration(20)
     .EUt(16)//精炼重晶石矿石高速处理
-    //粗重晶石、重晶石矿石增产后产出
 
     kc('prts:crushed_alunite_ore_1')
     .itemInputs('#forge:ores/alunite')
@@ -2186,7 +2156,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('36x gtceu:alunite_dust')
     .duration(20)
     .EUt(16)//精炼明矾石矿石高速处理
-    //粗明矾石、明矾石矿石增产后产出
     
     kc('prts:crushed_talc_ore_1')
     .itemInputs('#forge:ores/talc')
@@ -2213,7 +2182,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:talc_dust','9x gtceu:carbon_dust','9x gtceu:clay_dust')
     .duration(20)
     .EUt(16)//精炼滑石矿石高速处理
-    //粗滑石、滑石矿石增产后产出
 
     kc('prts:crushed_soapstone_ore_1')
     .itemInputs('#forge:ores/soapstone')
@@ -2240,7 +2208,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:soapstone_dust','6x gtceu:calcite_dust','6x gtceu:magnesium_dust','6x gtceu:silicon_dioxide_dust')
     .duration(20)
     .EUt(16)//精炼皂石矿石高速处理
-    //粗皂石、皂石矿石增产后产出
 
     kc('prts:crushed_lapis_ore_1')
     .itemInputs('#forge:ores/lapis')
@@ -2267,7 +2234,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:lapis_dust','6x gtceu:pyrite_dust','6x gtceu:sodalite_dust','6x gtceu:lazurite_dust')
     .duration(20)
     .EUt(16)//精炼青金石矿石高速处理
-    //粗青金石、青金石矿石增产后产出
 
     kc('prts:crushed_amethyst_ore_1')
     .itemInputs('#forge:ores/amethyst')
@@ -2294,7 +2260,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('36x gtceu:amethyst_dust')
     .duration(20)
     .EUt(16)//精炼紫水晶矿石高速处理
-    //粗紫水晶、紫水晶矿石增产后产出
 
     kc('prts:crushed_opal_ore_1')
     .itemInputs('#forge:ores/opal')
@@ -2321,7 +2286,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('36x gtceu:opal_dust')
     .duration(20)
     .EUt(16)//精炼猫眼石矿石高速处理
-    //粗猫眼石、猫眼石矿石增产后产出
 
     kc('prts:crushed_olivine_ore_1')
     .itemInputs('#forge:ores/olivine')
@@ -2348,7 +2312,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:olivine_dust','6x gtceu:manganese_dust','6x gtceu:magnesium_dust','6x gtceu:pyrope_dust')
     .duration(20)
     .EUt(16)//精炼橄榄石矿石高速处理
-    //粗橄榄石、橄榄石矿石增产后产出
 
     kc('prts:crushed_oilsands_ore_1')
     .itemInputs('#forge:ores/oilsands')
@@ -2375,7 +2338,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('36x gtceu:oilsands_dust')
     .duration(20)
     .EUt(16)//精炼油砂矿石高速处理
-    //粗油砂、油砂矿石增产后产出
 
     kc('prts:crushed_pyrochlore_ore_1')
     .itemInputs('#forge:ores/pyrochlore')
@@ -2402,7 +2364,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:pyrochlore_dust','6x gtceu:niobium_dust','6x gtceu:calcium_dust','6x gtceu:apatite_dust')
     .duration(20)
     .EUt(16)//精炼烧绿石矿石高速处理
-    //粗烧绿石、烧绿石矿石增产后产出
 
     kc('prts:crushed_kyanite_ore_1')
     .itemInputs('#forge:ores/kyanite')
@@ -2429,7 +2390,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:kyanite_dust','6x gtceu:silicon_dust','6x gtceu:aluminium_dust','6x gtceu:talc_dust')
     .duration(20)
     .EUt(16)//精炼蓝晶石矿石高速处理
-    //粗蓝晶石、蓝晶石矿石增产后产出
 
     kc('prts:crushed_apatite_ore_1')
     .itemInputs('#forge:ores/apatite')
@@ -2456,7 +2416,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:apatite_dust','4x gtceu:pyrochlore_dust','4x gtceu:phosphate_dust','4x gtceu:tricalcium_phosphate_dust','4x gtceu:talc_dust')
     .duration(20)
     .EUt(16)//精炼磷灰石矿石高速处理
-    //粗磷灰石、磷灰石矿石增产后产出
 
     kc('prts:crushed_tricalcium_phosphate_ore_1')
     .itemInputs('#forge:ores/tricalcium_phosphate')
@@ -2483,7 +2442,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:tricalcium_phosphate_dust','6x gtceu:pyrochlore_dust','6x gtceu:phosphate_dust','6x gtceu:apatite_dust')
     .duration(20)
     .EUt(16)//精炼磷酸三钙矿石高速处理
-    //粗磷酸三钙、磷酸三钙矿石增产后产出
 
     kc('prts:crushed_red_garnet_ore_1')
     .itemInputs('#forge:ores/red_garnet')
@@ -2510,7 +2468,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:red_garnet_dust','6x gtceu:almandine_dust','6x gtceu:pyrope_dust','6x gtceu:spessartine_dust')
     .duration(20)
     .EUt(16)//精炼红石榴石矿石高速处理
-    //粗红石榴石、红石榴石矿石增产后产出
 
     kc('prts:crushed_yellow_garnet_ore_1')
     .itemInputs('#forge:ores/yellow_garnet')
@@ -2537,7 +2494,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:yellow_garnet_dust','6x gtceu:uvarovite_dust','6x gtceu:grossular_dust','6x gtceu:andradite_dust')
     .duration(20)
     .EUt(16)//精炼黄石榴石矿石高速处理
-    //粗黄石榴石、黄石榴石矿石增产后产出
 
     kc('prts:crushed_vanadium_magnetite_ore_1')
     .itemInputs('#forge:ores/vanadium_magnetite')
@@ -2564,7 +2520,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:vanadium_magnetite_dust','9x gtceu:vanadium_dust','9x gtceu:magnetite_dust')
     .duration(20)
     .EUt(16)//精炼钒磁铁矿矿石高速处理
-    //粗钒磁铁矿、钒磁铁矿矿石增产后产出
 
     kc('prts:crushed_pollucite_ore_1')
     .itemInputs('#forge:ores/pollucite')
@@ -2591,7 +2546,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:pollucite_dust','6x gtceu:potassium_dust','6x gtceu:aluminium_dust','6x gtceu:caesium_dust')
     .duration(20)
     .EUt(16)//精炼铯榴石矿矿石高速处理
-    //粗铯榴石矿、铯榴石矿石增产后产出
 
     kc('prts:crushed_fullers_earth_ore_1')
     .itemInputs('#forge:ores/fullers_earth')
@@ -2618,7 +2572,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:fullers_earth_dust','6x gtceu:magnesium_dust','6x gtceu:silicon_dust','6x gtceu:aluminium_dust')
     .duration(20)
     .EUt(16)//精炼漂白石矿石高速处理
-    //粗漂白石、漂白石矿石增产后产出
 
     kc('prts:crushed_diatomite_ore_1')
     .itemInputs('#forge:ores/diatomite')
@@ -2645,7 +2598,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:diatomite_dust','9x gtceu:sapphire_dust','9x gtceu:hematite_dust')
     .duration(20)
     .EUt(16)//精炼硅藻土矿石高速处理
-    //粗硅藻土、硅藻土矿石增产后产出
 
     kc('prts:crushed_electrotine_ore_1')
     .itemInputs('#forge:ores/electrotine')
@@ -2672,7 +2624,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:electrotine_dust','6x gtceu:diamond_dust','6x gtceu:electrum_dust','6x minecraft:redstone')
     .duration(20)
     .EUt(16)//精炼蓝石矿石高速处理
-    //粗蓝石、蓝石矿石增产后产出
 
     kc('prts:crushed_redstone_ore_1')
     .itemInputs('#forge:ores/redstone')
@@ -2699,7 +2650,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x minecraft:redstone','6x minecraft:glowstone_dust','6x gtceu:rare_earth_dust','6x gtceu:cinnabar_dust')
     .duration(20)
     .EUt(16)//精炼红石矿石高速处理
-    //粗红石、红石矿石增产后产出
 
     kc('prts:crushed_zeolite_ore_1')
     .itemInputs('#forge:ores/zeolite')
@@ -2726,7 +2676,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:zeolite_dust','6x gtceu:aluminium_dust','6x gtceu:silicon_dust','6x gtceu:calcium_dust')
     .duration(20)
     .EUt(16)//精炼沸石矿石高速处理
-    //粗沸石、沸石矿石增产后产出
 
     kc('prts:crushed_gypsum_ore_1')
     .itemInputs('#forge:ores/gypsum')
@@ -2753,7 +2702,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x tceu:calcium_dust','6x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//精炼石膏矿石高速处理
-    //粗石膏、石膏矿石增产后产出
 
     kc('prts:crushed_trona_ore_1')
     .itemInputs('#forge:ores/trona')
@@ -2780,7 +2728,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:trona_dust','9x gtceu:soda_ash_dust','9x gtceu:sodium_dust')
     .duration(20)
     .EUt(16)//精炼天然碱矿石高速处理
-    //粗天然碱、天然碱矿石增产后产出
 
     kc('prts:crushed_monazite_ore_1')
     .itemInputs('#forge:ores/monazite')
@@ -2807,7 +2754,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:monazite_dust','6x gtceu:rare_earth_dust','6x gtceu:neodymium_dust','6x gtceu:thorium_dust')
     .duration(20)
     .EUt(16)//精炼独居石矿石高速处理
-    //粗独居石、独居石矿石增产后产出
 
     kc('prts:crushed_granitic_mineral_sand_ore_1')
     .itemInputs('#forge:ores/granitic_mineral_sand')
@@ -2834,7 +2780,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:granitic_mineral_sand_dust','9x gtceu:magnetite_dust','9x gtceu:deepslate_dust')
     .duration(20)
     .EUt(16)//精炼花岗岩矿砂矿石高速处理
-    //粗花岗岩矿砂、花岗岩矿砂矿石增产后产出
 
     kc('prts:crushed_basaltic_mineral_sand_ore_1')
     .itemInputs('#forge:ores/basaltic_mineral_sand')
@@ -2861,7 +2806,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:basaltic_mineral_sand_dust','9x gtceu:magnetite_dust','9x gtceu:basalt_dust')
     .duration(20)
     .EUt(16)//精炼玄武岩矿砂矿石高速处理
-    //粗玄武岩矿砂、玄武岩矿砂矿石增产后产出
 
     kc('prts:crushed_garnet_sand_ore_1')
     .itemInputs('#forge:ores/garnet_sand')

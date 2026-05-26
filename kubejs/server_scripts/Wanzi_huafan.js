@@ -62,7 +62,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .outputFluids(Fluid.of('gtceu:hydrogen',100))
     .outputFluids(Fluid.of('gtceu:ammonia',100))
     .outputFluids(Fluid.of('gtceu:chlorine',100))
-    .itemOutputs('gtceu:ruthenium_dust','gtceu:silicon_dioxide_dust','gtceu:gold_dust','gtceu:iridium_dust','gtceu:platinum_dust','gtceu:palladium_dust')
+    .itemOutputs('gtceu:ruthenium_dust','gtceu:silicon_dioxide_dust','gtceu:gold_dust','gtceu:iridium_dust','gtceu:platinum_dust','gtceu:palladium_dust','gtceu:rhodium_dust')
     .duration(100)
     .EUt(240)//超级铂系矿泥处理
 
@@ -77,7 +77,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .outputFluids(Fluid.of('gtceu:hydrogen',200))
     .outputFluids(Fluid.of('gtceu:ammonia',200))
     .outputFluids(Fluid.of('gtceu:chlorine',200))
-    .itemOutputs('2x gtceu:ruthenium_dust','2x gtceu:silicon_dioxide_dust','2x gtceu:gold_dust','2x gtceu:iridium_dust','2x gtceu:platinum_dust','2x gtceu:palladium_dust')
+    .itemOutputs('2x gtceu:ruthenium_dust','2x gtceu:silicon_dioxide_dust','2x gtceu:gold_dust','2x gtceu:iridium_dust','2x gtceu:platinum_dust','2x gtceu:palladium_dust','2x gtceu:rhodium_dust')
     .duration(100)
     .EUt(240)//超级铂系矿泥处理Ⅱ
 
@@ -92,7 +92,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .outputFluids(Fluid.of('gtceu:hydrogen',3200))
     .outputFluids(Fluid.of('gtceu:ammonia',3200))
     .outputFluids(Fluid.of('gtceu:chlorine',3200))
-    .itemOutputs('32x gtceu:ruthenium_dust','32x gtceu:silicon_dioxide_dust','32x gtceu:gold_dust','32x gtceu:iridium_dust','32x gtceu:platinum_dust','32x gtceu:palladium_dust')
+    .itemOutputs('32x gtceu:ruthenium_dust','32x gtceu:silicon_dioxide_dust','32x gtceu:gold_dust','32x gtceu:iridium_dust','32x gtceu:platinum_dust','32x gtceu:palladium_dust','32x gtceu:rhodium_dust')
     .duration(100)
     .EUt(240)//超级大批量铂系矿泥处理
 
@@ -107,7 +107,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .outputFluids(Fluid.of('gtceu:hydrogen',6400))
     .outputFluids(Fluid.of('gtceu:ammonia',6400))
     .outputFluids(Fluid.of('gtceu:chlorine',6400))
-    .itemOutputs('64x gtceu:ruthenium_dust','64x gtceu:silicon_dioxide_dust','64x gtceu:gold_dust','64x gtceu:iridium_dust','64x gtceu:platinum_dust','64x gtceu:palladium_dust')
+    .itemOutputs('64x gtceu:ruthenium_dust','64x gtceu:silicon_dioxide_dust','64x gtceu:gold_dust','64x gtceu:iridium_dust','64x gtceu:platinum_dust','64x gtceu:palladium_dust','64x gtceu:rhodium_dust')
     .duration(100)
     .EUt(240)//超级大批量铂系矿泥处理Ⅱ
 })
