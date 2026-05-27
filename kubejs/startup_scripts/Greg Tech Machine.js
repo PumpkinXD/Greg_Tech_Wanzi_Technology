@@ -1,11 +1,10 @@
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA;
-
 // 注册机器配方类型
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {//注册一个新的多方块（大型蒸汽发电机）
   event.create('large_scale_steam_generator')//设置机器的名字
     .category('large_scale_steam_generator')//设置类型
     .setEUIO('out') //设置机器的能源输入/输出
-    .setMaxIOSize(8, 0, 4, 2)//设置机器输入输出个数(物品输入,物品输出,流体输入,流体输出)
+    .setMaxIOSize(8, 3, 4, 2)//设置机器输入输出个数(物品输入,物品输出,流体输入,流体输出)
     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)//设置机器运行时处理中的样子
     .setSound(GTSoundEntries.BATH)//设置机器运行时工作的声音
     .setMaxTooltips(5)//设置最大信息提示
