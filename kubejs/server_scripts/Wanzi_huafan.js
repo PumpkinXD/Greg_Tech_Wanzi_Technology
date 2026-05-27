@@ -15,6 +15,23 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .itemOutputs('4x gtceu:polyethylene_plate')
     .duration(100)
     .EUt(64)//格雷科技聚乙烯定向制作Ⅱ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:polyethylene_bigger_1')
+    .circuit(2)
+    .itemInputs('20x gtceu:carbon_dust')
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',5760))
+    .outputFluids(Fluid.of('gtceu:polyethylene',5760))
+    .duration(100)
+    .EUt(64)//格雷科技聚乙烯定向大批量制作Ⅰ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:polyethylene_bigger_2')
+    .circuit(3)
+    .itemInputs('20x gtceu:carbon_dust')
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',5760))
+    .itemOutputs('40x gtceu:polyethylene_plate')
+    .duration(100)
+    .EUt(64)//格雷科技聚乙烯定向大批量制作Ⅱ
+
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_1')
     .circuit(1)
     .itemInputs('2x #forge:dusts/sulfur')
@@ -32,6 +49,24 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .outputFluids(Fluid.of('gtceu:sulfuric_acid',1152))
     .duration(100)
     .EUt(64)//格雷科技硫酸定向制作Ⅱ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_bigger_1')
+    .circuit(2)
+    .itemInputs('20x #forge:dusts/sulfur')
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',5760))
+    .inputFluids(Fluid.of('gtceu:oxygen',11520))
+    .outputFluids(Fluid.of('gtceu:sulfuric_acid',11520))
+    .duration(100)
+    .EUt(64)//格雷科技硫酸定向大批量制作Ⅰ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_bigger_2')
+    .circuit(3)
+    .itemInputs('20x #forge:dusts/sulfur')
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('minecraft:water',11520))
+    .outputFluids(Fluid.of('gtceu:sulfuric_acid',11520))
+    .duration(100)
+    .EUt(64)//格雷科技硫酸定向大批量制作Ⅱ
+
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_1')
     .circuit(1)
     .notConsumable('prts:type_c_directed_chemical_reaction_device')
@@ -50,6 +85,41 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .outputFluids(Fluid.of('gtceu:nitric_acid',1728))
     .duration(100)
     .EUt(64)//格雷科技硝酸定向制作Ⅱ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_bigger_1')
+    .circuit(2)
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',2880))
+    .inputFluids(Fluid.of('gtceu:nitrogen',2880))
+    .inputFluids(Fluid.of('gtceu:oxygen',8640))
+    .outputFluids(Fluid.of('gtceu:nitric_acid',17280))
+    .duration(100)
+    .EUt(64)//格雷科技硝酸定向大批量制作Ⅰ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_bigger_2')
+    .circuit(2)
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',2880))
+    .inputFluids(Fluid.of('gtceu:nitrogen',2880))
+    .inputFluids(Fluid.of('mekanism:oxygen',8640))
+    .outputFluids(Fluid.of('gtceu:nitric_acid',17280))
+    .duration(100)
+    .EUt(64)//格雷科技硝酸定向大批量制作Ⅱ
+
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:hydrochloric_acid_1')
+    .circuit(1)
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',288))
+    .inputFluids(Fluid.of('gtceu:chlorine',288))
+    .outputFluids(Fluid.of('gtceu:hydrochloric_acid',1152))
+    .duration(100)
+    .EUt(64)//格雷科技盐酸定向制作Ⅰ
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:hydrochloric_acid_bigger_1')
+    .circuit(2)
+    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .inputFluids(Fluid.of('gtceu:hydrogen',2880))
+    .inputFluids(Fluid.of('gtceu:chlorine',2880))
+    .outputFluids(Fluid.of('gtceu:hydrochloric_acid',11520))
+    .duration(100)
+    .EUt(64)//格雷科技盐酸定向大批量制作Ⅱ
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('prts:magic_kc')
     .circuit(1)

@@ -1,12 +1,215 @@
-ServerEvents.recipes((event) => {
+ServerEvents.recipes((event) => {//格雷科技部分
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:qingsetoujing_1')
+    .circuit(1)
+    .itemInputs('gtceu:glass_lens','2x minecraft:cyan_dye','prts:basic_wanzi')
+    .itemOutputs('gtceu:cyan_glass_lens')
+    .duration(120)
+    .EUt(40)//青色透镜制作1
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:qingsetoujing_2')
+    .circuit(1)
+    .itemInputs('gtceu:glass_lens')
+    .inputFluids(Fluid.of('gtceu:cyan_dye',288))
+    .itemOutputs('gtceu:cyan_glass_lens')
+    .duration(120)
+    .EUt(40)//青色透镜制作2
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:chengsetoujing_1')
+    .circuit(1)
+    .itemInputs('gtceu:glass_lens','2x minecraft:orange_dye','prts:basic_wanzi')
+    .itemOutputs('gtceu:orange_glass_lens')
+    .duration(120)
+    .EUt(40)//橙色透镜制作1
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:chengsetoujing_2')
+    .circuit(1)
+    .itemInputs('gtceu:glass_lens')
+    .inputFluids(Fluid.of('gtceu:orange_dye',288))
+    .itemOutputs('gtceu:orange_glass_lens')
+    .duration(120)
+    .EUt(40)//橙色透镜制作2
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_1')
+    .itemInputs('prts:densified_iron_dust','12x prts:basic_wanzi')
+    .itemOutputs('12x prts:iron_grit_dust_wanzi')
+    .duration(120)
+    .EUt(16)//铁砂尘制作
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_2')
+    .itemInputs('prts:densified_coppper_dust','12x prts:basic_wanzi')
+    .itemOutputs('12x prts:copper_grit_dust_wanzi')
+    .duration(120)
+    .EUt(16)//铜砂尘制作
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_3')
+    .itemInputs('prts:densified_gold_dust','12x prts:basic_wanzi')
+    .itemOutputs('12x prts:gold_grit_dust_wanzi')
+    .duration(120)
+    .EUt(16)//金砂尘制作
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gold_cable_1')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:gold_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:gold_single_cable')
+    .duration(120)
+    .EUt(16)//金线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gold_cable_2')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:gold_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:gold_single_cable')
+    .duration(120)
+    .EUt(16)//金线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gold_cable_3')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:gold_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:gold_single_cable')
+    .duration(120)
+    .EUt(16)//金线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gold_cable_4')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:gold_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:gold_single_cable')
+    .duration(120)
+    .EUt(16)//金线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gold_cable_5')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:gold_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:gold_single_cable')
+    .duration(120)
+    .EUt(16)//金线缆制作Ⅴ
     
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:tin_cable_1')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:tin_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:tin_single_cable')
+    .duration(120)
+    .EUt(16)//锡线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:tin_cable_2')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:tin_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:tin_single_cable')
+    .duration(120)
+    .EUt(16)//锡线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:tin_cable_3')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:tin_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:tin_single_cable')
+    .duration(120)
+    .EUt(16)//锡线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:tin_cable_4')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:tin_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:tin_single_cable')
+    .duration(120)
+    .EUt(16)//锡线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:tin_cable_5')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:tin_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:tin_single_cable')
+    .duration(120)
+    .EUt(16)//锡线缆制作Ⅴ
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:copper_cable_1')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:copper_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:copper_single_cable')
+    .duration(120)
+    .EUt(16)//铜线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:copper_cable_2')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:copper_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:copper_single_cable')
+    .duration(120)
+    .EUt(16)//铜线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:copper_cable_3')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:copper_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:copper_single_cable')
+    .duration(120)
+    .EUt(16)//铜线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:copper_cable_4')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:copper_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:copper_single_cable')
+    .duration(120)
+    .EUt(16)//铜线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:copper_cable_5')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('minecraft:copper_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:copper_single_cable')
+    .duration(120)
+    .EUt(16)//铜线缆制作Ⅴ
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:annealed_copper_cable_1')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:annealed_copper_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:annealed_copper_single_cable')
+    .duration(120)
+    .EUt(16)//退火铜线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:annealed_copper_cable_2')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:annealed_copper_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:annealed_copper_single_cable')
+    .duration(120)
+    .EUt(16)//退火铜线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:annealed_copper_cable_3')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:annealed_copper_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:annealed_copper_single_cable')
+    .duration(120)
+    .EUt(16)//退火铜线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:annealed_copper_cable_4')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:annealed_copper_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:annealed_copper_single_cable')
+    .duration(120)
+    .EUt(16)//退火铜线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:annealed_copper_cable_5')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:annealed_copper_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:annealed_copper_single_cable')
+    .duration(120)
+    .EUt(16)//退火铜线缆制作Ⅴ
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:cupronickel_cable_1')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:cupronickel_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:cupronickel_single_cable')
+    .duration(120)
+    .EUt(16)//白铜线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:cupronickel_cable_2')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:cupronickel_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:cupronickel_single_cable')
+    .duration(120)
+    .EUt(16)//白铜线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:cupronickel_cable_3')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:cupronickel_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:cupronickel_single_cable')
+    .duration(120)
+    .EUt(16)//白铜线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:cupronickel_cable_4')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:cupronickel_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:cupronickel_single_cable')
+    .duration(120)
+    .EUt(16)//白铜线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:cupronickel_cable_5')
+    .notConsumable('prts:type_c_wire_guide_connection_device')
+    .itemInputs('gtceu:cupronickel_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:cupronickel_single_cable')
+    .duration(120)
+    .EUt(16)//白铜线缆制作Ⅴ
+})
+ServerEvents.recipes((event) => {//万子科技部分
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi')
     .circuit(2)
     .notConsumable('prts:basic_wanzi_position_corrector')
     .itemInputs('prts:basic_wanzi','minecraft:iron_ingot')
     .itemOutputs('4x prts:type_d_conductive_circuit')
     .duration(80)
-    .EUt(15)
+    .EUt(15)//D型导电线路
 
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_1')
     .circuit(3)
@@ -56,154 +259,7 @@ ServerEvents.recipes((event) => {
     .duration(80)
     .EUt(15)
 
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:qingsetoujing_1')
-    .circuit(1)
-    .itemInputs('gtceu:glass_lens','2x minecraft:cyan_dye','prts:basic_wanzi')
-    .itemOutputs('gtceu:cyan_glass_lens')
-    .duration(120)
-    .EUt(40)//青色透镜制作1
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:qingsetoujing_2')
-    .circuit(1)
-    .itemInputs('gtceu:glass_lens')
-    .inputFluids(Fluid.of('gtceu:cyan_dye',288))
-    .itemOutputs('gtceu:cyan_glass_lens')
-    .duration(120)
-    .EUt(40)//青色透镜制作2
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:chengsetoujing_1')
-    .circuit(1)
-    .itemInputs('gtceu:glass_lens','2x minecraft:orange_dye','prts:basic_wanzi')
-    .itemOutputs('gtceu:orange_glass_lens')
-    .duration(120)
-    .EUt(40)//橙色透镜制作1
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:chengsetoujing_2')
-    .circuit(1)
-    .itemInputs('gtceu:glass_lens')
-    .inputFluids(Fluid.of('gtceu:orange_dye',288))
-    .itemOutputs('gtceu:orange_glass_lens')
-    .duration(120)
-    .EUt(40)//橙色透镜制作2
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_1')
-    .itemInputs('prts:densified_iron_dust','12x prts:basic_wanzi')
-    .itemOutputs('12x prts:iron_grit_dust_wanzi')
-    .duration(120)
-    .EUt(16)//铁砂尘制作
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_2')
-    .itemInputs('prts:densified_coppper_dust','12x prts:basic_wanzi')
-    .itemOutputs('12x prts:copper_grit_dust_wanzi')
-    .duration(120)
-    .EUt(16)//铜砂尘制作
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_3')
-    .itemInputs('prts:densified_gold_dust','12x prts:basic_wanzi')
-    .itemOutputs('12x prts:gold_grit_dust_wanzi')
-    .duration(120)
-    .EUt(16)//金砂尘制作
-
-    // === 蒸馏水快速制作 ===
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_distilled_water_1')
-    .circuit(1)
-    .inputFluids(Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_packaging_unit')
-    .outputFluids(Fluid.of('gtceu:distilled_water',1400))
-    .duration(24)
-    .EUt(64)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_distilled_water_2')
-    .circuit(1)
-    .inputFluids(Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_purified_packaging_unit')
-    .outputFluids(Fluid.of('gtceu:distilled_water',2100))
-    .duration(20)
-    .EUt(80)
-
-    // === 硫酸快速制作 ===
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_sulfuric_acid_1')
-    .circuit(2)
-    .inputFluids(Fluid.of('gtceu:sulfur_dioxide',1000), Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_conductive_circuit')
-    .outputFluids(Fluid.of('gtceu:sulfuric_acid',1400))
-    .duration(32)
-    .EUt(80)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_sulfuric_acid_2')
-    .circuit(2)
-    .inputFluids(Fluid.of('gtceu:sulfur_dioxide',1000), Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_purified_conductive_circuit')
-    .outputFluids(Fluid.of('gtceu:sulfuric_acid',2100))
-    .duration(26)
-    .EUt(96)
-
-    // === 盐酸快速制作 ===
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_hydrochloric_acid_1')
-    .circuit(3)
-    .inputFluids(Fluid.of('gtceu:hydrogen',1000), Fluid.of('gtceu:chlorine',1000))
-    .notConsumable('prts:type_c_risk_management_unit')
-    .outputFluids(Fluid.of('gtceu:hydrochloric_acid',1400))
-    .duration(28)
-    .EUt(64)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_hydrochloric_acid_2')
-    .circuit(3)
-    .inputFluids(Fluid.of('gtceu:hydrogen',1000), Fluid.of('gtceu:chlorine',1000))
-    .notConsumable('prts:type_c_purified_risk_management_unit')
-    .outputFluids(Fluid.of('gtceu:hydrochloric_acid',2100))
-    .duration(23)
-    .EUt(80)
-
-    // === 橡胶快速制作 ===
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_rubber_1')
-    .circuit(5)
-    .itemInputs('9x gtceu:raw_rubber_dust','prts:type_c_packaging_unit','gtceu:sulfur_dust')
-    .itemOutputs('25x gtceu:rubber_plate')
-    .duration(32)
-    .EUt(64)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_rubber_2')
-    .circuit(5)
-    .itemInputs('9x gtceu:raw_rubber_dust','prts:type_c_purified_packaging_unit','gtceu:sulfur_dust')
-    .itemOutputs('36x gtceu:rubber_plate')
-    .duration(26)
-    .EUt(80)
-
-    // === 氧气快速制作 ===
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_oxygen_1')
-    .circuit(7)
-    .inputFluids(Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_conductive_circuit')
-    .outputFluids(Fluid.of('gtceu:oxygen',1400))
-    .duration(28)
-    .EUt(80)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_oxygen_2')
-    .circuit(7)
-    .inputFluids(Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_purified_conductive_circuit')
-    .outputFluids(Fluid.of('gtceu:oxygen',2100))
-    .duration(23)
-    .EUt(96)
-
-    // === 氢气快速制作 ===
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_hydrogen_1')
-    .circuit(8)
-    .inputFluids(Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_conductive_circuit')
-    .outputFluids(Fluid.of('gtceu:hydrogen',2800))
-    .duration(28)
-    .EUt(80)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('wanzi_mv_hydrogen_2')
-    .circuit(8)
-    .inputFluids(Fluid.of('minecraft:water',1000))
-    .notConsumable('prts:type_c_purified_conductive_circuit')
-    .outputFluids(Fluid.of('gtceu:hydrogen',4200))
-    .duration(23)
-    .EUt(96)
-
+    
 
 function basic_model_wanzi_phase_change_machine(id,C,I,O,T,E){
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine(id)
@@ -457,4 +513,13 @@ event.shaped('gtceu:hv_basic_model_wanzi_phase_change_machine',[
     ['prts:basic_wanzi','gtceu:hv_machine_hull','prts:basic_wanzi'],
     ['gtceu:electrum_quadruple_wire','gtceu:hv_electric_piston','gtceu:electrum_quadruple_wire']
 ])//进阶型万子相变机配方
+})
+ServerEvents.recipes((event) => {//AE2及其拓展部分
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:yungang_1')
+    .circuit(1)
+    .itemInputs('16x #forge:ingots/steel','16x ae2:sky_stone_block')
+    .inputFluids(Fluid.of('minecraft:lava',2000))
+    .itemOutputs('16x megacells:sky_steel_block')
+    .duration(100)
+    .EUt(64)//陨钢块合成
 })

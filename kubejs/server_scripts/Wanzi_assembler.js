@@ -16,46 +16,74 @@ ServerEvents.recipes((event) => {
     //MV流体输入仓组装
 
     // === LV机器外壳快速制作 ===
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_mv_lv_hull_1')
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_lv_hull_1')
     .circuit(1)
-    .itemInputs('gtceu:lv_machine_casing','4x prts:type_c_conductive_circuit')
-    .itemOutputs('4x gtceu:lv_machine_hull')
+    .itemInputs('gtceu:lv_machine_casing','4x prts:type_c_conductive_circuit','2x gtceu:tin_single_cable')
+    .itemOutputs('5x gtceu:lv_machine_hull')
     .duration(34)
     .EUt(64)
 
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_mv_lv_hull_2')
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_lv_hull_2')
     .circuit(1)
-    .itemInputs('gtceu:lv_machine_casing','4x prts:type_d_conductive_circuit')
-    .itemOutputs('2x gtceu:lv_machine_hull')
-    .duration(30)
-    .EUt(80)
-
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_mv_lv_hull_3')
-    .circuit(1)
-    .itemInputs('gtceu:lv_machine_casing','4x prts:type_c_purified_conductive_circuit')
-    .itemOutputs('6x gtceu:lv_machine_hull')
-    .duration(34)
-    .EUt(64)
-
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_mv_lv_hull_4')
-    .circuit(1)
-    .itemInputs('gtceu:lv_machine_casing','4x prts:type_d_purified_conductive_circuit')
+    .itemInputs('gtceu:lv_machine_casing','4x prts:type_d_conductive_circuit','2x gtceu:tin_single_cable')
     .itemOutputs('3x gtceu:lv_machine_hull')
     .duration(30)
     .EUt(80)
 
-    // === MV机器外壳快速制作 ===
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_mv_mv_hull_1')
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_lv_hull_3')
     .circuit(1)
-    .itemInputs('gtceu:mv_machine_casing','prts:type_c_conductive_circuit')
-    .itemOutputs('gtceu:mv_machine_hull')
+    .itemInputs('gtceu:lv_machine_casing','4x prts:type_c_purified_conductive_circuit','2x gtceu:tin_single_cable')
+    .itemOutputs('8x gtceu:lv_machine_hull')
+    .duration(34)
+    .EUt(64)
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_lv_hull_4')
+    .circuit(1)
+    .itemInputs('gtceu:lv_machine_casing','4x prts:type_d_purified_conductive_circuit','2x gtceu:tin_single_cable')
+    .itemOutputs('5x gtceu:lv_machine_hull')
+    .duration(30)
+    .EUt(80)
+
+    // === MV机器外壳高效制作 ===
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_mv_hull_1')
+    .circuit(1)
+    .itemInputs('gtceu:mv_machine_casing','prts:type_c_conductive_circuit','2x gtceu:copper_single_cable')
+    .itemOutputs('3x gtceu:mv_machine_hull')
     .duration(36)
     .EUt(80)
 
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_mv_mv_hull_2')
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_mv_hull_2')
     .circuit(1)
-    .itemInputs('2x gtceu:mv_machine_casing','2x prts:type_c_purified_conductive_circuit','#gtecu:waw_yuan')
+    .itemInputs('2x gtceu:mv_machine_casing','2x prts:type_c_purified_conductive_circuit','2x gtceu:copper_single_cable')
+    .itemOutputs('6x gtceu:mv_machine_hull')
+    .duration(30)
+    .EUt(96)
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_mv_hull_3')
+    .circuit(1)
+    .itemInputs('gtceu:mv_machine_casing','prts:type_c_conductive_circuit','2x gtceu:annealed_copper_single_cable')
     .itemOutputs('4x gtceu:mv_machine_hull')
+    .duration(36)
+    .EUt(80)
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_mv_hull_4')
+    .circuit(1)
+    .itemInputs('2x gtceu:mv_machine_casing','2x prts:type_c_purified_conductive_circuit','2x gtceu:annealed_copper_single_cable')
+    .itemOutputs('8x gtceu:mv_machine_hull')
+    .duration(30)
+    .EUt(96)
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_mv_hull_5')
+    .circuit(1)
+    .itemInputs('gtceu:mv_machine_casing','prts:type_c_conductive_circuit','2x gtceu:cupronickel_single_cable')
+    .itemOutputs('5x gtceu:mv_machine_hull')
+    .duration(36)
+    .EUt(80)
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_mv_hull_6')
+    .circuit(1)
+    .itemInputs('2x gtceu:mv_machine_casing','2x prts:type_c_purified_conductive_circuit','2x gtceu:cupronickel_single_cable')
+    .itemOutputs('10x gtceu:mv_machine_hull')
     .duration(30)
     .EUt(96)
 
@@ -959,200 +987,4 @@ ServerEvents.recipes((event) => {
     .EUt(120)
     //正式万子覆膜喷涂器
 
-    // ==================== DSV型组件合成配方 ====================
-    // DSV型组件 - 万子组装机制作（标准方法）
-    
-    event.recipes.gtceu.basic_wanzi_assembler('dsv_component_assembler_1')
-        .circuit(3)
-        .itemInputs(
-            '3x prts:type_c_conductive_circuit',
-            '2x prts:type_c_packaging_unit',
-            '2x prts:type_c_circuit_cross_domain_actuator',
-            'prts:type_c_high_voltage_transformation_component',
-            '2x prts:type_one_wanzi'
-        )
-        .inputFluids(Fluid.of('gtceu:waw', 144))
-        .itemOutputs('2x prts:dsv_component')
-        .duration(160)
-        .EUt(96)
-    
-    // DSV型组件和实验组件的组合配方（高级应用）
-    
-    event.recipes.gtceu.basic_wanzi_assembler('dsv_combined_advanced_motor')
-        .notConsumable('prts:dsv_component')
-        .notConsumable('prts:experimental_dsv_component')
-        .itemInputs(
-            '2x gtceu:stainless_steel_rod',
-            '4x gtceu:silver_single_wire',
-            'gtceu:magnetic_steel_rod'
-        )
-        .inputFluids(Fluid.of('gtceu:waw', 144))
-        .itemOutputs('8x gtceu:hv_electric_motor')  // 原版2个，提升300%
-        .duration(50)
-        .EUt(128)
-
-    // ==================== 拓展用途配方 ====================
-    
-    // 高效隔绝组件 - 万子组装机制作
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_high_isolation')
-        .circuit(15)
-        .itemInputs('prts:type_c_risk_management_unit', '2x gtceu:polyethylene_plate', 'gtceu:rubber_plate')
-        .itemOutputs('prts:high_efficiency_isolation_component')
-        .duration(120)
-        .EUt(96)
-    
-    // 常规组件 - 万子组装机制作
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_normal_component')
-        .circuit(20)
-        .itemInputs('prts:type_c_resistor', 'prts:type_c_packaging_unit', 'gtceu:steel_plate')
-        .itemOutputs('2x prts:conventional_component')
-        .duration(100)
-        .EUt(64)
-    
-    // 反常规组件 - 万子组装机制作
-    event.recipes.gtceu.basic_wanzi_assembler('wanzi_abnormal_component')
-        .circuit(21)
-        .itemInputs('prts:conventional_component', 'prts:abnormal_data', 'prts:type_c_specialized_circuit_group')
-        .itemOutputs('prts:imitation_conventional_component')
-        .duration(150)
-        .EUt(96)
-})
-
-ServerEvents.recipes((event) => {
-    function basic_wanzi_assembler(id,C,I,O,T,E){
-        event.recipes.gtceu.basic_wanzi_assembler(id)
-             .circuit(C)
-             .itemInputs(I)
-             .itemOutputs(O)
-             .duration(T)
-             .EUt(E)
-    }//C型材料简化MV组件配方
-
-    // ========== MV电动马达 ==========
-    
-    // 1. C型导电线路马达
-    basic_wanzi_assembler('c_simple_mv_motor_1',1,[
-        '2x prts:type_c_conductive_circuit',
-        'gtceu:magnetic_steel_rod',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_electric_motor',100,64)
-
-    // 2. 纯化C型导电线路马达
-    basic_wanzi_assembler('c_simple_mv_motor_2',1,[
-        'prts:type_c_purified_conductive_circuit',
-        'gtceu:magnetic_steel_rod',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_electric_motor',80,80)
-
-    // ========== MV电动活塞 ==========
-
-    // 3. C型封装活塞
-    basic_wanzi_assembler('c_simple_mv_piston_1',1,[
-        'gtceu:mv_electric_motor',
-        'prts:type_c_packaging_unit',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_electric_piston',100,64)
-
-    // 4. 纯化C型封装活塞
-    basic_wanzi_assembler('c_simple_mv_piston_2',1,[
-        'gtceu:mv_electric_motor',
-        'prts:type_c_purified_packaging_unit',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_electric_piston',80,80)
-
-    // ========== MV机械臂 ==========
-
-    // 5. C型电阻机械臂
-    basic_wanzi_assembler('c_simple_mv_arm_1',1,[
-        'gtceu:mv_electric_piston',
-        'prts:type_c_resistor',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_robot_arm',110,68)
-
-    // 6. 纯化C型电阻机械臂
-    basic_wanzi_assembler('c_simple_mv_arm_2',1,[
-        'gtceu:mv_electric_piston',
-        'prts:type_c_purified_resistor',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_robot_arm',90,84)
-
-    // ========== MV传送带 ==========
-
-    // 7. C型导电传送带
-    basic_wanzi_assembler('c_simple_mv_conveyor_1',1,[
-        'gtceu:mv_electric_motor',
-        'prts:type_c_conductive_circuit',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_conveyor_module',100,64)
-
-    // 8. 纯化C型导电传送带
-    basic_wanzi_assembler('c_simple_mv_conveyor_2',1,[
-        'gtceu:mv_electric_motor',
-        'prts:type_c_purified_conductive_circuit',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_conveyor_module',80,80)
-
-    // ========== MV电动泵 ==========
-
-    // 9. C型高压泵
-    basic_wanzi_assembler('c_simple_mv_pump_1',1,[
-        'gtceu:mv_electric_motor',
-        'prts:type_c_high_voltage_transformation_component',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_electric_pump',100,64)
-
-    // 10. 纯化C型高压泵
-    basic_wanzi_assembler('c_simple_mv_pump_2',1,[
-        'gtceu:mv_electric_motor',
-        'prts:type_c_purified_high_voltage_transformation_component',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_electric_pump',80,80)
-
-    // ========== MV传感器 ==========
-
-    // 11. C型导电传感器
-    basic_wanzi_assembler('c_simple_mv_sensor_1',1,[
-        'prts:type_c_conductive_circuit',
-        'gtceu:ender_eye_plate',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_sensor',110,72)
-
-    // 12. 纯化C型导电传感器
-    basic_wanzi_assembler('c_simple_mv_sensor_2',1,[
-        'prts:type_c_purified_conductive_circuit',
-        'gtceu:ender_eye_plate',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_sensor',90,88)
-
-    // ========== MV发射器 ==========
-
-    // 13. C型电阻发射器
-    basic_wanzi_assembler('c_simple_mv_emitter_1',1,[
-        'prts:type_c_resistor',
-        'gtceu:ender_eye_plate',
-        'prts:type_one_wanzi'
-    ],'2x gtceu:mv_emitter',110,72)
-
-    // 14. 纯化C型电阻发射器
-    basic_wanzi_assembler('c_simple_mv_emitter_2',1,[
-        'prts:type_c_purified_resistor',
-        'gtceu:ender_eye_plate',
-        'prts:purified_type_one_wanzi'
-    ],'3x gtceu:mv_emitter',90,88)
-
-    // ========== MV力场发生器 ==========
-
-    // 15. C型封装力场
-    basic_wanzi_assembler('c_simple_mv_field_1',1,[
-        'prts:type_c_packaging_unit',
-        'gtceu:ender_pearl_plate',
-        'prts:medium_voltage_wanzi_circuit'
-    ],'2x gtceu:mv_field_generator',120,96)
-
-    // 16. 纯化C型封装力场
-    basic_wanzi_assembler('c_simple_mv_field_2',1,[
-        'prts:type_c_purified_packaging_unit',
-        'gtceu:ender_pearl_plate',
-        'prts:medium_voltage_wanzi_circuit'
-    ],'3x gtceu:mv_field_generator',100,112)
 })

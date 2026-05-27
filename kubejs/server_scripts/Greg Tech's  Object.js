@@ -9,12 +9,12 @@ ServerEvents.recipes((event) => {
              .duration(600)//持续时间
              .EUt(eu)//电压
     }	//大型蒸汽发电配方设置代码块
-        large_scale_steam_generator('steamgenerator','minecraft:coal',-HV,288,18,)
-        large_scale_steam_generator('steamgenerator1','minecraft:charcoal',-HV,288,18,)
-        large_scale_steam_generator('steamgenerator2','gtceu:charcoal_dust',-HV,288,18,)
-        large_scale_steam_generator('steamgenerator3','gtceu:coal_dust',-HV,288,18,)
-        large_scale_steam_generator('steamgenerator4','minecraft:coal_block',-EV,576,18,)   
-        large_scale_steam_generator('steamgenerator5','gtceu:charcoal_block',-EV,576,18,) 
+        large_scale_steam_generator('steamgenerator','minecraft:coal',-12,288,18,)
+        large_scale_steam_generator('steamgenerator1','minecraft:charcoal',-16,288,18,)
+        large_scale_steam_generator('steamgenerator2','gtceu:charcoal_dust',-26,288,18,)
+        large_scale_steam_generator('steamgenerator3','gtceu:coal_dust',-16,288,18,)
+        large_scale_steam_generator('steamgenerator4','minecraft:coal_block',-32,576,18,)   
+        large_scale_steam_generator('steamgenerator5','gtceu:charcoal_block',-32,576,18,) 
         //大型蒸汽发电配方实现代码块 
     
         event.shaped('gtceu:large_scale_steam_generator',[

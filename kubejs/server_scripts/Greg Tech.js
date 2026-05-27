@@ -2112,7 +2112,7 @@ ServerEvents.recipes(event => {
 
     event.shaped('prts:low_voltage_wanzi_circuit',[
         ['prts:type_d_resistor','prts:type_d_conductive_circuit','prts:type_d_resistor'],
-        ['prts:type_d_high_voltage_transformation_component','prts:type_d_patype_d_high_voltage_transformation_component_d_high_voltage_transformation_component'],
+        ['prts:type_d_high_voltage_transformation_component','prts:type_d_packaging_unit','prts:type_d_high_voltage_transformation_component'],
         ['prts:type_d_conductive_circuit','prts:type_d_resistor','prts:type_d_conductive_circuit']
     ])//低压万子电路手动制作
 
@@ -4052,50 +4052,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('2x gtceu:mv_emitter')
         .duration(210)
         .EUt(64)
-    
-    // === 纯化C型线导连接装置 - 高效线缆制作 ===
-    
-    // 使用纯化C型线导连接装置制作铜线缆（产量提升100%）
-    event.recipes.gtceu.assembler('gtceu_purified_cable_copper')
-        .itemInputs('gtceu:copper_single_wire', 'gtceu:rubber_plate', 'prts:type_c_purified_wire_guide_connection_device')
-        .itemOutputs('4x gtceu:copper_single_cable')
-        .duration(50)
-        .EUt(32)
-    
-    // 使用纯化C型线导连接装置制作金线缆（产量提升100%）
-    event.recipes.gtceu.assembler('gtceu_purified_cable_gold')
-        .itemInputs('gtceu:gold_single_wire', 'gtceu:rubber_plate', 'prts:type_c_purified_wire_guide_connection_device')
-        .itemOutputs('4x gtceu:gold_single_cable')
-        .duration(50)
-        .EUt(32)
-    
-    // === 纯化C型反应定向装置 - 高效化学反应 ===
-    
-    // 使用纯化C型反应定向装置制作硫酸（产量提升50%）
-    event.recipes.gtceu.chemical_reactor('gtceu_purified_sulfuric_acid')
-        .inputFluids(Fluid.of('gtceu:sulfur_dioxide', 1000), Fluid.of('minecraft:water', 1000))
-        .notConsumable('prts:type_c_purified_directed_chemical_reaction_device')
-        .outputFluids(Fluid.of('gtceu:sulfuric_acid', 1500))
-        .duration(60)
-        .EUt(32)
-    
-    // 使用纯化C型反应定向装置制作盐酸（产量提升50%）
-    event.recipes.gtceu.chemical_reactor('gtceu_purified_hydrochloric_acid')
-        .inputFluids(Fluid.of('gtceu:hydrogen', 1000), Fluid.of('gtceu:chlorine', 1000))
-        .notConsumable('prts:type_c_purified_directed_chemical_reaction_device')
-        .outputFluids(Fluid.of('gtceu:hydrochloric_acid', 1500))
-        .duration(60)
-        .EUt(32)
-    
-    // === 纯化C型物质相变装置 - 高效材料转换 ===
-    
-    // 使用纯化C型物质相变装置制作橡胶板（产量提升50%）
-    event.recipes.gtceu.alloy_smelter('gtceu_purified_rubber_plate')
-        .itemInputs('9x gtceu:raw_rubber_dust', 'prts:type_c_purified_phase_change_device')
-        .itemOutputs('18x gtceu:rubber_plate')
-        .duration(120)
-        .EUt(48)
-    
     
     // 使用纯化DSV型组件制作数据控制电路（特殊高效配方）
     event.recipes.gtceu.circuit_assembler('gtceu_purified_data_control')
