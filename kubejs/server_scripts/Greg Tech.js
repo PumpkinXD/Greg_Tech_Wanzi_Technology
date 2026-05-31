@@ -2019,7 +2019,7 @@ ServerEvents.recipes(event => {
     .EUt(20)
 
     event.recipes.gtceu.chaogaosuhejinyelian_1('teshuhejin_2')
-    .circuit(1)
+    .circuit(2)
     .itemInputs('4x prts:basic_wanzi','5x prts:type_one_wanzi_special_alloy')
     .itemOutputs('4x prts:type_two_wanzi_special_alloy')
     .duration(100)
@@ -2033,7 +2033,7 @@ ServerEvents.recipes(event => {
     .EUt(20)
 
     event.recipes.gtceu.chaogaosuhejinyelian_1('teshuhejin_4')
-    .circuit(1)
+    .circuit(2)
     .itemInputs('4x prts:basic_wanzi','prts:type_two_wanzi_special_alloy','4x prts:type_three_wanzi_special_alloy')
     .itemOutputs('4x prts:type_four_wanzi_special_alloy')
     .duration(100)
