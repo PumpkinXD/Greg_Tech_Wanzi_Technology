@@ -133,7 +133,9 @@ StartupEvents.registry("item",event=>{
     event.create("prts:type_b_purified_wanzi_emission_concentrator","basic");
     event.create("prts:type_b_purified_wire_guide_connection_device","basic");
     event.create("prts:type_b_purified_directed_chemical_reaction_device","basic");
-    event.create("prts:type_b_purified_phase_change_device","basic")
+    event.create("prts:type_b_purified_phase_change_device","basic");
+    event.create("prts:ultra_compacted_copper_plate","basic")
+    event.create("prts:ultra_high_stiffness_toughness_plate","basic")
 
     event.create("prts:basic_wanzi_sword","sword")
          .speedBaseline(-2.4)           // 攻击速度：1.6
@@ -184,7 +186,9 @@ StartupEvents.registry("block",event=>{
     event.create("prts:naweigeshikeqiankuai","basic");
     event.create("prts:naweigeshikexikuai","basic");
     event.create("prts:naweigeshiketankuai","basic");
-    event.create("prts:gaoxiaoshuiyayanmofangkuai","basic")
+    event.create("prts:gaoxiaoshuiyayanmofangkuai","basic");
+    event.create("prts:high_voltage_universal_casing","basic");
+    event.create("prts:ultra_high_efficiency_adsorption_core_component")
 })
 StartupEvents.registry("fluid",event=>{
     event.create("prts:jianduduye").thinTexture(0x8a209c).noBlock()
