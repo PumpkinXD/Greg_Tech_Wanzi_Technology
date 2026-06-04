@@ -527,6 +527,6 @@ ServerEvents.recipes((event) => {
         B:'farmersdelight:organic_compost',
         C:'gtceu:hv_electric_pump',
         D:'prts:type_c_packaging_unit',
-        S:'gtceu:hv_machine_hull'
+        S:'prts:high_voltage_universal_casing'
     })//HV万子培养机制作配方
 })

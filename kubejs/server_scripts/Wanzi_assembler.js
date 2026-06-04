@@ -987,4 +987,16 @@ ServerEvents.recipes((event) => {
     .EUt(120)
     //正式万子覆膜喷涂器
 
+    event.recipes.gtceu.basic_wanzi_assembler('prts:hv_wn_1')
+    .circuit(1)
+    .itemInputs('2x prts:ultra_high_stiffness_toughness_plate','2x gtceu:waw_quadruple_wire','prts:unconventional_crystal_plate','gtceu:hv_machine_hull')
+    .itemOutputs('prts:high_voltage_universal_casing')
+    .duration(145)
+    .EUt(120)//HV万能机壳制作1
+    event.recipes.gtceu.basic_wanzi_assembler('prts:hv_wn_2')
+    .circuit(1)
+    .itemInputs('2x prts:ultra_high_stiffness_toughness_plate','2x gtceu:waw_quadruple_wire','prts:unconventional_crystal_plate','2x gtceu:mv_machine_hull','prts:medium_voltage_wanzi_circuit')
+    .itemOutputs('prts:high_voltage_universal_casing')
+    .duration(145)
+    .EUt(120)//HV万能机壳制作2
 })

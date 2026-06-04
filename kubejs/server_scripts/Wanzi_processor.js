@@ -65,39 +65,39 @@ ServerEvents.recipes((event) => {
     ],'2x minecraft:diamond',240,30,'gtceu:diamond_dust','gtceu:diamond_dust',143,115,28,57)
     basic_model_wanzi_processor('wanzi_processor_4',8,[
         'prts:basic_wanzi'
-    ],'3x minecraft:coal',80,15,'air','air',0,0,0,0)
+    ],'3x minecraft:coal',80,15,'minecraft:coal','minecraft:coal',1000,500,500,250)
     basic_model_wanzi_processor('wanzi_processor_5',4,[
         'prts:basic_wanzi'
-    ],'3x minecraft:redstone',80,15,'air','air',0,0,0,0)
+    ],'3x minecraft:redstone',80,15,'minecraft:redstone','minecraft:redstone',1000,500,500,250)
     basic_model_wanzi_processor('wanzi_processor_6',5,[
         'prts:basic_wanzi'
-    ],'4x minecraft:lapis_lazuli',80,15,'air','air',0,0,0,0)
+    ],'4x minecraft:lapis_lazuli',80,15,'minecraft:lapis_lazuli','minecraft:lapis_lazuli',1000,500,500,250)
     basic_model_wanzi_processor('wanzi_processor_7',0,[
         '16x prts:basic_wanzi',
         'prts:iron_grit_dust_wanzi',
         'prts:copper_grit_dust_wanzi'
-    ],'2x prts:base_substrate_wanjing',240,30,'prts:substrate_dust_wanjing','air',143,28,0,0)
+    ],'2x prts:base_substrate_wanjing',240,30,'prts:substrate_dust_wanjing','prts:substrate_dust_wanjing',143,28,100,20)
     basic_model_wanzi_processor('wanzi_processor_8',1,[
         '8x prts:basic_wanzi',
         '4x prts:iron_grit_dust_wanzi',
         '2x prts:copper_grit_dust_wanzi'
-    ],'2x prts:base_substrate_wanjing',192,20,'prts:substrate_dust_wanjing','air',143,28,0,0)
+    ],'2x prts:base_substrate_wanjing',192,20,'prts:substrate_dust_wanjing','prts:substrate_dust_wanjing',143,28,100,20)
     basic_model_wanzi_processor('wanzi_processor_9',2,[
         '4x prts:basic_wanzi',
         '8x prts:iron_grit_dust_wanzi',
         '4x prts:copper_grit_dust_wanzi',
         'prts:gold_grit_dust_wanzi'
-    ],'2x prts:base_substrate_wanjing',144,10,'prts:substrate_dust_wanjing','air',287,57,0,0)
+    ],'2x prts:base_substrate_wanjing',144,10,'prts:substrate_dust_wanjing','prts:substrate_dust_wanjing',287,57,100,20)
     basic_model_wanzi_processor('wanzi_processor_10',2,[
         'prts:iron_grit_dust_wanzi',
         '4x prts:type_one_wanzi',
         '#gtceu:waw_yuan',
         'prts:copper_grit_dust_wanzi'
-    ],'2x prts:stable_wanjing_substrate',144,40,'prts:substrate_dust_wanjing','air',575,115,0,0)
+    ],'2x prts:stable_wanjing_substrate',144,40,'prts:substrate_dust_wanjing','prts:substrate_dust_wanjing',575,115,100,20)
     basic_model_wanzi_processor('wanzi_processor_11',2,[
         'prts:base_substrate_wanjing',
         '#gtceu:waw_yuan'
-    ],'2x prts:stable_wanjing_substrate',144,40,'prts:substrate_dust_wanjing','air',575,115,0,0)
+    ],'2x prts:stable_wanjing_substrate',144,40,'prts:substrate_dust_wanjing','prts:substrate_dust_wanjing',575,115,100,20)
 
     // ==================== DSV型实验组件合成配方 ====================
     // DSV型实验组件 - 万子处理机制作（使用DSV型组件升级）
@@ -130,7 +130,7 @@ ServerEvents.recipes((event) => {
 
     event.shaped('gtceu:hv_basic_model_wanzi_processor',[
         ['#forge:glass','prts:basic_wanzi','gtceu:hv_electric_motor'],
-        ['gtceu:advanced_integrated_circuit','gtceu:hv_machine_hull','gtceu:advanced_integrated_circuit'],
+        ['gtceu:advanced_integrated_circuit','prts:high_voltage_universal_casing','gtceu:advanced_integrated_circuit'],
         ['#forge:glass','prts:basic_wanzi','gtceu:hv_electric_motor']
     ])//进阶型万子处理机制作
 })

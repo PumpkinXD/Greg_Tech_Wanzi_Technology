@@ -70,8 +70,8 @@ ServerEvents.recipes((event) => {
     'minecraft:raw_gold',
     'gtceu:raw_magnetite',
     'gtceu:raw_vanadium_magnetite',
-    'air',
-    1500,5000,2000,5000,2000,5000,0,0,
+    'gtceu:waw_dust',
+    1500,5000,2000,5000,2000,5000,500,500,
     'prts:crude_etched_iron_block',
     'prts:crude_etched_gold_block'
     )
@@ -212,8 +212,8 @@ ServerEvents.recipes((event) => {
         'prts:heteromorphic_diamond',
         'prts:primary_void_coal',
         'prts:heteromorphic_steel',
-        'air',
-    7500,7500,7500,7500,7500,7500,0,0,
+        'gtceu:waw_ingot',
+    7500,7500,7500,7500,7500,7500,1000,1000,
     'prts:naweigeshiketankuai',
     'prts:naweigeshikegangkuai'
     )
@@ -311,6 +311,6 @@ ServerEvents.recipes((event) => {
         B:'prts:production_type_wanzi_actuator',
         C:'prts:production_type_wanzi_emitter',
         D:'prts:production_type_wanzi_holder',
-        S:'gtceu:advanced_integrated_circuit'
+        S:'prts:high_voltage_universal_casing'
     })//进阶型万子采矿机配方
 })

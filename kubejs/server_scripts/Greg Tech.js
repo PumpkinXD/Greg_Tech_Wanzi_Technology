@@ -1,42 +1,4 @@
 ServerEvents.recipes(event => {
-    //如果要添加新的配方类型，请在下面的recipes对象中添加对应的函数，并且函数参数需要按照gtceuRecipe函数的参数顺序进行编写
-    const recipes = {
-        assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'assembler', id, eu, inputs, outputs, time),
-        sifter: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, inputs, outputs, time),
-        circuit_assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, inputs, outputs, time),
-        chemical_reactor: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, inputs, outputs, time),
-        macerator: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, inputs, outputs, time),
-        assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'assembler', id, eu, time, inputs, outputs),
-        sifter: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'sifter', id, eu, time, inputs, outputs),
-        circuit_assembler: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'circuit_assembler', id, eu, time, inputs, outputs),
-        chemical_reactor: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'chemical_reactor', id, eu, time, inputs, outputs),
-        macerator: (id, eu, time, inputs, outputs) => gtceuRecipe(event, 'macerator', id, eu, time, inputs, outputs),
-    }
-    recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120,
-        [
-            ['item','2x ae2:fluix_covered_cable'],
-            ['item','2x gtceu:polyvinyl_chloride_foil'],
-        ],
-        [
-            ['item', '3x ae2:fluix_smart_dense_cable']
-        ])
-    /*以下为配方编写区，编写时请按照recipes对象中函数的参数顺序进行编写，参数说明如下：
-    第一个参数id为配方输出的物品ID，
-    第二个参数eu为配方所需的EU/t，
-    第三个参数time为配方所需的时间（tick），
-    第四个参数inputs为一个二维数组，数组内每个元素也是一个数组，
-        包含三个元素:分别是输入类型（item或fluid）、输入数量(物品需要分开用item写，流体需要用Fluid.of写）和输入ID
-    第五个参数outputs与第四个参数格式相同，但表示输出
-     recipes.assembler('ae2:fluix_smart_dense_cable', 24, 120,
-         [
-            ['item', "2x ae2:fluix_covered_cable",
-            ['item','2x gtceu:polyvinyl_chloride_foil'],
-            ['fluid',Fluid.of('minecraft:water',1000)]
-         ],
-         [
-            ['item', "3x ae2:fluix_smart_dense_cable"],
-         ])*/
-
     event.recipes.gtceu.chemical_reactor('ae2:sky_dust')           
     .itemInputs('ae2:sky_dust','gtceu:stone_dust')
     .inputFluids(Fluid.of('gtceu:steel', 144))
@@ -2011,14 +1973,14 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(32)//覆膜喷涂获取橡胶板
 
-    event.recipes.gtceu.chaogaosuhejinyelian_1('teshuhejin_1')
+    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:teshuhejin_1')
     .circuit(1)
     .itemInputs('4x prts:basic_wanzi','4x gtceu:iron_dust','gtceu:red_alloy_ingot')
     .itemOutputs('4x prts:type_one_wanzi_special_alloy')
     .duration(100)
     .EUt(20)
 
-    event.recipes.gtceu.chaogaosuhejinyelian_1('teshuhejin_2')
+    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:teshuhejin_2')
     .circuit(2)
     .itemInputs('4x prts:basic_wanzi','5x prts:type_one_wanzi_special_alloy')
     .itemOutputs('4x prts:type_two_wanzi_special_alloy')
@@ -3608,6 +3570,930 @@ ServerEvents.recipes(event => {
         C:'prts:medium_voltage_wanzi_circuit',
         S:'gtceu:lv_item_collector'
     })//物品收集器升级至MV_2
+
+    event.shaped('gtceu:hv_electric_furnace',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:hv_electric_furnace'
+    })//电炉升级至HV
+
+    event.shaped('gtceu:hv_alloy_smelter',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:hv_alloy_smelter'
+    })//合金炉升级至HV
+
+    event.shaped('gtceu:hv_arc_furnace',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_arc_furnace'
+    })//电弧炉升级至HV
+
+    event.shaped('gtceu:hv_assembler',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_assembler'
+    })//组装机升级至HV
+
+    event.shaped('gtceu:hv_autoclave',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_autoclave'
+    })//高压釜升级至HV
+
+    event.shaped('gtceu:hv_bender',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_bender'
+    })//卷板机升级至HV
+
+    event.shaped('gtceu:hv_brewery',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_brewery'
+    })//酿造室升级至HV
+
+    event.shaped('gtceu:hv_canner',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_canner'
+    })//装罐机升级至HV
+
+    event.shaped('gtceu:hv_centrifuge',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_centrifuge'
+    })//离心机升级至HV
+
+    event.shaped('gtceu:hv_chemical_bath',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_chemical_bath'
+    })//化学浸洗机升级至HV
+
+    event.shaped('gtceu:hv_chemical_reactor',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_chemical_reactor'
+    })//化学反应釜升级至HV
+
+    event.shaped('gtceu:hv_compressor',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_compressor'
+    })//压缩机升级至HV
+
+    event.shaped('gtceu:hv_cutter',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_cutter'
+    })//切割机升级至HV
+
+    event.shaped('gtceu:hv_distillery',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_distillery'
+    })//蒸馏室升级至HV
+
+    event.shaped('gtceu:hv_electrolyzer',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_electrolyzer'
+    })//电解机升级至HV
+
+    event.shaped('gtceu:hv_electromagnetic_separator',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_electromagnetic_separator'
+    })//电磁选矿机升级至HV
+
+    event.shaped('gtceu:hv_extractor',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_extractor'
+    })//提取机升级至HV
+
+    event.shaped('gtceu:hv_extruder',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_extruder'
+    })//压模器升级至HV
+
+    event.shaped('gtceu:hv_fermenter',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_fermenter'
+    })//发酵槽升级至HV
+
+    event.shaped('gtceu:hv_fluid_heater',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_fluid_heater'
+    })//流体加热器升级至HV
+
+    event.shaped('gtceu:hv_fluid_solidifier',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_fluid_solidifier'
+    })//流体固化器升级至HV
+
+    event.shaped('gtceu:hv_forge_hammer',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_forge_hammer'
+    })//锻造锤升级至HV
+
+    event.shaped('gtceu:hv_bender',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_bender'
+    })//卷板机升级至HV
+
+    event.shaped('gtceu:hv_forming_press',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_forming_press'
+    })//冲压机床升级至HV
+
+    event.shaped('gtceu:hv_lathe',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_lathe'
+    })//车床升级至HV
+
+    event.shaped('gtceu:hv_scanner',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_scanner'
+    })//扫描仪升级至HV
+
+    event.shaped('gtceu:hv_mixer',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_mixer'
+    })//搅拌机升级至HV
+
+    event.shaped('gtceu:hv_ore_washer',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_ore_washer'
+    })//洗矿厂升级至HV
+
+    event.shaped('gtceu:hv_packer',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_packer'
+    })//打包机升级至HV
+
+    event.shaped('gtceu:hv_polarizer',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_polarizer'
+    })//磁化机升级至HV
+
+    event.shaped('gtceu:hv_laser_engraver',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_laser_engraver'
+    })//激光蚀刻机升级至HV
+
+    event.shaped('gtceu:hv_sifter',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_sifter'
+    })//筛选机升级至HV
+
+    event.shaped('gtceu:hv_thermal_centrifuge',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_thermal_centrifuge'
+    })//热力离心机升级至HV
+
+    event.shaped('gtceu:hv_wiremill',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_wiremill'
+    })//线材轧机升级至HV
+
+    event.shaped('gtceu:hv_macerator',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_macerator'
+    })//研磨机升级至HV
+
+    event.shaped('gtceu:hv_gas_collector',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_gas_collector'
+    })//集气室升级至HV
+
+    event.shaped('gtceu:hv_rock_crusher',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_rock_crusher'
+    })//碎岩机升级至HV
+
+    event.shaped('gtceu:hv_pump',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_pump'
+    })//泵升级至HV
+
+    event.shaped('gtceu:hv_fisher',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_fisher'
+    })//钓鱼机升级至HV
+
+    event.shaped('gtceu:hv_block_breaker',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_block_breaker'
+    })//方块破坏器升级至HV
+
+    event.shaped('gtceu:hv_miner',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_miner'
+    })//采矿机升级至HV
+
+    event.shaped('gtceu:hv_item_collector',[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_nichrome_plate',
+        B:'gtceu:double_stainless_steel_plate',
+        C:'#gtceu:circuits/hv',
+        S:'gtceu:mv_item_collector'
+    })//物品收集器升级至HV
+
+    event.shaped(Item.of('gtceu:hv_electric_furnace',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate', 
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_electric_furnace'
+    })//电炉升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_alloy_smelter',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_alloy_smelter'
+    })//合金炉升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_arc_furnace',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_arc_furnace'
+    })//电弧炉升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_assembler',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_assembler'
+    })//组装机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_autoclave',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_autoclave'
+    })//高压釜升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_bender',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_bender'
+    })//卷板机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_brewery',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_brewery'
+    })//酿造室升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_canner',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_canner'
+    })//装罐机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_centrifuge',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_centrifuge'
+    })//离心机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_chemical_bath',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_chemical_bath'
+    })//化学浸洗机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_chemical_reactor',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_chemical_reactor'
+    })//化学反应釜升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_compressor',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_compressor'
+    })//压缩机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_cutter',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_cutter'
+    })//切割机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_distillery',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_distillery'
+    })//蒸馏室升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_electrolyzer',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_electrolyzer'
+    })//电解机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_electromagnetic_separator',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_electromagnetic_separator'
+    })//电磁选矿机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_extractor',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_extractor'
+    })//提取机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_extruder',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_extruder'
+    })//压模器升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_fermenter',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_fermenter'
+    })//发酵槽升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_fluid_heater',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_fluid_heater'
+    })//流体加热器升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_fluid_solidifier',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_fluid_solidifier'
+    })//流体固化器升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_forge_hammer',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_forge_hammer'
+    })//锻造锤升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_bender',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_bender'
+    })//卷板机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_forming_press',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_forming_press'
+    })//冲压机床升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_lathe',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_lathe'
+    })//车床升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_scanner',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_scanner'
+    })//扫描仪升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_mixer',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_mixer'
+    })//搅拌机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_ore_washer',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_ore_washer'
+    })//洗矿厂升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_packer',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_packer'
+    })//打包机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_polarizer',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_polarizer'
+    })//磁化机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_laser_engraver',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_laser_engraver'
+    })//激光蚀刻机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_sifter',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_sifter'
+    })//筛选机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_thermal_centrifuge',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_thermal_centrifuge'
+    })//热力离心机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_wiremill',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_wiremill'
+    })//线材轧机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_macerator',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_macerator'
+    })//研磨机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_gas_collector',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_gas_collector'
+    })//集气室升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_rock_crusher',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_rock_crusher'
+    })//碎岩机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_pump',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_pump'
+    })//泵升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_fisher',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_fisher'
+    })//钓鱼机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_block_breaker',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_block_breaker'
+    })//方块破坏器升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_miner',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_miner'
+    })//采矿机升级至HV_2
+
+    event.shaped(Item.of('gtceu:hv_item_collector',2),[
+        "ABA",
+        "ASA",
+        "ACA"
+    ],{
+        A:'gtceu:double_stainless_steel_plate',
+        B:'gtceu:double_nichrome_plate',
+        C:'prts:high_voltage_universal_casing',
+        S:'gtceu:mv_item_collector'
+    })//物品收集器升级至HV_2
 
     event.recipes.gtceu.implosion_compressor('prts:diamond_implosion_1')
     .itemInputs('4x minecraft:diamond','2x gtceu:dynamite')

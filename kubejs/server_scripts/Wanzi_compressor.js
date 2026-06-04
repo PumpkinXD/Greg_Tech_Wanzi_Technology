@@ -366,10 +366,10 @@ ServerEvents.recipes((event) => {
     .duration(120)
     .EUt(120)//超压缩铜板制作
     wcp('prts:ultra_compacted_copper_plate_2')
-    .notConsumable('prts:type_c_phase_change_device')
+    .notConsumable('prts:type_c_purified_phase_change_device')
     .circuit(1)
     .itemInputs('gtceu:copper_plate','gtceu:annealed_copper_plate','gtceu:brass_plate','gtceu:bronze_plate','gtceu:cupronickel_plate','gtceu:black_bronze_plate','gtceu:bismuth_bronze_plate','gtceu:cobalt_brass_plate')
-    .itemOutputs('4x prts:ultra_compacted_copper_plate')
+    .itemOutputs('6x prts:ultra_compacted_copper_plate')
     .duration(120)
     .EUt(120)//超压缩铜板制作2
 
@@ -392,7 +392,21 @@ ServerEvents.recipes((event) => {
     .itemInputs('prts:ultra_compacted_copper_plate','prts:unconventional_crystal_plate','4x prts:type_one_wanzi_special_alloy')
     .itemOutputs('2x prts:ultra_high_stiffness_toughness_plate')
     .duration(200)
-    .EUt(120)//超纲韧性材料板制作
+    .EUt(120)//超纲韧性材料板制作2
+
+    wcp('prts:ultra_high_stiffness_toughness_plate_3')
+    .circuit(1)
+    .itemInputs('gtceu:rhodium_dust','gtceu:ruthenium_dust','gtceu:iridium_dust','gtceu:platinum_dust','gtceu:palladium_dust','prts:unconventional_crystal_plate','prts:type_two_wanzi_special_alloy')
+    .itemOutputs('4x prts:ultra_high_stiffness_toughness_plate')
+    .duration(200)
+    .EUt(150)//超纲韧性材料板制作3
+
+    wcp('prts:ultra_high_stiffness_toughness_plate_4')
+    .circuit(1)
+    .itemInputs('gtceu:rhodium_dust','gtceu:ruthenium_dust','gtceu:iridium_dust','gtceu:platinum_dust','gtceu:palladium_dust','prts:unconventional_crystal_plate','4x prts:type_one_wanzi_special_alloy')
+    .itemOutputs('4x prts:ultra_high_stiffness_toughness_plate')
+    .duration(200)
+    .EUt(150)//超纲韧性材料板制作4
 
      // === 末影珍珠板快速制作 ===
     wcp('wanzi_mv_ender_pearl_plate_1')
@@ -497,7 +511,7 @@ ServerEvents.recipes((event) => {
     }//万子压缩机
     basic_model_wanzi_compressor('ya_li_shan_da_1',9,[
         '5x prts:basic_wanzi',
-    ],'prts:compression_type_wanzi',80,20,'air',0,0)
+    ],'prts:compression_type_wanzi',80,20,'prts:basic_wanzi',10,10)
     basic_model_wanzi_compressor('ya_li_shan_da_2',1,[
         '5x prts:compression_type_wanzi',
         '3x minecraft:coal',
@@ -545,7 +559,7 @@ ServerEvents.recipes((event) => {
     ],'2x prts:zhimigangkuai',200,30,'prts:densified_steel_dust',575,517)
     basic_model_wanzi_compressor('ya_li_shan_da_12',1,[
         'prts:substrate_dust_wanjing'
-    ],'prts:base_substrate_wanjing',200,30,'air',0,0)
+    ],'prts:base_substrate_wanjing',200,30,'prts:basic_wanzi',10,10)
 
     event.shaped('gtceu:lv_basic_model_wanzi_compressor',[
         "BBA",
@@ -586,7 +600,7 @@ ServerEvents.recipes((event) => {
         D:'prts:basic_wanzi_actuator',
         E:'prts:basic_wanzi_position_corrector',
         F:'prts:medium_voltage_wanzi_circuit',
-        S:'gtceu:hv_machine_hull'
+        S:'prts:high_voltage_universal_casing'
     })//进阶型万子压缩机配方
 
     wcp('prts:wanzi_compressor_plastic_block_1')

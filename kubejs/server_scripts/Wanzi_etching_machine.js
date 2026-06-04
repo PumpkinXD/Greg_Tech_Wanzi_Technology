@@ -63,62 +63,62 @@ ServerEvents.recipes((event) => {
         '2x minecraft:copper_ingot',
         '3x gtceu:tiny_iron_dust',
         '3x gtceu:tiny_copper_dust'
-    ],'prts:type_one_wanjing_etched_substrate',170,20,'prts:waste_material','air',287,115,0,0)
+    ],'prts:type_one_wanjing_etched_substrate',170,20,'prts:waste_material','gtceu:tiny_iron_dust',287,115,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_1',1,[
         'prts:base_substrate_wanjing',
         '3x minecraft:iron_ingot',
         '3x minecraft:copper_ingot'
-    ],'prts:type_one_wanjing_etched_substrate',340,30,'air','air',0,0,0,0)
+    ],'prts:type_one_wanjing_etched_substrate',340,30,'gtceu:tiny_iron_dust','gtceu:tiny_copper_dust',10,10,20,20)
     basic_model_wanzi_etching_machine('wanzi_etching_2',1,[
         'minecraft:iron_block'
     ],[
         'prts:crude_etched_iron_block',
         '3x prts:iron_grit_dust_wanzi'
-    ],255,30,'prts:iron_grit_dust_wanzi','air',920,575,0,0)
+    ],255,30,'prts:iron_grit_dust_wanzi','prts:iron_grit_dust_wanzi',920,575,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_3',1,[
         'minecraft:copper_block'
     ],[
         'prts:crude_etched_copper_block',
         '3x prts:copper_grit_dust_wanzi'
-    ],255,30,'prts:copper_grit_dust_wanzi','air',920,575,0,0)
+    ],255,30,'prts:copper_grit_dust_wanzi','prts:copper_grit_dust_wanzi',920,575,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_4',1,[
         'minecraft:gold_block'
     ],[
         'prts:crude_etched_gold_block',
         '3x prts:gold_grit_dust_wanzi'
-    ],255,30,'prts:gold_grit_dust_wanzi','air',460,287,0,0)
+    ],255,30,'prts:gold_grit_dust_wanzi','prts:gold_grit_dust_wanzi',460,287,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_5',1,[
         'prts:crude_etched_iron_block'
     ],[
         'prts:refined_etched_iron_block',
         '3x prts:iron_grit_dust_wanzi'
-    ],340,30,'prts:iron_grit_dust_wanzi','air',1840,575,0,0)
+    ],340,30,'prts:iron_grit_dust_wanzi','prts:iron_grit_dust_wanzi',1840,575,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_6',1,[
         'prts:crude_etched_copper_block'
     ],[
         'prts:refined_etched_copper_block',
         '3x prts:copper_grit_dust_wanzi'
-    ],340,30,'prts:copper_grit_dust_wanzi','air',1840,575,0,0)
+    ],340,30,'prts:copper_grit_dust_wanzi','prts:copper_grit_dust_wanzi',1840,575,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_7',1,[
         'prts:crude_etched_gold_block'
     ],[
         'prts:refined_etched_gold_block',
         '3x prts:gold_grit_dust_wanzi'
-    ],340,30,'prts:gold_grit_dust_wanzi','air',920,287,0,0)
+    ],340,30,'prts:gold_grit_dust_wanzi','prts:gold_grit_dust_wanzi',920,287,10,10)
     basic_model_wanzi_etching_machine('wanzi_etching_8',1,[
         'prts:stable_wanjing_substrate',
         '2x minecraft:copper_ingot',
         'minecraft:iron_ingot'
     ],[
         'prts:stable_wanjing_etched_substrate'
-    ],170,80,'prts:waste_material','air',460,230,0,0)
+    ],170,80,'prts:waste_material','5x gtceu:tiny_copper_dust',460,230,1000,1000)
     basic_model_wanzi_etching_machine('wanzi_etching_9',1,[
         'prts:stable_wanjing_substrate',
         '2x gtceu:copper_dust',
         'gtceu:iron_dust'
     ],[
         'prts:stable_wanjing_etched_substrate'
-    ],170,80,'prts:waste_material','air',460,230,0,0)
+    ],170,80,'prts:waste_material','5x gtceu:tiny_copper_dust',460,230,1000,1000)
     basic_model_wanzi_etching_machine('wanzi_etching_10',1,[
         'prts:zhimitiekuai',
         '4x prts:type_one_wanzi'
@@ -174,7 +174,7 @@ ServerEvents.recipes((event) => {
         D:'gtceu:stainless_steel_plate',
         B:'prts:type_c_purified_packaging_unit',
         A:'prts:type_c_purified_conductive_circuit',
-        S:'gtceu:hv_machine_hull',
+        S:'prts:high_voltage_universal_casing',
         C:'prts:type_c_high_voltage_transformation_component',
         F:'prts:type_c_risk_management_unit'
     })//进阶型万子蚀刻机配方

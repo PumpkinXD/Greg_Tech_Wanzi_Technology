@@ -510,7 +510,7 @@ event.shaped('gtceu:mv_basic_model_wanzi_phase_change_machine',[
 
 event.shaped('gtceu:hv_basic_model_wanzi_phase_change_machine',[
     ['gtceu:electrum_quadruple_wire','gtceu:hv_electric_motor','gtceu:electrum_quadruple_wire'],
-    ['prts:basic_wanzi','gtceu:hv_machine_hull','prts:basic_wanzi'],
+    ['prts:basic_wanzi','prts:high_voltage_universal_casing','prts:basic_wanzi'],
     ['gtceu:electrum_quadruple_wire','gtceu:hv_electric_piston','gtceu:electrum_quadruple_wire']
 ])//进阶型万子相变机配方
 })
