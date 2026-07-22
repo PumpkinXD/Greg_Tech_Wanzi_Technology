@@ -307,10 +307,10 @@ ServerEvents.recipes((event) => {
         "BSC",
         "DDD"
     ],{
-        A:'prts:production_type_wanzi_impact_resistant_plate',
-        B:'prts:production_type_wanzi_actuator',
-        C:'prts:production_type_wanzi_emitter',
-        D:'prts:production_type_wanzi_holder',
+        A:'prts:advanced_wanzi_impact_plate',
+        B:'prts:advanced_wanzi_actuator',
+        C:'prts:advanced_wanzi_emitter',
+        D:'prts:advanced_wanzi_holder',
         S:'prts:high_voltage_universal_casing'
     })//进阶型万子采矿机配方
 })

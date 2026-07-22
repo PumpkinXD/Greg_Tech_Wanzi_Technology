@@ -48,9 +48,14 @@ ServerEvents.recipes(event =>{
        ['avaritia:infinity','twilightforest:maze_map_focus','avaritia:infinity'],
        ['avaritia:infinity','avaritia:infinity','avaritia:infinity']
     ])//拆解台配方极度困难化
+    event.shaped(Item.of('cyclic:uncrafter',1),[
+        ['minecraft:diamond','','minecraft:diamond'],
+        ['avaritia:infinity_nugget','cyclic:gem_obsidian','avaritia:infinity_nugget'],
+        ['minecraft:calcite','minecraft:calcite','minecraft:calcite']
+    ])//分解磨床配方极度困难化
     
     event.remove({id:'twilightforest:uncrafting_table'})//去除原版拆解台配方
-    event.remove({id:'legendblade:iron_tachi'})//去除铁武士刀原配方
+    event.remove({id:'cyclic:uncrafter'})//分解磨床配方去除
 })
 
 ServerEvents.recipes(event => {
@@ -88,17 +93,6 @@ ServerEvents.recipes(event => {
             D:'gtceu:lv_voltage_coil'
         }
     )//数据撕裂剑合成
-    avaritia.shaped_table(1,
-        "legendblade:iron_tachi",
-        [
-            "  S",
-            " S ",
-            "D  "
-        ],{
-            S:'minecraft:iron_ingot',
-            D:'minecraft:stick'
-        }
-    )//铁武士刀合成
 })
 
 

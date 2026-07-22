@@ -408,6 +408,20 @@ ServerEvents.recipes((event) => {
     .duration(200)
     .EUt(150)//超纲韧性材料板制作4
 
+    wcp('prts:abnormal_data_1')
+    .circuit(1)
+    .itemInputs('gtceu:ram_wafer','#gtceu:circuits/lv')
+    .chancedOutput('prts:abnormal_data',8000,1000)
+    .duration(200)
+    .EUt(32)//异常数据生成
+    wcp('prts:abnormal_data_2')
+    .circuit(1)
+    .itemInputs('gtceu:ram_wafer','#gtceu:circuits/mv')
+    .itemOutputs('2x prts:abnormal_data')
+    .chancedOutput('2x prts:abnormal_data',8000,1000)
+    .duration(200)
+    .EUt(32)//异常数据生成2
+
      // === 末影珍珠板快速制作 ===
     wcp('wanzi_mv_ender_pearl_plate_1')
      .circuit(6)
@@ -499,6 +513,38 @@ ServerEvents.recipes((event) => {
     .itemOutputs('4x gtceu:wood_plate')
     .duration(60)
     .EUt(16)//甘蔗制作木板Ⅱ
+
+    wcp('wanzi_mv_foil_1')
+    .circuit(4)
+    .notConsumable('prts:type_c_purified_packaging_unit')
+    .itemInputs('gtceu:aluminium_plate')
+    .itemOutputs('4x gtceu:aluminium_foil')
+    .duration(25)
+    .EUt(64)
+
+    wcp('wanzi_mv_foil_2')
+    .circuit(4)
+    .notConsumable('prts:type_c_purified_packaging_unit')
+    .itemInputs('gtceu:steel_plate')
+    .itemOutputs('4x gtceu:steel_foil')
+    .duration(30)
+    .EUt(64)
+
+    wcp('wanzi_mv_foil_3')
+    .circuit(4)
+    .notConsumable('prts:type_c_purified_packaging_unit')
+    .itemInputs('gtceu:copper_plate')
+    .itemOutputs('5x gtceu:copper_foil')
+    .duration(25)
+    .EUt(80)
+
+    wcp('wanzi_mv_foil_4')
+    .circuit(4)
+    .notConsumable('prts:type_c_purified_packaging_unit')
+    .itemInputs('gtceu:silver_plate')
+    .itemOutputs('5x gtceu:silver_foil')
+    .duration(30)
+    .EUt(80)
     
     function basic_model_wanzi_compressor(id,C,I,O,T,E,CH,CHT1,CHT2){
         wcp(id)
@@ -595,10 +641,10 @@ ServerEvents.recipes((event) => {
         "EFE"
     ],{
         A:'gtceu:hv_robot_arm',
-        B:'prts:basic_wanzi_resistance_plate',
-        C:'prts:basic_wanzi_redirection_plate',
-        D:'prts:basic_wanzi_actuator',
-        E:'prts:basic_wanzi_position_corrector',
+        B:'prts:advanced_wanzi_resistor_plate',
+        C:'prts:advanced_wanzi_redirection_plate',
+        D:'prts:advanced_wanzi_actuator',
+        E:'prts:advanced_wanzi_position_corrector',
         F:'prts:medium_voltage_wanzi_circuit',
         S:'prts:high_voltage_universal_casing'
     })//进阶型万子压缩机配方
@@ -638,7 +684,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('prts:alpha_wanjing')
     .duration(200)
     .EUt(80)//阿尔法压缩型万晶1
-
     wcp('prts:alpha_yasuowanjing_2')
     .circuit(1)
     .itemInputs('3x prts:purified_basic_wanjing','2x #gtceu:waw_yuan','2x #gtceu:iron_yuan','2x #gtceu:copper_yuan')
@@ -646,4 +691,11 @@ ServerEvents.recipes((event) => {
     .itemOutputs('prts:alpha_wanjing')
     .duration(200)
     .EUt(80)//阿尔法压缩型万晶2
+
+    wcp('prts:beta_wanjing')
+    .circuit(1)
+    .itemInputs('prts:alpha_wanjing','2x #gtceu:waw_yuan','2x gtceu:flt_ingot','4x #forge:dusts/gold')
+    .itemOutputs('prts:beta_wanjing')
+    .duration(200)
+    .EUt(160)//贝塔万晶制作
 })

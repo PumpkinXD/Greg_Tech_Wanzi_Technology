@@ -139,6 +139,7 @@ ServerEvents.recipes((event) => {
     kc('prts:crushed_cobalt_ore_2')
     .itemInputs('gtceu:raw_cobalt')
     .itemOutputs('36x gtceu:cobalt_dust','18x gtceu:cobaltite_dust','18x gtceu:cobalt_oxide_dust')
+    .duration(20)
     .EUt(16)//粗钴高速处理
     kc('prts:crushed_cobalt_ore_3')
     .itemInputs('gtceu:crushed_cobalt_ore')
@@ -2679,27 +2680,27 @@ ServerEvents.recipes((event) => {
 
     kc('prts:crushed_gypsum_ore_1')
     .itemInputs('#forge:ores/gypsum')
-    .itemOutputs('48x gtceu:gypsum_dust','16x gtceu:salt_dust','16x tceu:calcium_dust','16x gtceu:sulfur_dust')
+    .itemOutputs('48x gtceu:gypsum_dust','16x gtceu:salt_dust','16x gtceu:calcium_dust','16x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//粗石膏矿高速处理
     kc('prts:crushed_gypsum_ore_2')
     .itemInputs('gtceu:raw_gypsum')
-    .itemOutputs('36x gtceu:gypsum_dust','12x gtceu:salt_dust','12x tceu:calcium_dust','12x gtceu:sulfur_dust')
+    .itemOutputs('36x gtceu:gypsum_dust','12x gtceu:salt_dust','12x gtceu:calcium_dust','12x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//粗石膏矿高速处理
     kc('prts:crushed_gypsum_ore_3')
     .itemInputs('gtceu:crushed_gypsum_ore')
-    .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x tceu:calcium_dust','6x gtceu:sulfur_dust')
+    .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x gtceu:calcium_dust','6x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//粉碎石膏矿石高速处理
     kc('prts:crushed_gypsum_ore_4')
     .itemInputs('gtceu:purified_gypsum_ore')
-    .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x tceu:calcium_dust','6x gtceu:sulfur_dust')
+    .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x gtceu:calcium_dust','6x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//纯净石膏矿石高速处理
     kc('prts:crushed_gypsum_ore_5')
     .itemInputs('gtceu:refined_gypsum_ore')
-    .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x tceu:calcium_dust','6x gtceu:sulfur_dust')
+    .itemOutputs('18x gtceu:gypsum_dust','6x gtceu:salt_dust','6x gtceu:calcium_dust','6x gtceu:sulfur_dust')
     .duration(20)
     .EUt(16)//精炼石膏矿石高速处理
 
@@ -2858,6 +2859,37 @@ ServerEvents.recipes((event) => {
     .itemOutputs('18x gtceu:bentonite_dust','6x gtceu:magnesium_dust','6x gtceu:calcium_dust','6x gtceu:aluminium_dust')
     .duration(20)
     .EUt(16)//精炼膨润土矿石高速处理
+
+    kc('prts:raw_osmium_1')
+    .itemInputs('mekanism:raw_osmium')
+    .inputFluids(Fluid.of('minecraft:water',2560))
+    .itemOutputs('60x mekanism:dust_osmium')
+    .duration(20)
+    .EUt(16)//MEK锇矿兼容
+    kc('prts:raw_osmium_2')
+    .itemInputs('#forge:ores/osmium')
+    .inputFluids(Fluid.of('minecraft:water',25600))
+    .itemOutputs('600x mekanism:dust_osmium')
+    .duration(20)
+    .EUt(16)//MEK锇矿兼容Ⅱ
+    kc('prts:raw_uranium_1')
+    .itemInputs('mekanism:raw_uranium')
+    .inputFluids(Fluid.of('minecraft:water',2560))
+    .itemOutputs('60x mekanism:dust_uranium')
+    .duration(20)
+    .EUt(16)//MEK铀矿兼容
+    kc('prts:raw_uranium_2')
+    .itemInputs('#forge:ores/uranium')
+    .inputFluids(Fluid.of('minecraft:water',25600))
+    .itemOutputs('600x mekanism:dust_uranium')
+    .duration(20)
+    .EUt(16)//MEK铀矿兼容Ⅱ
+    kc('prts:fluorite_ore_1')
+    .itemInputs('#forge:ores/fluorite')
+    .inputFluids(Fluid.of('minecraft:water',25600))
+    .itemOutputs('600x mekanism:fluorite_gem')
+    .duration(20)
+    .EUt(16)//MEK氟矿兼容
 
     event.shaped('prts:gaoxiaoshuiyayanmofangkuai',[
         "ASA",

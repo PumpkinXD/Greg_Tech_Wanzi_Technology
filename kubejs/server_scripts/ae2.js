@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
 
     event.shaped('extendedae_plus:infinity_biginteger_cell',[
         ['prts:production_type_wanzi_impact_resistant_plate','mekanism:ultimate_control_circuit','prts:production_type_wanzi_impact_resistant_plate'],
-        ['gtceu:quantum_eye','megacells:bulk_cell_component','legendblade:god_soul_crystal'],
+        ['gtceu:quantum_eye','megacells:bulk_cell_component','slashblade_useful_addon:god_soul_crystal'],
         ['prts:production_type_wanzi_impact_resistant_plate','minecraft:netherite_block','prts:production_type_wanzi_impact_resistant_plate']
     ])//无限盘制作难度增加
     

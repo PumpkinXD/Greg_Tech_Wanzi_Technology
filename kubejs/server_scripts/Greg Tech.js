@@ -1957,6 +1957,66 @@ ServerEvents.recipes(event => {
         ['prts:type_two_wanzi_special_alloy','prts:basic_wanzi','prts:type_two_wanzi_special_alloy']
     ])//万子特殊合金Ⅳ型制作
 
+    event.shaped(Item.of('prts:blueprint',8),[
+        ['#forge:dyes/blue','prts:dedicated_blueprint_pen','#forge:dyes/blue'],
+        ['#forge:dyes/blue','prts:compressed_cardboard','#forge:dyes/blue'],
+        ['#forge:dyes/blue','#forge:dyes/blue','#forge:dyes/blue']
+    ])//蓝图制作
+
+    event.shaped(Item.of('prts:compressed_cardboard',1),[
+        ['minecraft:paper','minecraft:paper','minecraft:paper'],
+        ['minecraft:paper','minecraft:paper','minecraft:paper'],
+        ['minecraft:paper','minecraft:paper','minecraft:paper']
+    ])//压缩纸板制作
+
+    event.shaped(Item.of('prts:dedicated_blueprint_pen',1),[
+        ['','#forge:dyes/blue','minecraft:paper'],
+        ['#forge:dyes/blue','minecraft:paper','#forge:dyes/blue'],
+        ['#forge:dyes/white','#forge:dyes/blue','']
+    ])//蓝图专用笔制作
+
+    event.shaped(Item.of('prts:blueprint_rod',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:rods',''],
+        ['','prts:blueprint','']
+    ])//杆材蓝图制作
+
+    event.shaped(Item.of('prts:blueprint_plate',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:plates',''],
+        ['','prts:blueprint','']
+    ])//板材蓝图制作
+
+    event.shaped(Item.of('prts:blueprint_gear',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:gears',''],
+        ['','prts:blueprint','']
+    ])//齿轮蓝图制作
+
+    event.shaped(Item.of('prts:blueprint_small_gear',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:small_gears',''],
+        ['','prts:blueprint','']
+    ])//小型齿轮蓝图制作
+
+    event.shaped(Item.of('prts:blueprint_ring',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:rings',''],
+        ['','prts:blueprint','']
+    ])//环蓝图制作
+
+    event.shaped(Item.of('prts:blueprint_rotor',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:rotors',''],
+        ['','prts:blueprint','']
+    ])//转子蓝图制作
+
+    event.shaped(Item.of('prts:blueprint_ball',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:rounds',''],
+        ['','prts:blueprint','']
+    ])//杆材蓝图制作
+
     event.recipes.gtceu.assembler('gtceu:wanzi_coated_plate_1')
     .notConsumable('prts:basic_wanzi_film_coating_sprayer')
     .itemInputs('4x gtceu:steel_plate','prts:basic_wanzi')
@@ -1972,105 +2032,6 @@ ServerEvents.recipes(event => {
     .itemOutputs('4x gtceu:rubber_plate')
     .duration(100)
     .EUt(32)//覆膜喷涂获取橡胶板
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:teshuhejin_1')
-    .circuit(1)
-    .itemInputs('4x prts:basic_wanzi','4x gtceu:iron_dust','gtceu:red_alloy_ingot')
-    .itemOutputs('4x prts:type_one_wanzi_special_alloy')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:teshuhejin_2')
-    .circuit(2)
-    .itemInputs('4x prts:basic_wanzi','5x prts:type_one_wanzi_special_alloy')
-    .itemOutputs('4x prts:type_two_wanzi_special_alloy')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('teshuhejin_3')
-    .circuit(1)
-    .itemInputs('4x prts:basic_wanzi','prts:type_one_wanzi_special_alloy','4x prts:type_two_wanzi_special_alloy')
-    .itemOutputs('4x prts:type_three_wanzi_special_alloy')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('teshuhejin_4')
-    .circuit(2)
-    .itemInputs('4x prts:basic_wanzi','prts:type_two_wanzi_special_alloy','4x prts:type_three_wanzi_special_alloy')
-    .itemOutputs('4x prts:type_four_wanzi_special_alloy')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('hongsehejin_1')
-    .itemInputs('#forge:dusts/copper','4x minecraft:redstone')
-    .itemOutputs('4x gtceu:red_alloy_ingot')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('hongsehejin_2')
-    .itemInputs('gtceu:annealed_copper_dust','4x minecraft:redstone')
-    .itemOutputs('4x gtceu:red_alloy_ingot')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('hongsehejin_3')
-    .itemInputs('minecraft:copper_ingot','4x minecraft:redstone')
-    .itemOutputs('4x gtceu:red_alloy_ingot')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('hongsehejin_4')
-    .itemInputs('gtceu:annealed_copper_ingot','4x minecraft:redstone')
-    .itemOutputs('4x gtceu:red_alloy_ingot')
-    .duration(100)
-    .EUt(20)
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('walapasihejinyelian')
-    .circuit(2)
-    .itemInputs('8x prts:basic_wanzi','4x prts:type_one_wanzi_special_alloy','4x gtceu:gold_dust')
-    .itemOutputs('16x gtceu:waw_ingot')
-    .inputFluids(Fluid.of('minecraft:lava',100))
-    .duration(300)
-    .EUt(128)
-    //瓦拉帕斯材料制作1
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:teshuhejinyelian_1')
-    .circuit(2)
-    .itemInputs('15x prts:compression_type_wanzi','4x prts:teshuhejinkuai','36x gtceu:gold_dust')
-    .itemOutputs('20x gtceu:waw_block')
-    .inputFluids(Fluid.of('minecraft:lava',900))
-    .duration(1350)
-    .EUt(128)
-    //瓦拉帕斯材料制作2
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:teshuhejinyelian_2')
-    .circuit(2)
-    .itemInputs('75x prts:basic_wanzi','4x prts:teshuhejinkuai','36x gtceu:gold_dust')
-    .itemOutputs('8x gtceu:waw_block')
-    .inputFluids(Fluid.of('minecraft:lava',900))
-    .duration(1350)
-    .EUt(128)
-    //瓦拉帕斯材料制作3
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:soldering_alloy_dust_1')
-    .circuit(1)
-    .itemInputs('gtceu:antimony_dust','3x #forge:dusts/tin','6x #forge:dusts/lead','5x prts:basic_wanzi')
-    .itemOutputs('20x gtceu:soldering_alloy_ingot')
-    .duration(300)
-    .EUt(30)//焊锡制作1
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:soldering_alloy_dust_2')
-    .circuit(1)
-    .itemInputs('5x gtceu:antimony_dust','14x #forge:dusts/tin','27x #forge:dusts/lead','23x prts:basic_wanzi')
-    .itemOutputs('10x gtceu:soldering_alloy_block')
-    .duration(300)
-    .EUt(30)//焊锡制作2
-
-    event.recipes.gtceu.chaogaosuhejinyelian_1('prts:ultimet_ingot')
-    .itemInputs('25x #forge:dusts/cobalt','10x gtceu:chromium_dust','5x gtceu:nickel_dust','5x gtceu:molybdenum_dust')
-    .itemOutputs('90x gtceu:ultimet_ingot')
-    .duration(800)
-    .EUt(64)//哈氏合金制作1
 
     event.shaped('prts:low_voltage_wanzi_circuit',[
         ['prts:type_d_resistor','prts:type_d_conductive_circuit','prts:type_d_resistor'],
@@ -2131,21 +2092,19 @@ ServerEvents.recipes(event => {
     .itemInputs('prts:basic_wanzi')
     .itemOutputs('gtceu:tiny_ash_dust')
     .duration(100)
-    .EUt(-8)
-
+    .EUt(-128)//万子发电
     event.recipes.gtceu.basic_model_wanzi_power_supply_machine_1('prts:wanzigongdian_2')
-    .circuit(2)
-    .itemInputs('2x prts:basic_wanzi')
+    .circuit(1)
+    .itemInputs('prts:type_one_wanzi')
     .itemOutputs('gtceu:tiny_ash_dust')
     .duration(100)
-    .EUt(-15)
-
+    .EUt(-512)//万子发电
     event.recipes.gtceu.basic_model_wanzi_power_supply_machine_1('prts:wanzigongdian_3')
-    .circuit(3)
-    .itemInputs('3x prts:basic_wanzi')
+    .circuit(1)
+    .itemInputs('prts:type_two_wanzi')
     .itemOutputs('gtceu:tiny_ash_dust')
     .duration(100)
-    .EUt(-30)
+    .EUt(-2048)//万子发电
 
     event.recipes.gtceu.basic_model_wanzi_electrolyzer_1('prts:wanzidianjie_1')
     .circuit(1)
@@ -2156,20 +2115,39 @@ ServerEvents.recipes(event => {
     .chancedOutput('gtceu:copper_dust',1000,500)
     .duration(40)
     .EUt(32)
-
     event.recipes.gtceu.basic_model_wanzi_electrolyzer_1('prts:wanzidianjie_2')
     .circuit(1)
-    .itemInputs('gtceu:rubber_log','prts:basic_wanzi')
-    .itemOutputs('2x minecraft:charcoal')
-    .chancedOutput('2x gtceu:charcoal_dust',1000,500)
-    .chancedOutput('gtceu:sticky_resin',100,50)
-    .chancedFluidOutput(Fluid.of('gtceu:methane',60),1000,500)
+    .itemInputs('minecraft:stone','prts:basic_wanzi')
+    .itemOutputs('8x gtceu:stone_dust')
+    .chancedOutput('2x gtceu:stone_dust',1000,500)
+    .chancedOutput('gtceu:iron_dust',1000,500)
+    .chancedOutput('gtceu:copper_dust',1000,500)
     .duration(40)
     .EUt(32)
 
     event.recipes.gtceu.basic_model_wanzi_electrolyzer_1('prts:wanzidianjie_3')
     .circuit(1)
+    .itemInputs('gtceu:rubber_log','prts:basic_wanzi')
+    .itemOutputs('2x minecraft:charcoal')
+    .chancedOutput('2x gtceu:charcoal_dust',1000,500)
+    .chancedOutput('gtceu:sticky_resin',100,50)
+    .chancedFluidOutput(Fluid.of('gtceu:methane',600),1000,2000)
+    .duration(40)
+    .EUt(32)
+
+    event.recipes.gtceu.basic_model_wanzi_electrolyzer_1('prts:wanzidianjie_4')
+    .circuit(1)
     .itemInputs('minecraft:cobbled_deepslate','prts:basic_wanzi')
+    .itemOutputs('6x gtceu:deepslate_dust')
+    .chancedOutput('2x gtceu:deepslate_dust',1000,500)
+    .chancedOutput('gtceu:iron_dust',2000,1000)
+    .chancedOutput('gtceu:copper_dust',2500,1500)
+    .chancedOutput('gtceu:gold_dust',1000,500)
+    .duration(40)
+    .EUt(32)
+    event.recipes.gtceu.basic_model_wanzi_electrolyzer_1('prts:wanzidianjie_5')
+    .circuit(1)
+    .itemInputs('minecraft:deepslate','prts:basic_wanzi')
     .itemOutputs('6x gtceu:deepslate_dust')
     .chancedOutput('2x gtceu:deepslate_dust',1000,500)
     .chancedOutput('gtceu:iron_dust',2000,1000)
@@ -2326,7 +2304,7 @@ ServerEvents.recipes(event => {
     .itemOutputs('2x gtceu:gallium_dust')
     .chancedOutput('2x gtceu:gallium_arsenide_dust',500,250)
     .duration(200)
-    .EUt(240)//356至此行均为万晶/纯化万晶在非万子科技树的用途
+    .EUt(240)//2261至此行均为万晶/纯化万晶在非万子科技树的用途
 
     event.recipes.gtceu.electrolyzer('prts:feiliaohuishou')
     .itemInputs('prts:waste_material')
@@ -2573,6 +2551,22 @@ ServerEvents.recipes(event => {
         ['','prts:type_d_purified_packaging_unit',''],
         ['','minecraft:iron_ingot','']
     ])//手搓C型封装单元2
+
+    event.shapeless(Item.of('prts:type_b_conductive_circuit',2),[
+        'gtceu:gold_single_wire','gtceu:gold_single_wire','gtceu:flt_ingot'
+    ])//手搓B型导电线路1
+    event.shapeless(Item.of('prts:type_b_conductive_circuit',2),[
+        'gtceu:gold_double_wire','gtceu:flt_ingot'
+    ])//手搓B型导电线路2
+    event.shapeless(Item.of('prts:type_b_conductive_circuit',2),[
+        'minecraft:gold_ingot','gtceu:flt_ingot'
+    ])//手搓B型导电线路3
+    event.shapeless(Item.of('prts:type_b_conductive_circuit',2),[
+        'gtceu:fine_gold_wire','gtceu:fine_gold_wire','gtceu:fine_gold_wire',
+        'gtceu:fine_gold_wire','gtceu:flt_ingot','gtceu:fine_gold_wire',
+        'gtceu:fine_gold_wire','gtceu:fine_gold_wire','gtceu:fine_gold_wire'
+    ])//手搓B型导电线路4
+
 
     event.recipes.gtceu.laser_engraver('gtceu:zizhi_ram_1')
     .itemInputs('prts:type_one_wanjing_etched_substrate')
@@ -4513,153 +4507,8 @@ ServerEvents.recipes(event => {
     .duration(145)
     .EUt(16)//钻石晶格爆破生产3
 
-    // ==================== DSV型组件作为催化剂的用途 ====================
-    // 这些配方使用DSV型组件作为催化剂，大幅提升生产效率
-    // 催化剂不会被消耗，可以无限重复使用
-    
-    // === DSV型组件催化配方 ===
-    event.recipes.gtceu.assembler('dsv_catalyst_motor_production')
-        .notConsumable('prts:dsv_component')
-        .itemInputs(
-            '2x gtceu:steel_rod',
-            '4x gtceu:copper_single_wire',
-            'gtceu:magnetic_steel_rod'
-        )
-        .itemOutputs('3x gtceu:mv_electric_motor')
-        .duration(80)
-        .EUt(64)
-    
-    // 超高效电路板生产（+200%）
-    event.recipes.gtceu.circuit_assembler('dsv_catalyst_circuit_production')
-        .notConsumable('prts:dsv_component')
-        .itemInputs(
-            'gtceu:plastic_printed_circuit_board',
-            '2x gtceu:diode',
-            '2x gtceu:transistor'
-        )
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 144))
-        .itemOutputs('6x gtceu:good_electronic_circuit')
-        .duration(60)
-        .EUt(80)
-    
-    // 超高效流体转换（+50%）
-    event.recipes.gtceu.chemical_reactor('dsv_catalyst_fluid_conversion')
-        .notConsumable('prts:dsv_component')
-        .inputFluids(
-            Fluid.of('minecraft:water', 1000),
-            Fluid.of('gtceu:sulfuric_acid', 100)
-        )
-        .outputFluids(Fluid.of('gtceu:distilled_water', 1500))
-        .duration(100)
-        .EUt(48)
-    
-    // === DSV型实验组件催化配方 ===
-    
-    // 极致电动马达生产（+200%）
-    event.recipes.gtceu.assembler('dsv_experimental_catalyst_motor')
-        .notConsumable('prts:experimental_dsv_component')
-        .itemInputs(
-            '2x gtceu:aluminium_rod',
-            '4x gtceu:copper_single_wire',
-            'gtceu:magnetic_steel_rod'
-        )
-        .itemOutputs('6x gtceu:mv_electric_motor')
-        .duration(60)
-        .EUt(64)
-    
-    // 极致电路生产（+150%）
-    event.recipes.gtceu.circuit_assembler('dsv_experimental_catalyst_circuit')
-        .notConsumable('prts:experimental_dsv_component')
-        .itemInputs(
-            'gtceu:plastic_printed_circuit_board',
-            'gtceu:good_electronic_circuit',
-            '2x gtceu:capacitor'
-        )
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 144))
-        .itemOutputs('5x gtceu:good_integrated_circuit')
-        .duration(50)
-        .EUt(96)
-    
-    // 极致材料转换（+50%）
-    event.recipes.gtceu.alloy_smelter('dsv_experimental_catalyst_alloy')
-        .notConsumable('prts:experimental_dsv_component')
-        .itemInputs(
-            '3x gtceu:copper_dust',
-            'gtceu:tin_dust'
-        )
-        .itemOutputs('6x gtceu:bronze_ingot')
-        .duration(80)
-        .EUt(32)
-    
-    // 极致能量转换
-    event.recipes.gtceu.electrolyzer('dsv_experimental_catalyst_electrolysis')
-        .notConsumable('prts:experimental_dsv_component')
-        .inputFluids(Fluid.of('minecraft:water', 1000))
-        .outputFluids(
-            Fluid.of('gtceu:hydrogen', 3000),
-            Fluid.of('gtceu:oxygen', 1500)
-        )
-        .duration(150)
-        .EUt(64)
-    
-    // === 纯化DSV型组件超级催化配方 ===
-    
-    // 使用纯化DSV型组件的超级催化配方（+500%）
-    event.recipes.gtceu.circuit_assembler('dsv_purified_catalyst_ultimate')
-        .notConsumable('prts:dsv_purified_component')
-        .itemInputs(
-            'gtceu:plastic_printed_circuit_board',
-            '2x gtceu:advanced_integrated_circuit',
-            '4x gtceu:smd_transistor'
-        )
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 288))
-        .itemOutputs('6x gtceu:micro_processor_assembly')
-        .duration(40)
-        .EUt(256)
-
-    // ==================== 拓展用途配方 ====================
-    // 为用途稀少的万子科技物品添加格雷科技应用
-    
-    // === 粘合性塑料用途 ===
-    
-    // 粘合性塑料用于制作高级电路板
-    event.recipes.gtceu.assembler('gtceu_sticky_plastic_pcb')
-        .itemInputs('prts:adhesive_plastic', '2x gtceu:copper_foil')
-        .inputFluids(Fluid.of('gtceu:sulfuric_acid', 100))
-        .itemOutputs('4x gtceu:plastic_printed_circuit_board')
-        .duration(80)
-        .EUt(64)
-    
-    // === 高效隔绝组件用途 ===
-    
-    // 高效隔绝组件用于制作高级机器外壳
-    event.recipes.gtceu.assembler('gtceu_isolation_casing')
-        .itemInputs('gtceu:mv_machine_hull', 'prts:high_efficiency_isolation_component', '4x gtceu:polyethylene_plate')
-        .itemOutputs('gtceu:solid_machine_casing')
-        .duration(200)
-        .EUt(128)
-    
-    // === 电路通用单元用途 ===
-    
-    // 电路通用单元用于快速制作基础电路
-    event.recipes.gtceu.assembler('gtceu_quick_basic_circuit')
-        .itemInputs('prts:general_purpose_circuit_unit', 'gtceu:phenolic_printed_circuit_board', 'gtceu:vacuum_tube')
-        .itemOutputs('4x gtceu:basic_electronic_circuit')
-        .duration(60)
-        .EUt(32)
-    
-    // === 电路通用信息块用途 ===
-    
-    // 电路通用信息块用于快速制作高级电路
-    event.recipes.gtceu.assembler('gtceu_quick_good_circuit')
-        .itemInputs('prts:general_purpose_circuit_information_module', 'gtceu:plastic_printed_circuit_board', 'gtceu:transistor')
-        .itemOutputs('4x gtceu:good_electronic_circuit')
-        .duration(80)
-        .EUt(64)
-    
     // === 常规组件用途 ===
     
-    // 常规组件用于制作MV机器零件
     event.recipes.gtceu.assembler('prts:mada_mv')
     .itemInputs('prts:conventional_component', 'gtceu:steel_rod', '2x gtceu:copper_single_wire', 'gtceu:magnetic_steel_rod')
     .itemOutputs('3x gtceu:mv_electric_motor')
@@ -4837,116 +4686,4 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(64)//MV传感器Ⅱ
     
-    // ==================== 纯化C型组件在格雷科技中的高效应用 ====================
-    
-    // === 纯化C型导电线路 - 高效电路制作 ===
-    
-    // 使用纯化C型导电线路制作高级集成电路（效率提升50%）
-    event.recipes.gtceu.circuit_assembler('gtceu_purified_advanced_circuit')
-        .itemInputs('gtceu:plastic_printed_circuit_board', '2x gtceu:good_electronic_circuit', 'prts:type_c_purified_conductive_circuit')
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 72))
-        .itemOutputs('3x gtceu:advanced_integrated_circuit')
-        .duration(120)
-        .EUt(128)
-
-    // === 纯化C型封装单元 - 高效元件制作 ===
-    
-    // 使用纯化C型封装单元制作SMD电阻（产量提升50%）
-    event.recipes.gtceu.assembler('gtceu_purified_smd_resistor')
-        .itemInputs('2x gtceu:resistor', 'minecraft:glowstone_dust', 'prts:type_c_purified_packaging_unit')
-        .itemOutputs('9x gtceu:smd_resistor')
-        .duration(60)
-        .EUt(64)
-    
-    // 使用纯化C型封装单元制作SMD二极管（产量提升50%）
-    event.recipes.gtceu.assembler('gtceu_purified_smd_diode')
-        .itemInputs('2x gtceu:diode', 'minecraft:glowstone_dust', 'prts:type_c_purified_packaging_unit')
-        .itemOutputs('9x gtceu:smd_diode')
-        .duration(60)
-        .EUt(64)
-    
-    // 使用纯化C型封装单元制作SMD晶体管（产量提升50%）
-    event.recipes.gtceu.assembler('gtceu_purified_smd_transistor')
-        .itemInputs('2x gtceu:transistor', 'minecraft:glowstone_dust', 'prts:type_c_purified_packaging_unit')
-        .itemOutputs('9x gtceu:smd_transistor')
-        .duration(60)
-        .EUt(64)
-    
-    // 使用纯化C型封装单元制作SMD电容（产量提升50%）
-    event.recipes.gtceu.assembler('gtceu_purified_smd_capacitor')
-        .itemInputs('2x gtceu:capacitor', 'minecraft:glowstone_dust', 'prts:type_c_purified_packaging_unit')
-        .itemOutputs('9x gtceu:smd_capacitor')
-        .duration(60)
-        .EUt(64)
-    
-    // === 纯化C型线路跨域驱动器 - 高效机器零件制作 ===
-    
-    // 使用纯化C型线路跨域驱动器制作MV电动马达
-    event.recipes.gtceu.assembler('gtceu_purified_mv_motor')
-        .itemInputs('gtceu:steel_rod', '4x gtceu:copper_single_wire', 'gtceu:magnetic_steel_rod', 'prts:type_c_purified_circuit_cross_domain_actuator')
-        .itemOutputs('10x gtceu:mv_electric_motor')
-        .duration(140)
-        .EUt(64)
-    
-    // 使用纯化C型线路跨域驱动器制作MV电动活塞
-    event.recipes.gtceu.assembler('gtceu_purified_mv_piston')
-        .itemInputs('gtceu:mv_electric_motor', '4x gtceu:steel_plate', 'gtceu:steel_rod', 'prts:type_c_purified_circuit_cross_domain_actuator')
-        .itemOutputs('10x gtceu:mv_electric_piston')
-        .duration(140)
-        .EUt(64)
-    
-    // 使用纯化C型线路跨域驱动器制作MV机械臂
-    event.recipes.gtceu.assembler('gtceu_purified_mv_robot_arm')
-        .itemInputs('2x gtceu:mv_electric_motor', '4x gtceu:steel_rod', 'gtceu:mv_electric_piston', 'prts:type_c_purified_circuit_cross_domain_actuator')
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 144))
-        .itemOutputs('10x gtceu:mv_robot_arm')
-        .duration(210)
-        .EUt(64)
-    
-    /* === 纯化C型高压变电组件 - 高效能源设备制作 === */
-    
-    // 使用纯化C型高压变电组件制作MV变压器（产量提升）
-    event.recipes.gtceu.assembler('gtceu_purified_mv_transformer')
-        .itemInputs('gtceu:mv_machine_hull', '2x gtceu:copper_single_cable', 'prts:type_c_purified_high_voltage_transformation_component')
-        .itemOutputs('2x gtceu:mv_transformer_1a')
-        .duration(150)
-        .EUt(64)
-    
-    // 使用纯化C型高压变电组件制作MV能源输入仓（效率提升）
-    event.recipes.gtceu.assembler('gtceu_purified_mv_energy_input')
-        .itemInputs('gtceu:mv_machine_hull', '2x gtceu:copper_single_cable', 'prts:type_c_purified_high_voltage_transformation_component')
-        .itemOutputs('2x gtceu:mv_input_hatch')
-        .duration(120)
-        .EUt(64)
-    
-    // === 纯化C型转型特化线路组 - 高效数据处理 ===
-    
-    // 使用纯化C型转型特化线路组制作处理器阵列（效率提升40%）
-    event.recipes.gtceu.circuit_assembler('gtceu_purified_processor_array')
-        .itemInputs('gtceu:epoxy_printed_circuit_board', '2x gtceu:processor_assembly', 'prts:type_c_purified_specialized_circuit_group')
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 144))
-        .itemOutputs('2x gtceu:workstation')
-        .duration(180)
-        .EUt(256)
-    
-    // === 纯化C型万子发射集合器 - 高效能量传输 ===
-    
-    // 使用纯化C型万子发射集合器制作MV场发射器（产量提升）
-    event.recipes.gtceu.assembler('gtceu_purified_mv_emitter')
-        .itemInputs('gtceu:mv_electric_motor', '4x gtceu:steel_rod', 'gtceu:quartzite_gem', 'prts:type_c_purified_wanzi_emission_concentrator')
-        .inputFluids(Fluid.of('gtceu:soldering_alloy', 144))
-        .itemOutputs('2x gtceu:mv_emitter')
-        .duration(210)
-        .EUt(64)
-    
-    // 使用纯化DSV型组件制作数据控制电路（特殊高效配方）
-    event.recipes.gtceu.circuit_assembler('gtceu_purified_data_control')
-    .circuit(2)
-    .notConsumable('prts:dsv_purified_component')
-    .itemInputs('gtceu:plastic_printed_circuit_board', '2x gtceu:advanced_integrated_circuit')
-    .inputFluids(Fluid.of('gtceu:soldering_alloy', 288))
-    .itemOutputs('4x gtceu:micro_processor_assembly')
-    .duration(150)
-    .EUt(256)
 })
-   

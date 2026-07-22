@@ -9,12 +9,12 @@ ServerEvents.recipes((event) => {
              .duration(600)//持续时间
              .EUt(eu)//电压
     }	//大型蒸汽发电配方设置代码块
-        large_scale_steam_generator('steamgenerator','minecraft:coal',-12,288,18,)
-        large_scale_steam_generator('steamgenerator1','minecraft:charcoal',-16,288,18,)
-        large_scale_steam_generator('steamgenerator2','gtceu:charcoal_dust',-26,288,18,)
-        large_scale_steam_generator('steamgenerator3','gtceu:coal_dust',-16,288,18,)
-        large_scale_steam_generator('steamgenerator4','minecraft:coal_block',-32,576,18,)   
-        large_scale_steam_generator('steamgenerator5','gtceu:charcoal_block',-32,576,18,) 
+        large_scale_steam_generator('steamgenerator','minecraft:coal',-128,288,18,)
+        large_scale_steam_generator('steamgenerator1','minecraft:charcoal',-128,288,18,)
+        large_scale_steam_generator('steamgenerator2','gtceu:charcoal_dust',-512,288,18,)
+        large_scale_steam_generator('steamgenerator3','gtceu:coal_dust',-512,288,18,)
+        large_scale_steam_generator('steamgenerator4','minecraft:coal_block',-1024,576,18,)   
+        large_scale_steam_generator('steamgenerator5','gtceu:charcoal_block',-1024,576,18,) 
         //大型蒸汽发电配方实现代码块 
     
         event.shaped('gtceu:large_scale_steam_generator',[
@@ -37,8 +37,8 @@ ServerEvents.recipes((event) => {
         large_steam_generator_machine('steam_generator_1','minecraft:charcoal',20,18,28800)
         large_steam_generator_machine('steam_generator_2','gtceu:charcoal_dust',40,36,28800)
         large_steam_generator_machine('steam_generator_3','gtceu:coal_dust',40,36,28800)
-        large_steam_generator_machine('steam_generator_4','minecraft:coal_block',10,18,57600)
-        large_steam_generator_machine('steam_generator_5','gtceu:charcoal_block',10,18,57600)
+        large_steam_generator_machine('steam_generator_4','minecraft:coal_block',10,18,576000)
+        large_steam_generator_machine('steam_generator_5','gtceu:charcoal_block',10,18,576000)
         //大型蒸汽发生配方实现代码块
     
         event.shaped('gtceu:large_steam_generator_machine',[
@@ -117,10 +117,4 @@ ServerEvents.recipes((event) => {
         ['prts:basic_wanzi','gtceu:lv_machine_hull','prts:basic_wanzi'],
         ['#forge:glass','gtceu:copper_double_wire','#forge:glass']
     ])//基础万子供电机配方
-
-    event.shaped('gtceu:chaogaosuhejinyelian',[
-        ['#forge:storage_blocks/steel','prts:low_voltage_wanzi_circuit','#forge:storage_blocks/steel'],
-        ['minecraft:iron_block','gtceu:lv_machine_hull','minecraft:iron_block'],
-        ['#forge:storage_blocks/steel','prts:low_voltage_wanzi_circuit','#forge:storage_blocks/steel']
-    ])//万子超高速合金冶炼机配方
 })

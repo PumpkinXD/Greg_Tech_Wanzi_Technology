@@ -5,7 +5,6 @@ ServerEvents.recipes((event) => {//格雷科技部分
     .itemOutputs('gtceu:cyan_glass_lens')
     .duration(120)
     .EUt(40)//青色透镜制作1
-
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:qingsetoujing_2')
     .circuit(1)
     .itemInputs('gtceu:glass_lens')
@@ -13,14 +12,12 @@ ServerEvents.recipes((event) => {//格雷科技部分
     .itemOutputs('gtceu:cyan_glass_lens')
     .duration(120)
     .EUt(40)//青色透镜制作2
-
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:chengsetoujing_1')
     .circuit(1)
     .itemInputs('gtceu:glass_lens','2x minecraft:orange_dye','prts:basic_wanzi')
     .itemOutputs('gtceu:orange_glass_lens')
     .duration(120)
     .EUt(40)//橙色透镜制作1
-
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:chengsetoujing_2')
     .circuit(1)
     .itemInputs('gtceu:glass_lens')
@@ -34,13 +31,11 @@ ServerEvents.recipes((event) => {//格雷科技部分
     .itemOutputs('12x prts:iron_grit_dust_wanzi')
     .duration(120)
     .EUt(16)//铁砂尘制作
-
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_2')
     .itemInputs('prts:densified_coppper_dust','12x prts:basic_wanzi')
     .itemOutputs('12x prts:copper_grit_dust_wanzi')
     .duration(120)
     .EUt(16)//铜砂尘制作
-
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:shachenzhizuo_3')
     .itemInputs('prts:densified_gold_dust','12x prts:basic_wanzi')
     .itemOutputs('12x prts:gold_grit_dust_wanzi')
@@ -202,64 +197,149 @@ ServerEvents.recipes((event) => {//格雷科技部分
     .duration(120)
     .EUt(16)//白铜线缆制作Ⅴ
 })
+
 ServerEvents.recipes((event) => {//万子科技部分
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi')
     .circuit(2)
-    .notConsumable('prts:basic_wanzi_position_corrector')
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
     .itemInputs('prts:basic_wanzi','minecraft:iron_ingot')
-    .itemOutputs('4x prts:type_d_conductive_circuit')
+    .itemOutputs('8x prts:type_d_conductive_circuit')
     .duration(80)
-    .EUt(15)//D型导电线路
-
+    .EUt(15)//D型导电线路（万子矫正器提升效率）
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_1')
     .circuit(3)
-    .notConsumable('prts:basic_wanzi_position_corrector')
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
     .itemInputs('prts:basic_wanzi','minecraft:iron_ingot','2x minecraft:copper_ingot')
     .itemOutputs('12x prts:type_d_resistor')
     .duration(80)
-    .EUt(15)
-
+    .EUt(15)//D型电阻（万子矫正器提升效率）
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_2')
     .circuit(2)
-    .notConsumable('prts:basic_wanzi_position_corrector')
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
     .itemInputs('2x prts:basic_wanzi','4x prts:micro_plastic_block','minecraft:iron_ingot')
-    .itemOutputs('2x prts:type_d_packaging_unit')
+    .itemOutputs('4x prts:type_d_packaging_unit')
     .duration(80)
-    .EUt(15)
-
+    .EUt(15)//D型封装单元（万子矫正器提升效率）
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_3')
-    .circuit(5)
-    .notConsumable('prts:basic_wanzi_position_corrector')
-    .itemInputs('prts:basic_wanzi','2x gtceu:sticky_resin')
-    .itemOutputs('4x prts:micro_plastic_block')
-    .duration(80)
-    .EUt(15)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_5')
     .circuit(7)
-    .notConsumable('prts:basic_wanzi_position_corrector')
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
     .itemInputs('3x prts:type_d_conductive_circuit','4x prts:basic_wanzi','2x prts:type_d_resistor','2x minecraft:iron_ingot','prts:micro_plastic_block')
     .itemOutputs('3x prts:type_d_high_voltage_transformation_component')
     .duration(80)
-    .EUt(15)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_6')
+    .EUt(15)//D型高压变电组件（万子矫正器提升效率）
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_4')
     .circuit(8)
-    .notConsumable('prts:basic_wanzi_position_corrector')
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
     .itemInputs('8x prts:basic_wanzi','4x minecraft:iron_ingot','8x minecraft:copper_ingot','2x prts:type_d_conductive_circuit','6x prts:micro_plastic_block')
     .itemOutputs('3x prts:type_d_risk_management_unit')
     .duration(80)
-    .EUt(15)
-
-    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_7')
+    .EUt(15)//D型风险管控单元（万子矫正器提升效率）
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_5')
     .circuit(9)
-    .notConsumable('prts:basic_wanzi_position_corrector')
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
     .itemInputs('3x prts:type_d_conductive_circuit','3x prts:type_d_packaging_unit','2x prts:type_d_resistor','8x prts:basic_wanzi','3x prts:type_d_circuit_cross_domain_actuator')
     .itemOutputs('3x prts:experimental_dsv_component')
     .duration(80)
-    .EUt(15)
+    .EUt(15)//实验型DSV装置（万子矫正器提升效率）
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:jiasuzengchanshezhi_6')
+    .circuit(5)
+    .chancedInput('prts:basic_wanzi_position_corrector',2500,-2500)
+    .itemInputs('prts:basic_wanzi','2x gtceu:sticky_resin')
+    .itemOutputs('8x prts:micro_plastic_block')
+    .duration(80)
+    .EUt(15)//微塑料块（万子矫正器提升效率）
 
-    
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_1')
+    .circuit(1)
+    .itemInputs('gtceu:flt_ingot','2x #forge:dusts/gold','gtceu:silver_dust','prts:type_two_wanzi')
+    .itemOutputs('4x prts:type_b_resistor')
+    .duration(80)
+    .EUt(256)//B型电阻
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_2')
+    .circuit(1)
+    .itemInputs('gtceu:flt_dust','2x #forge:dusts/gold','prts:type_two_wanzi')
+    .itemOutputs('4x prts:type_b_conductive_circuit')
+    .duration(80)
+    .EUt(256)//B型导电线路
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_3')
+    .circuit(1)
+    .itemInputs('gtceu:flt_ingot','prts:adhesive_plastic','prts:type_b_conductive_circuit','prts:type_b_resistor')
+    .itemOutputs('2x prts:type_b_packaging_unit')
+    .duration(80)
+    .EUt(256)//B型封装单元
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_4')
+    .circuit(1)
+    .itemInputs('2x gtceu:flt_dust','prts:adhesive_plastic','2x prts:type_b_resistor','2x prts:type_b_conductive_circuit')
+    .itemOutputs('prts:type_b_high_voltage_transformation_component')
+    .duration(80)
+    .EUt(256)//B型高压变电组件
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_5')
+    .circuit(1)
+    .itemInputs('2x #forge:dusts/gold','2x gtceu:silver_dust','prts:type_two_wanzi','2x prts:type_b_resistor','2x prts:type_b_conductive_circuit')
+    .itemOutputs('prts:type_b_risk_management_unit')
+    .duration(80)
+    .EUt(256)//B型风险管控单元
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_6')
+    .circuit(1)
+    .itemInputs('6x #forge:dusts/gold','6x gtceu:silver_dust','2x gtceu:flt_ingot','4x prts:adhesive_plastic')
+    .itemOutputs('prts:type_b_specialized_circuit_group')
+    .duration(80)
+    .EUt(256)//B型专型特化线路组
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_7')
+    .circuit(1)
+    .itemInputs('6x #forge:dusts/gold','6x gtceu:silver_dust','2x gtceu:flt_ingot','3x prts:medium_voltage_wanzi_circuit')
+    .itemOutputs('prts:type_b_wanzi_emission_concentrator')
+    .duration(80)
+    .EUt(256)//B型万子发射集中器
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_8')
+    .circuit(1)
+    .itemInputs('gtceu:stainless_steel_ingot','2x gtceu:flt_ingot','2x prts:type_two_wanzi')
+    .itemOutputs('prts:type_b_wire_guide_connection_device')
+    .duration(80)
+    .EUt(256)//B型线导连接装置
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_9')
+    .circuit(1)
+    .itemInputs('6x #forge:dusts/gold','6x gtceu:silver_dust','2x gtceu:flt_ingot','2x prts:type_two_wanzi','prts:medium_voltage_wanzi_circuit')
+    .itemOutputs('prts:type_b_directed_chemical_reaction_device')
+    .duration(80)
+    .EUt(256)//B型反应定向装置
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_10')
+    .circuit(1)
+    .itemInputs('2x #forge:dusts/gold','2x gtceu:silver_dust','2x gtceu:flt_ingot','gtceu:mv_field_generator')
+    .itemOutputs('prts:type_b_phase_change_device')
+    .duration(80)
+    .EUt(256)//B型物质相变装置
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:type_b_component_11')
+    .circuit(1)
+    .itemInputs('prts:pseudo_wanjing_etched_substrate','2x prts:adhesive_plastic','prts:type_two_wanzi')
+    .itemOutputs('prts:type_b_circuit_cross_domain_actuator')
+    .duration(80)
+    .EUt(256)//B型线路跨域促动器
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gem_super_phase')
+    .circuit(1)
+    .itemInputs('2x apotheosis:gem_dust','4x apotheosis:common_material','prts:basic_wanzi')
+    .itemOutputs('2x apotheosis:uncommon_material')
+    .duration(40)
+    .EUt(32)//神秘废金属转化为陈旧布匹
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gem_super_phase_1')
+    .circuit(1)
+    .itemInputs('4x apotheosis:gem_dust','4x apotheosis:uncommon_material','prts:type_one_wanzi')
+    .itemOutputs('2x apotheosis:rare_material')
+    .duration(40)
+    .EUt(128)//陈旧布匹转化为发光水晶碎片
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gem_super_phase_2')
+    .circuit(1)
+    .itemInputs('8x apotheosis:gem_dust','4x apotheosis:rare_material','4x prts:type_one_wanzi')
+    .itemOutputs('2x apotheosis:epic_material')
+    .duration(40)
+    .EUt(512)//发光水晶碎片转化为玄奥砂
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gem_super_phase_3')
+    .circuit(1)
+    .itemInputs('16x apotheosis:gem_dust','4x apotheosis:epic_material','8x prts:type_one_wanzi')
+    .itemOutputs('2x apotheosis:mythic_material')
+    .duration(40)
+    .EUt(512)//玄奥砂转化为神铸珍珠
 
 function basic_model_wanzi_phase_change_machine(id,C,I,O,T,E){
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine(id)
@@ -440,11 +520,6 @@ basic_model_wanzi_phase_change_machine('wanzi_phase_change_30',1,[
     '2x prts:type_c_resistor',
     'prts:deformable_plastic_block'
 ],'2x prts:type_c_high_voltage_transformation_component',120,96)
-basic_model_wanzi_phase_change_machine('wanzi_phase_change_31',2,[
-    '#gtceu:waw_yuan',
-    'prts:deformable_plastic_block',
-    'prts:chunhuagaoyabiandianzujian'
-],'prts:type_c_high_voltage_transformation_component',80,80)
 basic_model_wanzi_phase_change_machine('wanzi_phase_change_32',2,[
     'prts:stable_wanjing_etched_substrate',
     'prts:type_one_wanzi',
@@ -510,7 +585,7 @@ event.shaped('gtceu:mv_basic_model_wanzi_phase_change_machine',[
 
 event.shaped('gtceu:hv_basic_model_wanzi_phase_change_machine',[
     ['gtceu:electrum_quadruple_wire','gtceu:hv_electric_motor','gtceu:electrum_quadruple_wire'],
-    ['prts:basic_wanzi','prts:high_voltage_universal_casing','prts:basic_wanzi'],
+    ['prts:type_two_wanzi','prts:high_voltage_universal_casing','prts:type_two_wanzi'],
     ['gtceu:electrum_quadruple_wire','gtceu:hv_electric_piston','gtceu:electrum_quadruple_wire']
 ])//进阶型万子相变机配方
 })

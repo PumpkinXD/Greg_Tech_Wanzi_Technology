@@ -201,59 +201,89 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_7')
     .circuit(2)
-    .notConsumable('twilightforest:lich_trophy')
+    .chancedInput('twilightforest:lich_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',7500))
     .duration(120)
     .EUt(30)//液态魔魂生成Ⅶ
-
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_8')
     .circuit(2)
-    .notConsumable('twilightforest:minoshroom_trophy')
+    .chancedInput('twilightforest:minoshroom_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',9500))
     .duration(120)
     .EUt(30)//液态魔魂生成Ⅷ
-
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_9')
     .circuit(2)
-    .notConsumable('twilightforest:hydra_trophy')
+    .chancedInput('twilightforest:hydra_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',12000))
     .duration(120)
     .EUt(30)//液态魔魂生成Ⅸ
-
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_10')
     .circuit(2)
-    .notConsumable('twilightforest:alpha_yeti_trophy')
+    .chancedInput('twilightforest:alpha_yeti_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',15000))
     .duration(120)
     .EUt(30)//液态魔魂生成Ⅹ
-
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_11')
     .circuit(2)
-    .notConsumable('twilightforest:snow_queen_trophy')
+    .chancedInput('twilightforest:snow_queen_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',21000))
     .duration(120)
     .EUt(30)//液态魔魂生成11
-
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_12')
     .circuit(2)
-    .notConsumable('twilightforest:knight_phantom_trophy')
+    .chancedInput('twilightforest:knight_phantom_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',13000))
     .duration(120)
     .EUt(30)//液态魔魂生成12
-
     event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_13')
     .circuit(2)
-    .notConsumable('twilightforest:ur_ghast_trophy')
+    .chancedInput('twilightforest:ur_ghast_trophy',5000,1000)
     .inputFluids(Fluid.of('prts:magic_water',1000))
     .outputFluids(Fluid.of('prts:magic_ghost_fluid',20500))
     .duration(120)
     .EUt(30)//液态魔魂生成13
+
+    event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_14')
+    .circuit(1)
+    .itemInputs('2x apotheosis:common_material')
+    .inputFluids(Fluid.of('prts:magic_water',1000))
+    .outputFluids(Fluid.of('prts:magic_ghost_fluid',500))
+    .duration(120)
+    .EUt(30)//液态魔魂生成14
+    event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_15')
+    .circuit(1)
+    .itemInputs('2x apotheosis:uncommon_material')
+    .inputFluids(Fluid.of('prts:magic_water',1000))
+    .outputFluids(Fluid.of('prts:magic_ghost_fluid',1000))
+    .duration(120)
+    .EUt(30)//液态魔魂生成15
+    event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_16')
+    .circuit(1)
+    .itemInputs('2x apotheosis:rare_material')
+    .inputFluids(Fluid.of('prts:magic_water',1000))
+    .outputFluids(Fluid.of('prts:magic_ghost_fluid',1500))
+    .duration(120)
+    .EUt(30)//液态魔魂生成16
+    event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_17')
+    .circuit(1)
+    .itemInputs('2x apotheosis:epic_material')
+    .inputFluids(Fluid.of('prts:magic_water',1000))
+    .outputFluids(Fluid.of('prts:magic_ghost_fluid',2500))
+    .duration(120)
+    .EUt(30)//液态魔魂生成17
+    event.recipes.gtceu.liquid_magic_generator('prts:magic_ghost_18')
+    .circuit(1)
+    .itemInputs('2x apotheosis:mythic_material')
+    .inputFluids(Fluid.of('prts:magic_water',1000))
+    .outputFluids(Fluid.of('prts:magic_ghost_fluid',5000))
+    .duration(120)
+    .EUt(30)//液态魔魂生成18
 
     event.shaped('gtceu:liquid_magic_generator_1',[
         ['botania:polished_livingrock','botania:polished_livingrock','botania:polished_livingrock'],

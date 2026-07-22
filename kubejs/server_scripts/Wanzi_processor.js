@@ -39,6 +39,21 @@ ServerEvents.recipes((event) => {
     .EUt(64)
     //一型万子 => 瓦拉帕斯
 
+    event.recipes.gtceu.basic_model_wanzi_processor('prts:pseudo_wanjing_substrate')
+    .circuit(1)
+    .itemInputs('prts:gold_grit_dust_wanzi','prts:copper_grit_dust_wanzi','prts:type_two_wanzi','gtceu:flt_ingot')
+    .itemOutputs('2x prts:pseudo_wanjing_substrate')
+    .duration(50)
+    .EUt(256)
+    //拟化万晶基板制作1
+    event.recipes.gtceu.basic_model_wanzi_processor('prts:pseudo_wanjing_substrate_1')
+    .circuit(1)
+    .itemInputs('prts:stable_wanjing_substrate','2x gtceu:flt_ingot')
+    .itemOutputs('2x prts:pseudo_wanjing_substrate')
+    .duration(50)
+    .EUt(256)
+    //拟化万晶基板制作2
+
     function basic_model_wanzi_processor(id,C,I,O,T,E,Ch1,Ch2,CHT1,CHT3,CHT2,CHT4){
         event.recipes.gtceu.basic_model_wanzi_processor(id)
              .circuit(C)
@@ -129,8 +144,8 @@ ServerEvents.recipes((event) => {
     ])//正式型万子处理机制作
 
     event.shaped('gtceu:hv_basic_model_wanzi_processor',[
-        ['#forge:glass','prts:basic_wanzi','gtceu:hv_electric_motor'],
+        ['#forge:glass','prts:type_two_wanzi','gtceu:hv_electric_motor'],
         ['gtceu:advanced_integrated_circuit','prts:high_voltage_universal_casing','gtceu:advanced_integrated_circuit'],
-        ['#forge:glass','prts:basic_wanzi','gtceu:hv_electric_motor']
+        ['#forge:glass','prts:type_two_wanzi','gtceu:hv_electric_motor']
     ])//进阶型万子处理机制作
 })

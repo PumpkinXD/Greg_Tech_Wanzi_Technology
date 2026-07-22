@@ -1,51 +1,287 @@
 ServerEvents.recipes((event) => {
     event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:zizhi_ram_1')
+    .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:ram_wafer')
     .notConsumable('#forge:lenses/green')
     .duration(600)
     .EUt(48)
-    //一型蚀刻万晶基板再造1
+    //一型蚀刻万晶基板造RAM 1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ram_emitter_1')
+    .circuit(2)
+    .chancedInput('prts:basic_wanzi_emitter',5000,5000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
+    .itemOutputs('2x gtceu:ram_wafer')
+    .notConsumable('#forge:lenses/green')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造RAM 2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ram_emitter_2')
+    .circuit(2)
+    .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
+    .itemOutputs('4x gtceu:ram_wafer')
+    .notConsumable('#forge:lenses/green')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造RAM 3
 
-    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:zizhi_ram_2')
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ilc_emitter_1')
+    .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:ilc_wafer')
     .notConsumable('#forge:lenses/red')
     .duration(600)
     .EUt(48)
-    //一型蚀刻万晶基板再造2
+    //一型蚀刻万晶基板造LIC 1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ilc_emitter_2')
+    .circuit(2)
+    .chancedInput('prts:basic_wanzi_emitter',5000,5000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
+    .itemOutputs('gtceu:ilc_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造LIC 2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ilc_emitter_3')
+    .circuit(2)
+    .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
+    .itemOutputs('gtceu:ilc_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造LIC 3
 
-    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:zizhi_ram_3')
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_cpu_emitter_1')
+    .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:cpu_wafer')
-    .notConsumable('#forge:lenses/light_blue')
+    .notConsumable('#forge:lenses/red')
     .duration(600)
     .EUt(48)
-    //一型蚀刻万晶基板再造3
+    //一型蚀刻万晶基板造CPU 1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_cpu_emitter_2')
+    .circuit(2)
+    .chancedInput('prts:basic_wanzi_emitter',5000,5000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
+    .itemOutputs('gtceu:cpu_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造CPU 2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_cpu_emitter_3')
+    .circuit(2)
+    .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
+    .itemOutputs('gtceu:cpu_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造CPU 3
 
-    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:zizhi_ram_4')
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ulpic_emitter_1')
+    .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:ulpic_wafer')
-    .notConsumable('#forge:lenses/blue')
+    .notConsumable('#forge:lenses/red')
     .duration(600)
     .EUt(48)
-    //一型蚀刻万晶基板再造4
+    //一型蚀刻万晶基板造ULPIC 1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ulpic_emitter_2')
+    .circuit(2)
+    .chancedInput('prts:basic_wanzi_emitter',5000,5000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
+    .itemOutputs('gtceu:ulpic_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造ULPIC 2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_ulpic_emitter_3')
+    .circuit(2)
+    .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
+    .itemOutputs('gtceu:ulpic_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造ULPIC 3
 
-    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:zizhi_ram_5')
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_lpic_emitter_1')
+    .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:lpic_wafer')
-    .notConsumable('gtceu:orange_glass_lens')
+    .notConsumable('#forge:lenses/red')
     .duration(600)
     .EUt(48)
-    //一型蚀刻万晶基板再造5
+    //一型蚀刻万晶基板造LPIC 1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_lpic_emitter_2')
+    .circuit(2)
+    .chancedInput('prts:basic_wanzi_emitter',5000,5000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
+    .itemOutputs('gtceu:lpic_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造LPIC 2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_lpic_emitter_3')
+    .circuit(2)
+    .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
+    .itemOutputs('gtceu:lpic_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造LPIC 3
 
-    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:zizhi_ram_6')
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_soc_emitter_1')
+    .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
-    .itemOutputs('gtceu:simple_soc_wafer')
-    .notConsumable('gtceu:cyan_glass_lens')
+    .itemOutputs('gtceu:soc_wafer')
+    .notConsumable('#forge:lenses/red')
     .duration(600)
     .EUt(48)
-    //一型蚀刻万晶基板再造6
+    //一型蚀刻万晶基板造SOC 1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_soc_emitter_2')
+    .circuit(2)
+    .chancedInput('prts:basic_wanzi_emitter',5000,5000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
+    .itemOutputs('gtceu:soc_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造SOC 2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_soc_emitter_3')
+    .circuit(2)
+    .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
+    .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
+    .itemOutputs('gtceu:soc_wafer')
+    .notConsumable('#forge:lenses/red')
+    .duration(600)
+    .EUt(48)
+    //一型蚀刻万晶基板造SOC 3
+
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:gold_girt_dust_1')
+    .circuit(2)
+    .itemInputs('minecraft:gold_ingot')
+    .chancedOutput('prts:gold_grit_dust_wanzi',5000,0)
+    .duration(150)
+    .EUt(256)
+    //金砂尘直接制作1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:gold_girt_dust_2')
+    .circuit(2)
+    .itemInputs('minecraft:gold_block')
+    .itemOutputs('9x prts:gold_grit_dust_wanzi')
+    .chancedOutput('prts:gold_grit_dust_wanzi',5000,0)
+    .chancedOutput('2x prts:gold_grit_dust_wanzi',2500,0)
+    .chancedOutput('4x prts:gold_grit_dust_wanzi',1250,0)
+    .duration(150)
+    .EUt(256)
+    //金砂尘直接制作2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:gold_girt_dust_3')
+    .circuit(2)
+    .itemInputs('minecraft:raw_gold')
+    .chancedOutput('prts:gold_grit_dust_wanzi',5000,0)
+    .duration(150)
+    .EUt(256)
+    //金砂尘直接制作3
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:gold_girt_dust_4')
+    .circuit(2)
+    .itemInputs('minecraft:raw_gold_block')
+    .itemOutputs('9x prts:gold_grit_dust_wanzi')
+    .chancedOutput('prts:gold_grit_dust_wanzi',5000,0)
+    .chancedOutput('2x prts:gold_grit_dust_wanzi',2500,0)
+    .chancedOutput('4x prts:gold_grit_dust_wanzi',1250,0)
+    .duration(150)
+    .EUt(256)
+    //金砂尘直接制作4
+
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:iron_girt_dust_1')
+    .circuit(2)
+    .itemInputs('minecraft:iron_ingot')
+    .chancedOutput('prts:iron_grit_dust_wanzi',5000,0)
+    .duration(150)
+    .EUt(256)
+    //铁砂尘直接制作1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:iron_girt_dust_2')
+    .circuit(2)
+    .itemInputs('minecraft:iron_block')
+    .itemOutputs('9x prts:iron_grit_dust_wanzi')
+    .chancedOutput('prts:iron_grit_dust_wanzi',5000,0)
+    .chancedOutput('2x prts:iron_grit_dust_wanzi',2500,0)
+    .chancedOutput('4x prts:iron_grit_dust_wanzi',1250,0)
+    .duration(150)
+    .EUt(256)
+    //铁砂尘直接制作2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:iron_girt_dust_3')
+    .circuit(2)
+    .itemInputs('minecraft:raw_iron')
+    .chancedOutput('prts:iron_grit_dust_wanzi',5000,0)
+    .duration(150)
+    .EUt(256)
+    //铁砂尘直接制作3
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:iron_girt_dust_4')
+    .circuit(2)
+    .itemInputs('minecraft:raw_iron_block')
+    .itemOutputs('9x prts:iron_grit_dust_wanzi')
+    .chancedOutput('prts:iron_grit_dust_wanzi',5000,0)
+    .chancedOutput('2x prts:iron_grit_dust_wanzi',2500,0)
+    .chancedOutput('4x prts:iron_grit_dust_wanzi',1250,0)
+    .duration(150)
+    .EUt(256)
+    //铁砂尘直接制作4
+
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:copper_girt_dust_1')
+    .circuit(2)
+    .itemInputs('minecraft:copper_ingot')
+    .chancedOutput('prts:copper_grit_dust_wanzi',5000,0)
+    .duration(150)
+    .EUt(256)
+    //铜砂尘直接制作1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:copper_girt_dust_2')
+    .circuit(2)
+    .itemInputs('minecraft:copper_block')
+    .itemOutputs('9x prts:copper_grit_dust_wanzi')
+    .chancedOutput('prts:copper_grit_dust_wanzi',5000,0)
+    .chancedOutput('2x prts:copper_grit_dust_wanzi',2500,0)
+    .chancedOutput('4x prts:copper_grit_dust_wanzi',1250,0)
+    .duration(150)
+    .EUt(256)
+    //铜砂尘直接制作2
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:copper_girt_dust_3')
+    .circuit(2)
+    .itemInputs('minecraft:raw_copper')
+    .chancedOutput('prts:copper_grit_dust_wanzi',5000,0)
+    .duration(150)
+    .EUt(256)
+    //铜砂尘直接制作3
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:copper_girt_dust_4')
+    .circuit(2)
+    .itemInputs('minecraft:raw_copper_block')
+    .itemOutputs('9x prts:copper_grit_dust_wanzi')
+    .chancedOutput('prts:copper_grit_dust_wanzi',5000,0)
+    .chancedOutput('2x prts:copper_grit_dust_wanzi',2500,0)
+    .chancedOutput('4x prts:copper_grit_dust_wanzi',1250,0)
+    .duration(150)
+    .EUt(256)
+    //铜砂尘直接制作4
+
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:pseudo_wanjing_etched_substrate')
+    .circuit(1)
+    .itemInputs('prts:pseudo_wanjing_substrate','prts:type_two_wanzi','2x #forge:dusts/gold','2x gtceu:silver_dust')
+    .itemOutputs('prts:pseudo_wanjing_etched_substrate')
+    .duration(150)
+    .EUt(256)
+    //拟化万晶蚀刻基板制作1
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:pseudo_wanjing_etched_substrate')
+    .circuit(2)
+    .chancedInput('prts:advanced_wanzi_emitter',2000,0)
+    .chancedInput('prts:type_b_wanzi_emission_concentrator',2000,0)
+    .itemInputs('prts:pseudo_wanjing_substrate','prts:type_two_wanzi','2x #forge:dusts/gold','2x gtceu:silver_dust')
+    .itemOutputs('2x prts:pseudo_wanjing_etched_substrate')
+    .duration(150)
+    .EUt(256)
+    //拟化万晶蚀刻基板制作1
     
     function basic_model_wanzi_etching_machine(id,C,I,O,T,E,Ch1,Ch2,CHT1,CHT3,CHT2,CHT4){
         event.recipes.gtceu.basic_model_wanzi_etching_machine(id)
@@ -159,8 +395,8 @@ ServerEvents.recipes((event) => {
         "CFC"
     ],{
         D:'gtceu:aluminium_plate',
-        B:'prts:type_c_purified_packaging_unit',
-        A:'prts:type_c_purified_conductive_circuit',
+        B:'prts:type_c_packaging_unit',
+        A:'prts:type_c_conductive_circuit',
         S:'gtceu:mv_machine_hull',
         C:'prts:type_c_high_voltage_transformation_component',
         F:'prts:type_c_risk_management_unit'
@@ -172,10 +408,10 @@ ServerEvents.recipes((event) => {
         "CFC"
     ],{
         D:'gtceu:stainless_steel_plate',
-        B:'prts:type_c_purified_packaging_unit',
-        A:'prts:type_c_purified_conductive_circuit',
+        B:'prts:type_b_packaging_unit',
+        A:'prts:type_b_conductive_circuit',
         S:'prts:high_voltage_universal_casing',
-        C:'prts:type_c_high_voltage_transformation_component',
-        F:'prts:type_c_risk_management_unit'
+        C:'prts:type_b_high_voltage_transformation_component',
+        F:'prts:type_b_risk_management_unit'
     })//进阶型万子蚀刻机配方
 })
