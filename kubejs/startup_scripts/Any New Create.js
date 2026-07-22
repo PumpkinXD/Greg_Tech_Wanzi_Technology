@@ -1,5 +1,7 @@
 StartupEvents.registry("item",event=>{
     event.create("prts:basic_wanzi","basic");
+    event.create("prts:type_one_wanzi","basic");
+    event.create("prts:type_two_wanzi","basic");
     event.create("prts:base_substrate_wanjing","basic");
     event.create("prts:substrate_dust_wanjing","basic");
     event.create("prts:waste_material","basic");
@@ -40,12 +42,11 @@ StartupEvents.registry("item",event=>{
     event.create("prts:type_d_purified_packaging_unit","basic");
     event.create("prts:purified_basic_wanzi","basic");
     event.create("prts:purified_basic_wanjing","basic");
-    event.create("prts:type_d_purifie_circuit_cross_domain_actuator","basic");
-    event.create("prts:type_d_purifie_high_voltage_transformation_component","basic");
-    event.create("prts:type_d_purifie_risk_management_unit","basic");
+    event.create("prts:type_d_purified_circuit_cross_domain_actuator","basic");
+    event.create("prts:type_d_purified_high_voltage_transformation_component","basic");
+    event.create("prts:type_d_purified_risk_management_unit","basic");
     event.create("prts:low_voltage_wanzi_circuit","basic");
     event.create("prts:medium_voltage_wanzi_circuit","basic");
-    event.create("prts:type_one_wanzi","basic");
     event.create("prts:heteromorphic_iron","basic");
     event.create("prts:heteromorphic_jade");
     event.create("prts:heteromorphic_copper","basic");
@@ -134,30 +135,56 @@ StartupEvents.registry("item",event=>{
     event.create("prts:type_b_purified_wire_guide_connection_device","basic");
     event.create("prts:type_b_purified_directed_chemical_reaction_device","basic");
     event.create("prts:type_b_purified_phase_change_device","basic");
-    event.create("prts:ultra_compacted_copper_plate","basic")
-    event.create("prts:ultra_high_stiffness_toughness_plate","basic")
-
+    event.create("prts:advanced_wanzi_impact_plate","basic");
+    event.create("prts:advanced_wanzi_resistor_plate","basic");
+    event.create("prts:advanced_wanzi_redirection_plate","basic");
+    event.create("prts:advanced_wanzi_absorber_plate","basic");
+    event.create("prts:advanced_wanzi_position_corrector","basic");
+    event.create("prts:advanced_wanzi_actuator","basic");
+    event.create("prts:advanced_wanzi_emitter","basic");
+    event.create("prts:advanced_wanzi_film_coating_sprayer","basic");
+    event.create("prts:advanced_wanzi_holder","basic");
+    event.create("prts:advanced_dsv_component","basic");
+    event.create("prts:ultra_compacted_copper_plate","basic");
+    event.create("prts:ultra_high_stiffness_toughness_plate","basic");
+    event.create("prts:disassembler_unit","basic");
+    event.create("prts:blueprint","basic");
+    event.create("prts:blueprint_rod","basic");
+    event.create("prts:blueprint_gear","basic");
+    event.create("prts:blueprint_small_gear","basic");
+    event.create("prts:blueprint_rotor","basic");
+    event.create("prts:blueprint_ball","basic");
+    event.create("prts:blueprint_ring","basic");
+    event.create("prts:blueprint_plate","basic");
+    event.create("prts:blueprint_single_wire","basic");
+    event.create("prts:blueprint_fine_wire","basic");
+    event.create("prts:compressed_cardboard","basic");
+    event.create("prts:dedicated_blueprint_pen","basic");
+    event.create("prts:pseudo_wanjing_etched_substrate","basic");
+    event.create("prts:pseudo_wanjing_substrate","basic");
+    event.create("prts:beta_wanjing","basic")
+    
     event.create("prts:basic_wanzi_sword","sword")
          .speedBaseline(-2.4)           // 攻击速度：1.6
-         .attackDamageBonus(4.0)        // 攻击伤害：7
+         .attackDamageBonus(8.0)        // 攻击伤害增加8
          .maxDamage(250)                // 耐久：250
          .glow(true)
          .rarity("common")
     event.create("prts:compression_type_wanzi_sword","sword")
          .speedBaseline(-2.2)           // 攻击速度：1.8
-         .attackDamageBonus(6.0)        // 攻击伤害：9
+         .attackDamageBonus(16.0)       // 攻击伤害增加16
          .maxDamage(400)                // 耐久：400
          .glow(true)
          .rarity("common")
     event.create("prts:type_one_wanzi_sword","sword")
          .speedBaseline(-2.0)           // 攻击速度：2.0
-         .attackDamageBonus(8.5)        // 攻击伤害：11.5
+         .attackDamageBonus(28.5)       // 攻击伤害增加28.5
          .maxDamage(550)                // 耐久：550
          .glow(true)
          .rarity("common")
     event.create("prts:data_rending_sword","sword")
          .speedBaseline(-0.1)           // 攻击速度：3.9
-         .attackDamageBonus(10.5)       // 攻击伤害：13.5
+         .attackDamageBonus(40.5)       // 攻击伤害增加40.5
          .maxDamage(500)                // 耐久：500
          .glow(true)
          .rarity("uncommon")            //稀有度：少见
@@ -188,7 +215,7 @@ StartupEvents.registry("block",event=>{
     event.create("prts:naweigeshiketankuai","basic");
     event.create("prts:gaoxiaoshuiyayanmofangkuai","basic");
     event.create("prts:high_voltage_universal_casing","basic");
-    event.create("prts:ultra_high_efficiency_adsorption_core_component")
+    event.create("prts:ultra_high_efficiency_adsorption_core_component");
 })
 StartupEvents.registry("fluid",event=>{
     event.create("prts:jianduduye").thinTexture(0x8a209c).noBlock()

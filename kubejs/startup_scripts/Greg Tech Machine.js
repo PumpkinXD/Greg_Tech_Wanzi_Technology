@@ -6,6 +6,7 @@ const $ItemRecipeCapability = Java.loadClass('com.gregtechceu.gtceu.api.capabili
 const $GTHashMaps = Java.loadClass('com.gregtechceu.gtceu.utils.GTHashMaps');
 const $Collections = Java.loadClass('java.util.Collections');
 const $Objects = Java.loadClass('java.util.Objects');
+const $EnergyHatchPartMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.part.EnergyHatchPartMachine");
 // 注册机器配方类型
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
@@ -25,6 +26,94 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
        .setSound(GTSoundEntries.SUS_RECORD)
        .setMaxTooltips(5)
 
+  event.create('basic_model_wanzi_condenser')//配方:基础型万子凝练
+       .category('basic_model_wanzi_condenser')
+       .setEUIO('in') 
+       .setMaxIOSize(2, 1, 0, 0)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+  event.create('basic_model_wanzi_processor')//配方：基础型万子处理
+       .category('basic_model_wanzi_processor')
+       .setEUIO('in') 
+       .setMaxIOSize(5, 4, 0, 0)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_model_wanzi_etching_machine')//配方：基础型万子蚀刻
+       .category('basic_model_wanzi_etching_machine')
+       .setEUIO('in')
+       .setMaxIOSize(7, 5, 0, 0)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_model_wanzi_phase_change_machine')//配方：基础型万子相变
+       .category('basic_model_wanzi_phase_change_machine')
+       .setEUIO('in')
+       .setMaxIOSize(7, 3, 3, 3)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_model_wanzi_mining_machine')//配方：基础型万子采矿
+       .category('basic_model_wanzi_mining_machine')
+       .setEUIO('in')
+       .setMaxIOSize(6, 8, 0, 0)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_wanzi_assembler')//配方：基础型万子组装
+       .category('basic_wanzi_assembler')
+       .setEUIO('in')
+       .setMaxIOSize(8, 2, 2, 0)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_model_wanzi_compressor')//配方：基础型万子压缩器
+       .category('basic_model_wanzi_compressor')
+       .setEUIO('in') 
+       .setMaxIOSize(10, 6, 8, 6)
+       .setSlotOverlay(false, false, GuiTextures.COMPRESSOR_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+    
+ event.create('basic_model_wanzi_disassembler')//配方：基础型万子拆解机
+       .category('basic_model_wanzi_disassembler')
+       .setEUIO('in')
+       .setMaxIOSize(6, 9, 0, 9)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_model_wanzi_purifier')//配方：基础型万子净化机
+       .category('basic_model_wanzi_purifier')
+       .setEUIO('in') 
+       .setMaxIOSize(2, 1, 0, 0)
+       .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSound(GTSoundEntries.BATH)
+
+ event.create('basic_model_wanzi_electronics_assembler')//配方：基础型万子电路组装厂
+      .category('basic_model_wanzi_electronics_assembler')
+      .setEUIO('in')
+      .setMaxIOSize(6, 2, 2, 0)
+      .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.BATH)
+
+ event.create('wanzi_automated_culture_system')//配方：万子培养机
+      .category('wanzi_automated_culture_system')
+      .setEUIO('in')
+      .setMaxIOSize(1, 6, 1, 6)
+      .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+      .setSound(GTSoundEntries.BATH)
+ 
   event.create('basic_model_wanzi_power_supply_machine_1')//配方：万子供电
        .category('basic_model_wanzi_power_supply_machine_1')
        .setEUIO('out')
@@ -52,7 +141,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
  event.create('chaogaosuhejinyelian_1')//配方：超高速合金冶炼
        .category('chaogaosuhejinyelian_1')
        .setEUIO('in')
-       .setMaxIOSize(4,2,2,0)
+       .setMaxIOSize(8,4,4,2)
        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
        .setSound(GTSoundEntries.ELECTROLYZER)
        .setMaxTooltips(5)
@@ -86,6 +175,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
        .setEUIO('in') 
        .setMaxIOSize(9,9,9,9)
        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSlotOverlay(false, false, GuiTextures.BEAKER_OVERLAY_4)
        .setSound(GTSoundEntries.BATH)
        .setMaxTooltips(5)
 
@@ -94,8 +184,37 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
        .setEUIO('in') 
        .setMaxIOSize(9,9,9,9)
        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSlotOverlay(false, false, GuiTextures.BEAKER_OVERLAY_4)
        .setSound(GTSoundEntries.BATH)
        .setMaxTooltips(5)
+
+  event.create('bigger_wanzi_alloy_smelter')//配方：大型万子合金熔炼
+       .category('wanzi_alloy_smelter')
+       .setEUIO('in') 
+       .setMaxIOSize(15,15,6,6)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSlotOverlay(false, false, GuiTextures.BEAKER_OVERLAY_4)
+       .setSlotOverlay(false, true, GuiTextures.BEAKER_OVERLAY_3)
+       .setSound(GTSoundEntries.MIXER)
+       .setMaxTooltips(5)
+
+ event.create('bigger_wanzi_electrolyzer_over')//配方：大型万子电解
+       .category('bigger_wanzi_electrolyzer_over')
+       .setEUIO('in') 
+       .setMaxIOSize(3,15,3,15)
+       .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+       .setSlotOverlay(false, true, GuiTextures.BEAKER_OVERLAY_3)
+       .setSound(GTSoundEntries.MIXER)
+       .setMaxTooltips(5)
+
+ event.create('bigger_wanzi_assembler_plan')//配方：大型万子组装
+      .category('bigger_wanzi_assembler_plan')
+      .setEUIO('in') 
+      .setMaxIOSize(15,6,15,6)
+      .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+      .setSlotOverlay(false, true, GuiTextures.BEAKER_OVERLAY_3)
+      .setSound(GTSoundEntries.MIXER)
+      .setMaxTooltips(5)
 })
 
 // 注册机器方块
@@ -347,7 +466,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
        .recipeType('bigger_wanzi_condenser')
        .recipeType('bigger_wanzi_processor')
        .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
-       .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+       .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT])
        .generator(false)
        .regressWhenWaiting(false)
        .pattern(definition => FactoryBlockPattern.start()
@@ -366,100 +485,125 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
        .where('#',Predicates.blocks('gtceu:waw'))
        .build())
        .workableCasingModel('gtceu:block/casings/solid/machine_casing_clean_stainless_steel',"gtceu:block/machines/basic_model_wanzi_condenser")
-})          
-//////////////////////////////////////以下为单方块机器////////////////////////////////////////////////
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_condenser')//设置配方的名字（基础型万子凝练机）
-    .category('basic_model_wanzi_condenser')//设置类型
-    .setEUIO('in') //设置机器的能源输入/输出
-    .setMaxIOSize(2, 1, 0, 0)//设置机器输入输出个数(物品输入,物品输出,流体输入,流体输出)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)//设置机器的背面带有覆盖版
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)//设置机器运行时处理中的样子
-    .setSound(GTSoundEntries.BATH)//设置机器运行时工作的声音
-})
 
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_condenser', 'simple')
-      .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-      .definition((tier, builder) =>
+  event.create('bigger_wanzi_alloy_smelter_factory', 'multiblock')//大型万子合金熔炼场
+       .rotationState(RotationState.NON_Y_AXIS)
+       .recipeType('bigger_wanzi_alloy_smelter')
+       .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
+       .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT])
+       .generator(false)
+       .regressWhenWaiting(false)
+       .pattern(definition => FactoryBlockPattern.start()
+       .aisle('####AAA####','####BCB####','####BCB####','####BCB####','####BCB####','####BCB####','####BBB####')
+       .aisle('##AAAAAAA##','##BCBDBCB##','##BCBBBCB##','##BCBGBCB##','##BCBBBCB##','##BCBDBCB##','##BBBBBBB##')
+       .aisle('#AAAAAAAAA#','#BBEDDDEBB#','#BBBFBFBBB#','#BBEGGGEBB#','#BBBHBHBBB#','#BBEDDDEBB#','#BBBBBBBBB#')
+       .aisle('#AAAAAAAAA#','#CEDDDDDEC#','#CBBFBFBBC#','#CEGGGGGEC#','#CBBHBHBBC#','#CEDDDDDEC#','#BBBBBBBBB#')
+       .aisle('AAAAAAAAAAA','BBDDEDEDDBB','BBFFEBEFFBB','BBGGEGEGGBB','BBHHEBEHHBB','BBDDEDEDDBB','BBBBBBBBBBB')
+       .aisle('AAAAAAAAAAA','CDDDDDDDDDC','CBBBEBEBBBC','CGGGGGGGGGC','CBBBEBEBBBC','CDDDDDDDDDC','BBBBBBBBBBB')
+       .aisle('AAAAAAAAAAA','BBDDEDEDDBB','BBFFEBEFFBB','BBGGEGEGGBB','BBHHEBEHHBB','BBDDEDEDDBB','BBBBBBBBBBB')
+       .aisle('#AAAAAAAAA#','#CEDDDDDEC#','#CBBFBFBBC#','#CEGGGGGEC#','#CBBHBHBBC#','#CEDDDDDEC#','#BBBBBBBBB#')
+       .aisle('#AAAAAAAAA#','#BBEDDDEBB#','#BBBFBFBBB#','#BBEGGGEBB#','#BBBHBHBBB#','#BBEDDDEBB#','#BBBBBBBBB#')
+       .aisle('##AAAAAAA##','##BCBDBCB##','##BCBBBCB##','##BCBGBCB##','##BCBBBCB##','##BCBDBCB##','##BBBBBBB##')
+       .aisle('####AKA####','####BCB####','####BCB####','####BCB####','####BCB####','####BCB####','####BPB####')
+       .where('K',Predicates.controller(Predicates.blocks(definition.get())))
+       .where('A',Predicates.blocks('gtceu:titanium_firebox_casing'))
+       .where('B',Predicates.blocks('gtceu:stable_machine_casing')
+           .or(Predicates.autoAbilities(definition.getRecipeTypes())))
+       .where('C',Predicates.blocks('gtceu:nichrome_coil_block'))
+       .where('D',Predicates.blocks('gtceu:flt'))
+       .where('E',Predicates.blocks('gtceu:titanium_gearbox'))
+       .where('F',Predicates.blocks('gtceu:waw_frame'))
+       .where('G',Predicates.blocks('gtceu:waw'))
+       .where('H',Predicates.blocks('gtceu:flt_frame'))
+       .where('P',Predicates.abilities(PartAbility.MAINTENANCE))
+       .where('#',Predicates.any())
+       .build())
+       .workableCasingModel('gtceu:block/casings/solid/machine_casing_stable_titanium',"gtceu:block/machines/basic_model_wanzi_condenser")
+
+  event.create('bigger_wanzi_electrolyzer', 'multiblock')//大型万子电解机
+       .rotationState(RotationState.NON_Y_AXIS)
+       .recipeType('bigger_wanzi_electrolyzer_over')
+       .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
+       .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT])
+       .generator(false)
+       .regressWhenWaiting(false)
+       .pattern(definition => FactoryBlockPattern.start()
+       .aisle('AAA','AAA','AAA','AAA','AAA')
+       .aisle('AAA','ABA','ACA','ADA','AAA')
+       .aisle('AKA','AAA','AAA','AAA','AEA')
+       .where('K',Predicates.controller(Predicates.blocks(definition.get())))
+       .where('A',Predicates.blocks('gtceu:clean_machine_casing')
+           .or(Predicates.autoAbilities(definition.getRecipeTypes())))
+       .where('B',Predicates.blocks('gtceu:waw'))
+       .where('C',Predicates.blocks('gtceu:stainless_steel_gearbox'))
+       .where('D',Predicates.blocks('gtceu:flt'))
+       .where('E',Predicates.abilities(PartAbility.MAINTENANCE))
+       .build())
+       .workableCasingModel('gtceu:block/casings/solid/machine_casing_clean_stainless_steel',"gtceu:block/machines/basic_model_wanzi_electrolyzer")
+
+  event.create('bigger_wanzi_assembler', 'multiblock')//大型万子组装机
+       .rotationState(RotationState.NON_Y_AXIS)
+       .recipeType('bigger_wanzi_assembler_plan')
+       .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
+       .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT])
+       .generator(false)
+       .regressWhenWaiting(false)
+       .pattern(definition => FactoryBlockPattern.start()
+       .aisle('AAAAAAAAAA','AAGGGGGGAA','AAGGGGGGAA','AAAAAAAAAA')
+       .aisle('GAAAAAAAAG','GFFFFFFFFG','GBBBBBBBBG','GAAAAAAAAG')
+       .aisle('GBBABBABBG','G###BB###G','G###BB###G','GAAAAAAAAG')
+       .aisle('GBAAAAAABG','GDDDDDDDDG','GDDCCCCDDG','GAAAAAAAAG')
+       .aisle('AAAAAAAAAA','ADDCCCCDDA','ACCCCCCCCA','**********')
+       .aisle('AAAAKEAAAA','ACCC**CCCA','**********','**********')
+       .where('K',Predicates.controller(Predicates.blocks(definition.get())))
+       .where('A',Predicates.blocks('gtceu:clean_machine_casing'))
+       .where('G',Predicates.blocks('gtceu:clean_machine_casing')
+           .or(Predicates.autoAbilities(definition.getRecipeTypes())))
+       .where('B',Predicates.blocks('gtceu:stainless_steel_gearbox'))
+       .where('C',Predicates.blocks('gtceu:cleanroom_glass'))
+       .where('D',Predicates.blocks('gtceu:tempered_glass'))
+       .where('F',Predicates.blocks('gtceu:steel_pipe_casing'))
+       .where('E',Predicates.abilities(PartAbility.MAINTENANCE))
+       .where('#',Predicates.air())
+       .where('*',Predicates.any())
+       .build())
+       .workableCasingModel('gtceu:block/casings/solid/machine_casing_clean_stainless_steel',"gtceu:block/machines/basic_model_wanzi_electrolyzer")
+         
+//////////////////////////////////////以下为单方块机器////////////////////////////////////////////////
+
+  event.create('basic_model_wanzi_condenser', 'simple')//万子凝练机
+       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+       .definition((tier, builder) =>
           builder
               .rotationState(RotationState.NON_Y_AXIS)
               .recipeType('basic_model_wanzi_condenser')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_condenser')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_processor')//设置机器的名字（基础型万子处理机）
-    .category('basic_model_wanzi_processor')
-    .setEUIO('in') 
-    .setMaxIOSize(5, 4, 0, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_processor', 'simple')
-      .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-      .definition((tier, builder) =>
+  event.create('basic_model_wanzi_processor', 'simple')//万子处理机
+       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+       .definition((tier, builder) =>
           builder
               .rotationState(RotationState.NON_Y_AXIS)
               .recipeType('basic_model_wanzi_processor')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_processor')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_etching_machine')//设置机器的名字（基础型万子蚀刻机）
-    .category('basic_model_wanzi_etching_machine')
-    .setEUIO('in')
-    .setMaxIOSize(7, 5, 0, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_etching_machine', 'simple')
-      .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-      .definition((tier, builder) =>
+  event.create('basic_model_wanzi_etching_machine', 'simple')//万子蚀刻机
+       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+       .definition((tier, builder) =>
           builder
               .rotationState(RotationState.NON_Y_AXIS)
               .recipeType('basic_model_wanzi_etching_machine')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_etching_machine')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_phase_change_machine')//设置机器的名字（基础型万子相变机）
-    .category('basic_model_wanzi_phase_change_machine')
-    .setEUIO('in')
-    .setMaxIOSize(7, 3, 3, 3)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_phase_change_machine', 'simple')
-      .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-      .definition((tier, builder) =>
+  event.create('basic_model_wanzi_phase_change_machine', 'simple')//万子相变机
+       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+       .definition((tier, builder) =>
           builder
               .rotationState(RotationState.NON_Y_AXIS)
               .recipeType('basic_model_wanzi_phase_change_machine')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_phase_change_machine')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_mining_machine')//设置机器的名字（基础型万子采矿机）
-    .category('basic_model_wanzi_mining_machine')
-    .setEUIO('in')
-    .setMaxIOSize(6, 8, 0, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_mining_machine', 'simple')
+  event.create('basic_model_wanzi_mining_machine', 'simple')//万子采矿机
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -467,19 +611,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('basic_model_wanzi_mining_machine')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_mining_machine')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_wanzi_assembler')//设置机器的名字(基础型万子组装厂)
-    .category('basic_wanzi_assembler')
-    .setEUIO('in')
-    .setMaxIOSize(8, 2, 2, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_wanzi_assembler', 'simple')
+  event.create('basic_wanzi_assembler', 'simple')//万子组装厂
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -487,19 +619,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('basic_wanzi_assembler')
               .workableTieredHullModel('gtceu:block/machines/basic_wanzi_assembler')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_compressor')//设置机器的名字(基础型万子压缩器)
-    .category('basic_model_wanzi_compressor')
-    .setEUIO('in') 
-    .setMaxIOSize(10, 6, 8, 6)
-    .setSlotOverlay(false, false, GuiTextures.COMPRESSOR_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_compressor', 'simple')
+  event.create('basic_model_wanzi_compressor', 'simple')//万子压缩机
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -507,19 +627,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('basic_model_wanzi_compressor')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_compressor')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_disassembler')//设置机器的名字(基础型万子拆解机)
-    .category('basic_model_wanzi_disassembler')
-    .setEUIO('in')
-    .setMaxIOSize(3, 8, 0, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_disassembler', 'simple')
+  event.create('basic_model_wanzi_disassembler', 'simple')//万子拆解机
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -527,19 +635,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('basic_model_wanzi_disassembler')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_disassembler')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_purifier')//设置机器的名字(基础型万子净化机)
-    .category('basic_model_wanzi_purifier')
-    .setEUIO('in') 
-    .setMaxIOSize(2, 1, 0, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_purifier', 'simple')
+  event.create('basic_model_wanzi_purifier', 'simple')//万子净化机
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -547,19 +643,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('basic_model_wanzi_purifier')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_purifier')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('basic_model_wanzi_electronics_assembler')//设置机器的名字(基础型万子电路组装厂)
-    .category('basic_model_wanzi_electronics_assembler')
-    .setEUIO('in')
-    .setMaxIOSize(6, 2, 2, 0)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('basic_model_wanzi_electronics_assembler', 'simple')
+  event.create('basic_model_wanzi_electronics_assembler', 'simple')//万子电路组装机
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -567,19 +651,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('basic_model_wanzi_electronics_assembler')
               .workableTieredHullModel('gtceu:block/machines/basic_model_wanzi_electronics_assembler')
           );
-})
-
-GTCEuStartupEvents.registry('gtceu:recipe_type',event=>{
-  event.create('wanzi_automated_culture_system')//设置机器的名字(万子培养机)
-    .category('wanzi_automated_culture_system')
-    .setEUIO('in')
-    .setMaxIOSize(1, 6, 1, 6)
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.BATH)
-})
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-  event.create('wanzi_automated_culture_system', 'simple')
+  event.create('wanzi_automated_culture_system', 'simple')//万子培养机
       .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
       .definition((tier, builder) =>
           builder
@@ -587,4 +659,110 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
               .recipeType('wanzi_automated_culture_system')
               .workableTieredHullModel('gtceu:block/machines/wanzi_automated_culture_system')
           );
+
+///////////////动力仓////////////
+
+    event.create("energy_output_hatch_4a", "custom")
+        .tiers(GTValues.LV, GTValues.MV,GTValues.HV)
+        .machine((holder, tier, amperage) => {
+            //public EnergyHatchPartMachine(IMachineBlockEntity holder, int tier, IO io, int amperage, Object... args)
+            // amperage 即电流大小
+            return new $EnergyHatchPartMachine(holder, tier, $IO.OUT, 4);//传回
+        })
+        .definition((tier, builder) => {
+            let tierName;
+            switch (tier) {
+                case GTValues.LV: tierName = "LV"; break;
+                case GTValues.MV: tierName = "MV"; break;
+                case GTValues.HV: tierName = "HV"; break;
+            }
+ 
+            builder
+                .langValue("4A"+ "Wanzi" + tierName +"Energy Output Hatch")
+                .rotationState(RotationState.ALL)
+                .abilities(PartAbility.OUTPUT_ENERGY)//标记为能量输出能力
+                .workableTieredHullModel('gtceu:block/machines/4a_energy_output')  //工作方块模型
+  })
+
+    event.create("energy_output_hatch_16a", "custom")
+      .tiers(GTValues.LV, GTValues.MV)
+      .machine((holder, tier, amperage) => {
+          //public EnergyHatchPartMachine(IMachineBlockEntity holder, int tier, IO io, int amperage, Object... args)
+          // amperage 即电流大小
+          return new $EnergyHatchPartMachine(holder, tier, $IO.OUT, 16);//传回
+      })
+      .definition((tier, builder) => {
+          let tierName;
+          switch (tier) {
+              case GTValues.LV: tierName = "LV"; break;
+              case GTValues.MV: tierName = "MV"; break;
+          }
+
+          builder
+              .langValue("16A"+ "Wanzi" + tierName +"Energy Output Hatch")
+              .rotationState(RotationState.ALL)
+              .abilities(PartAbility.OUTPUT_ENERGY)//标记为能量输出能力
+              .workableTieredHullModel('gtceu:block/machines/16a_energy_output')  //工作方块模型
 })
+
+  event.create("energy_output_hatch_64a", "custom")
+      .tiers(GTValues.LV)
+      .machine((holder, tier, amperage) => {
+          return new $EnergyHatchPartMachine(holder, tier, $IO.OUT, 64);//传回
+      })
+      .definition((tier, builder) => {
+          let tierName;
+          switch (tier) {
+              case GTValues.LV: tierName = "LV"; break;
+          }
+
+          builder
+              .langValue("64A"+ "Wanzi" + tierName +"Energy Output Hatch")
+              .rotationState(RotationState.ALL)
+              .abilities(PartAbility.OUTPUT_ENERGY)//标记为能量输出能力
+              .workableTieredHullModel('gtceu:block/machines/wanzi_automated_culture_system')  //工作方块模型
+})
+
+    //////////////能源仓/////////////
+    event.create("energy_input_hatch_4a","custom")
+        .tiers(GTValues.LV, GTValues.MV)
+        .machine((holder, tier, amperage) => {
+            //public EnergyHatchPartMachine(IMachineBlockEntity holder, int tier, IO io, int amperage, Object... args)
+            // amperage 即电流大小
+            return new $EnergyHatchPartMachine(holder, tier, $IO.IN, 4);//传回
+        })
+        .definition((tier, builder) => {
+            let tierName;
+            switch (tier) {
+                case GTValues.LV: tierName = "LV"; break;
+                case GTValues.MV: tierName = "MV"; break;
+            }
+ 
+            builder
+                .langValue("4A"+ "Wanzi" + tierName +"Energy Output Hatch")
+                .rotationState(RotationState.ALL)
+                .abilities(PartAbility.INPUT_ENERGY)//标记为能量输入能力
+                .workableTieredHullModel('gtceu:block/machines/4a_energy_output')  //工作方块模型
+  })
+
+  event.create("energy_input_hatch_16a", "custom")
+      .tiers(GTValues.LV,GTValues.MV)
+      .machine((holder, tier, amperage) => {
+          //public EnergyHatchPartMachine(IMachineBlockEntity holder, int tier, IO io, int amperage, Object... args)
+          // amperage 即电流大小
+          return new $EnergyHatchPartMachine(holder, tier, $IO.IN, 16);//传回
+      })
+      .definition((tier, builder) => {
+          let tierName;
+          switch (tier) {
+              case GTValues.LV: tierName = "LV"; break;
+              case GTValues.MV: tierName = "MV"; break;
+          }
+
+          builder
+              .langValue("16A"+ "Wanzi" + tierName +"Energy Output Hatch")
+              .rotationState(RotationState.ALL)
+              .abilities(PartAbility.INPUT_ENERGY)//标记为能量输出能力
+              .workableTieredHullModel('gtceu:block/machines/16a_energy_output')  //工作方块模型
+})
+});

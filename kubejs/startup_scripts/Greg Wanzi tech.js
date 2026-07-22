@@ -1,6 +1,7 @@
+const PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
+const OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty')
+
 GTCEuStartupEvents.registry('gtceu:material', event => {//材料
-    const PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
-    const OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty')
     event.create('waw')
     .ingot()
     ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(1000).block())
@@ -19,15 +20,36 @@ GTCEuStartupEvents.registry('gtceu:material', event => {//材料
         GTMaterialFlags.GENERATE_GEAR,
         GTMaterialFlags.GENERATE_SMALL_GEAR,
         GTMaterialFlags.GENERATE_FINE_WIRE,
-        GTMaterialFlags.GENERATE_SPRING
+        GTMaterialFlags.GENERATE_SPRING,
+        GTMaterialFlags.GENERATE_ROUND
     )
-    .cableProperties(GTValues.MV, 8, 0, true)
+    .cableProperties(128, 8, 0, true)
+
+    event.create('flt')
+    .ingot()
+    ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(1500).block())
+   
+    // 主要颜色
+    .color(0xbc0707)
+    // 次要颜色
+    .secondaryColor(0x0725bb)
+    .element('flt')
+    .flags(
+        GTMaterialFlags.GENERATE_PLATE,
+        GTMaterialFlags.GENERATE_BOLT_SCREW,
+        GTMaterialFlags.GENERATE_FRAME,
+        GTMaterialFlags.GENERATE_ROD,
+        GTMaterialFlags.GENERATE_GEAR,
+        GTMaterialFlags.GENERATE_SMALL_GEAR,
+        GTMaterialFlags.GENERATE_FINE_WIRE,
+        GTMaterialFlags.GENERATE_SPRING,
+        GTMaterialFlags.GENERATE_ROUND
+    )
+    .cableProperties(512, 8, 0, true)
 })
 
 GTCEuStartupEvents.registry('gtceu:element', event => {//元素
-    const PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
-    const OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty')
-    event.create("waw")
+    event.create("waw")//瓦拉帕斯
          //定义id    String
          .protons(8)
          //质子数    long
@@ -41,4 +63,12 @@ GTCEuStartupEvents.registry('gtceu:element', event => {//元素
          //该元素的符号    String
          .isIsotope(false)
          //该元素是否为某元素的同位素？    boolean
+
+    event.create('flt')//菲利特瓦
+         .protons(15)
+         .neutrons(6)
+         .halfLifeSeconds(-1)
+         .decayTo(null)
+         .symbol('flt')
+         .isIsotope(false) 
  })
