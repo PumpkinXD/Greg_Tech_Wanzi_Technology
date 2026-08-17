@@ -2324,18 +2324,18 @@ ServerEvents.recipes(event => {
 //helldiver2 pack recipes
 ServerEvents.recipes(event => {
 
-    // const gunIds = [];
-    // event.forEachRecipe({}, r => {
-    //     const id = String(r.getId());
-    //     if (id.startsWith('helldiver2:gun/')) {
-    //         gunIds.push(id);
-    //     }
-    // });
+    const gunIds = [];
+    event.forEachRecipe({}, r => {
+        const id = String(r.getId());
+        if (id.startsWith('helldiver2:gun/')) {
+            gunIds.push(id);
+        }
+    });
 
-    // gunIds.forEach(id => {
-    //     event.remove({ id: id });
-    //     console.info(`Removed gun recipe: ${id}`);
-    // });
+    gunIds.forEach(id => {
+        event.remove({ id: id });
+        console.info(`Removed gun recipe: ${id}`);
+    });
 
 
 
@@ -2344,19 +2344,19 @@ ServerEvents.recipes(event => {
         "type": "tacz:gun_smith_table_crafting",
         "materials": [{
             "item": {
-                "tag": "forge:double_plates/steel"
+                "tag": "forge:double_plates/stainless_steel"
             },
             "count": 21
         },
         {
             "item": {
-                "tag": "forge:bolts/steel"
+                "tag": "forge:bolts/titanium"
             },
             "count": 8
         },
         {
             "item": {
-                "tag": "forge:rods/steel"
+                "tag": "forge:rods/stainless_steel"
             },
             "count": 1
         },
@@ -2374,6 +2374,12 @@ ServerEvents.recipes(event => {
         },
         {
             "item": {
+                "tag": "forge:small_springs/steel"
+            },
+            "count": 2
+        },
+        {
+            "item": {
                 "item": "minecraft:nether_star"
             },
             "count": 1
@@ -2385,5 +2391,660 @@ ServerEvents.recipes(event => {
             "id": "helldiver2:authorized_gun"
         }
     })
+
+
+    //HV weapons
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [{
+            "item": {
+                "tag": "forge:double_plates/vanadium_steel"
+            },
+            "count": 7
+        },
+        {
+            "item": {
+                "tag": "forge:plates/polycaprolactam"
+            },
+            "count": 2
+        },
+        {
+            "item": {
+                "tag": "forge:bolts/vanadium_steel"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:rods/vanadium_steel"
+            },
+            "count": 1
+        },
+        {
+            "item": {
+                "tag": "forge:small_springs/steel"
+            },
+            "count": 2
+        }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:p2_peacemaker"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:double_plates/stainless_steel"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/magnalium"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:plates/polycaprolactam"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/stainless_steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:rods/long/stainless_steel"
+                },
+                "count": 1
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:smg37_defender"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/stainless_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/stainless_steel"
+                },
+                "count": 10
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/magnalium"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/magnalium"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/iron"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:plates/polycaprolactam"
+                },
+                "count": 4
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:ar23_liberator"
+        }
+    })
+
+
+    //EV weapons
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [{
+            "item": {
+                "tag": "forge:double_plates/stainless_steel"
+            },
+            "count": 14
+        },
+        {
+            "item": {
+                "tag": "forge:plates/polycaprolactam"
+            },
+            "count": 3
+        },
+        {
+            "item": {
+                "tag": "forge:bolts/stainless_steel"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:bolts/titanium"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:rods/tungsten_steel"
+            },
+            "count": 1
+        },
+        {
+            "item": {
+                "tag": "forge:springs/steel"
+            },
+            "count": 2
+        }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:p19_redeemer"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/tungsten_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/titanium"
+                },
+                "count": 10
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/magnalium"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/magnalium"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/iron"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:plates/polycaprolactam"
+                },
+                "count": 4
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:ar23c_liberator"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/tungsten_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/hsla_steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/titanium"
+                },
+                "count": 12
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/stainless_steel"
+                },
+                "count": 8
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/magnalium"
+                },
+                "count": 8
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/iron"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/tungsten_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:plates/polycaprolactam"
+                },
+                "count": 6
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:ar23p_liberator"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/stainless_steel"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/titanium"
+                },
+                "count": 8
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/stainless_steel"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/stainless_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/iron"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/tungsten_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:plates/polycaprolactam"
+                },
+                "count": 8
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:r63_diligence"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/tungsten_steel"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/hsla_steel"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/titanium"
+                },
+                "count": 16
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/watertight_steel"
+                },
+                "count": 12
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/titanium"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/iron"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/tungsten_steel"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:plates/polycaprolactam"
+                },
+                "count": 8
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:r63cs_diligence"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [{
+            "item": {
+                "tag": "forge:double_plates/hsla_steel"
+            },
+            "count": 10
+        },
+        {
+            "item": {
+                "tag": "forge:double_plates/magnalium"
+            },
+            "count": 6
+        },
+        {
+            "item": {
+                "tag": "forge:bolts/magnalium"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:springs/hsla_steel"
+            },
+            "count": 2
+        },
+        {
+            "item": {
+                "tag": "forge:rods/stainless_steel"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:rods/long/tungsten_steel"
+            },
+            "count": 4
+        }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:sg225_breaker"
+        }
+    })
+
+    //IV Weapons
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [{
+            "item": {
+                "tag": "forge:double_plates/hsla_steel"
+            },
+            "count": 10
+        },
+        {
+            "item": {
+                "tag": "forge:double_plates/magnalium"
+            },
+            "count": 6
+        },
+        {
+            "item": {
+                "tag": "forge:bolts/magnalium"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:springs/niobium_titanium"
+            },
+            "count": 2
+        },
+        {
+            "item": {
+                "tag": "forge:rods/hsse"
+            },
+            "count": 4
+        },
+        {
+            "item": {
+                "tag": "forge:rods/long/tungsten_steel"
+            },
+            "count": 4
+        }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:sg225ie_breaker"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/hsse"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/hsla_steel"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/hsse"
+                },
+                "count": 8
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/niobium_titanium"
+                },
+                "count": 6
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/hsss"
+                },
+                "count": 3
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/titanium"
+                },
+                "count": 2
+            }, {
+                "item": {
+                    "tag": "forge:double_plates/niobium_titanium"
+                },
+                "count": 8
+            },
+            {
+                "item": {
+                    "tag": "forge:foils/polycaprolactam"
+                },
+                "count": 1
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:r36_eruptor"
+        }
+    })
+
+    event.custom({
+        "type": "tacz:gun_smith_table_crafting",
+        "materials": [
+            {
+                "item": {
+                    "tag": "forge:rods/long/hsse"
+                },
+                "count": 10
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/niobium_titanium"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:double_plates/niobium_titanium"
+                },
+                "count": 8
+            },
+            {
+                "item": {
+                    "tag": "forge:bolts/niobium_titanium"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:rounds/hsss"
+                },
+                "count": 4
+            },
+            {
+                "item": {
+                    "tag": "forge:small_gears/titanium"
+                },
+                "count": 2
+            },
+            {
+                "item": {
+                    "tag": "forge:springs/hsla_steel"
+                },
+                "count": 4
+            }
+        ],
+        "result":
+        {
+            "type": "gun",
+            "id": "helldiver2:jar5_dominator"
+        }
+    })
+});
+
+ServerEvents.recipes(event => {
+
+    //TODO:Create Armorer & Immersive Armorer Recipes
+
+    // const gunIds = [];
+    // event.forEachRecipe({}, r => {
+    //     const id = String(r.getId());
+    //     if (id.startsWith('create_armorer:gun/')||id.startsWith('immersive_armorer:gun/')) {
+    //         gunIds.push(id);
+    //     }
+    // });
+
+    // gunIds.forEach(id => {
+    //     event.remove({ id: id });
+    //     console.info(`Removed gun recipe: ${id}`);
+    // });
+
 
 });
