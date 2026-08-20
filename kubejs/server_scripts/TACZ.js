@@ -2979,17 +2979,1009 @@ ServerEvents.recipes((event) => {
     });
 });
 
+//Create Armorer && Immersive Armorer Recipes
 ServerEvents.recipes((event) => {
-    //TODO:Create Armorer & Immersive Armorer Recipes
-    // const gunIds = [];
-    // event.forEachRecipe({}, r => {
-    //     const id = String(r.getId());
-    //     if (id.startsWith('create_armorer:gun/')||id.startsWith('immersive_armorer:gun/')) {
-    //         gunIds.push(id);
-    //     }
-    // });
-    // gunIds.forEach(id => {
-    //     event.remove({ id: id });
-    //     console.info(`Removed gun recipe: ${id}`);
-    // });
+    
+    const gunIds = [];
+    event.forEachRecipe({}, (r) => {
+        const id = String(r.getId());
+        if (
+            id.startsWith("create_armorer:gun/") ||
+            id.startsWith("immersive_armorer:gun/")
+        ) {
+            gunIds.push(id);
+        }
+    });
+
+    gunIds.forEach((id) => {
+        event.remove({ id: id });
+        console.info(`Removed gun recipe: ${id}`);
+    });
+
+    //ULV/LV weapons
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/steel",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:small_gears/bronze",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:rods/long/steel",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:shotgun_pump_bearing",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:plates/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:rods/steel",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:shotgun_db_stone",
+        },
+    });
+
+    //MV weapons
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/long/vanadium_steel",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:pump_shotgun",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:rods/long/vanadium_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/black_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rounds/iron",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:gears/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:rifle_assult_crane",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:rods/long/vanadium_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rounds/iron",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:gears/bronze",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:mg_platemag_flywheel",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/steel",
+                },
+                count: 10,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:small_gears/steel",
+                },
+                count: 3,
+            },
+            {
+                item: {
+                    tag: "forge:rotors/steel",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:rods/long/vanadium_steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:smg_auto_crank",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 5,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/vanadium_steel",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:small_springs/steel",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:pistol_auto_stress",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/bronze",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/black_bronze",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/vanadium_steel",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:gears/bronze",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:small_gears/bronze",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:pistol_revolver_torque",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/steel",
+                },
+                count: 5,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/black_bronze",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:plates/treated_wood",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/vanadium_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/vanadium_steel",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:small_gears/bronze",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:revolver",
+        },
+    });
+
+    //HV Weapons
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/vanadium_steel",
+                },
+                count: 7,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/stainless_steel",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:small_springs/steel",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:pistol_9mm",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:rods/long/stainless_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/stainless_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/cobalt_brass",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/stainless_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rounds/iron",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:small_gears/stainless_steel",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:assult_rifle",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:rods/long/stainless_steel",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:springs/steel",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/stainless_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/cobalt_brass",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/stainless_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:copper_tiny_fluid_pipe",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:small_gears/bronze",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "create_armorer:sniper_semi_clockwork",
+        },
+    });
+
+    //EV Weapons
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/stainless_steel",
+                },
+                count: 14,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 3,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/stainless_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/titanium",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/tungsten_steel",
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:fine_wires/copper",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:inductor",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:small_springs/steel",
+                },
+                count: 2,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:standard_rail_pistol_mk1",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    type: "forge:partial_nbt",
+                    item: "tacz:modern_kinetic_gun",
+                    nbt: {
+                        GunId: "immersive_armorer:standard_rail_pistol_mk1",
+                    },
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "gtceu:capacitors",
+                },
+                count: 3,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/titanium",
+                },
+                count: 14,
+            },
+            {
+                item: {
+                    tag: "forge:fine_wires/annealed_copper",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:mv_voltage_coil",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/titanium",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:standard_rail_pistol_mk2",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:plates/tungsten_steel",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/titanium",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/titanium",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:tungsten_steel_small_fluid_pipe",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    item: "gtceu:titanium_small_fluid_pipe",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    item: "gtceu:ev_electric_pump",
+                },
+                count: 1,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:chemical_thrower",
+        },
+    });
+
+    //IV Weapons
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    type: "forge:partial_nbt",
+                    item: "tacz:modern_kinetic_gun",
+                    nbt: {
+                        GunId: "immersive_armorer:standard_rail_pistol_mk2",
+                    },
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "gtceu:capacitors",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/titanium_carbide",
+                },
+                count: 14,
+            },
+            {
+                item: {
+                    tag: "forge:fine_wires/hssg",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:hv_voltage_coil",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/titanium",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:standard_rail_pistol_mk3",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    type: "forge:partial_nbt",
+                    item: "tacz:modern_kinetic_gun",
+                    nbt: {
+                        GunId: "immersive_armorer:standard_rail_pistol_mk3",
+                    },
+                },
+                count: 1,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polybenzimidazole",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "gtceu:capacitors",
+                },
+                count: 9,
+            },
+            {
+                item: {
+                    tag: "forge:double_plates/niobium_titanium",
+                },
+                count: 14,
+            },
+            {
+                item: {
+                    tag: "forge:fine_wires/niobium_titanium",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    item: "gtceu:ev_voltage_coil",
+                },
+                count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/niobium_titanium",
+                },
+                count: 4,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:standard_rail_pistol_mk4",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/titanium",
+                },
+                count: 8,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 5,
+            },
+            {
+                item: {
+                    tag: "forge:fine_wires/ruridit",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "gtceu:capacitors",
+                },
+                count: 9,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/titanium",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:ev_voltage_coil",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    tag: "forge:rods/long/titanium",
+                },
+                count: 1,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:standard_rail_smg_mk1",
+        },
+    });
+
+    event.custom({
+        type: "tacz:gun_smith_table_crafting",
+        materials: [
+            {
+                item: {
+                    tag: "forge:double_plates/niobium_titanium",
+                },
+                count: 8,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polybenzimidazole",
+                },
+                count: 10,
+            },
+            {
+                item: {
+                    tag: "forge:fine_wires/ruridit",
+                },
+                count: 8,
+            },
+            {
+                item: {
+                    tag: "gtceu:capacitors",
+                },
+                count: 9,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/niobium_titanium",
+                },
+                count: 4,
+            },
+            {
+                item: {
+                    item: "gtceu:iv_voltage_coil",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:rods/long/niobium_titanium",
+                },
+                count: 6,
+            },
+        ],
+        result: {
+            type: "gun",
+            id: "immersive_armorer:railgun",
+        },
+    });
 });
