@@ -285,6 +285,124 @@ ServerEvents.recipes((event) => {
     .duration(20)
     .EUt(32)//4A => 16A
 
+    // ---- ↓ HV变压器快速制作 ↓ ---- //
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_1a_transformer_1')
+    .circuit(3)
+    .itemInputs('gtceu:hv_machine_hull','2x gtceu:gold_single_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('4x gtceu:hv_transformer_1a')
+    .duration(40)
+    .EUt(256)//1A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_1a_transformer_2')
+    .circuit(3)
+    .itemInputs('gtceu:hv_machine_hull','4x gtceu:gold_single_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('6x gtceu:hv_transformer_1a')
+    .duration(34)
+    .EUt(256)//1A（提纯高压变电组件）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_2a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_1a','2x gtceu:gold_double_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:hv_transformer_2a')
+    .duration(40)
+    .EUt(256)//1A => 2A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_2a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_1a','4x gtceu:gold_double_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:hv_transformer_2a')
+    .duration(34)
+    .EUt(256)//1A => 2A（提纯）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_4a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_2a','2x gtceu:gold_quadruple_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:hv_transformer_4a')
+    .duration(40)
+    .EUt(256)//2A => 4A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_4a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_2a','4x gtceu:gold_quadruple_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:hv_transformer_4a')
+    .duration(34)
+    .EUt(256)//2A => 4A（提纯）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_16a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_4a','gtceu:gold_hex_cable','gtceu:small_aluminium_spring','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:hv_transformer_16a')
+    .duration(40)
+    .EUt(256)//4A => 16A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_16a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_4a','gtceu:gold_hex_cable','gtceu:small_aluminium_spring','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:hv_transformer_16a')
+    .duration(34)
+    .EUt(256)//4A => 16A（提纯）
+
+    // ---- ↓ EV变压器快速组装 ↓ ---- //
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_1a_transformer_1')
+    .circuit(3)
+    .itemInputs('gtceu:ev_machine_hull','2x gtceu:aluminium_single_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('4x gtceu:ev_transformer_1a')
+    .duration(40)
+    .EUt(256)//1A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_1a_transformer_2')
+    .circuit(3)
+    .itemInputs('gtceu:ev_machine_hull','4x gtceu:aluminium_single_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('6x gtceu:ev_transformer_1a')
+    .duration(34)
+    .EUt(256)//1A（加倍线缆）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_2a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:ev_transformer_1a','2x gtceu:aluminium_double_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:ev_transformer_2a')
+    .duration(40)
+    .EUt(256)//1A => 2A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_2a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_purified_phase_change_device')
+    .itemInputs('gtceu:ev_transformer_1a','4x gtceu:aluminium_double_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:ev_transformer_2a')
+    .duration(34)
+    .EUt(256)//1A => 2A（提纯加倍）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_4a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:ev_transformer_2a','2x gtceu:aluminium_quadruple_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:ev_transformer_4a')
+    .duration(40)
+    .EUt(256)//2A => 4A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_4a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_purified_phase_change_device')
+    .itemInputs('gtceu:ev_transformer_2a','4x gtceu:aluminium_quadruple_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:ev_transformer_4a')
+    .duration(34)
+    .EUt(256)//2A => 4A（提纯加倍）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_16a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:ev_transformer_4a','gtceu:aluminium_hex_cable','gtceu:small_aluminium_spring','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:ev_transformer_16a')
+    .duration(40)
+    .EUt(256)//4A => 16A
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_16a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_purified_phase_change_device')
+    .itemInputs('gtceu:ev_transformer_4a','gtceu:aluminium_hex_cable','gtceu:small_aluminium_spring','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:ev_transformer_16a')
+    .duration(34)
+    .EUt(256)//4A => 16A（提纯加倍）
+
     //  ↓  ↓  LV能量转换器制作
     event.recipes.gtceu.basic_wanzi_assembler('prts:lv_1a_energy_converter_1')
     .circuit(3)
@@ -1408,7 +1526,7 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:blueprint_ring',1000,500)
     .chancedInput('prts:blueprint_rod',1000,500)
-    .itemInputs('gtceu:aluminium_ingot','prts:basic_wanzi')
+    .itemInputs('gtceu:europium_ingot','prts:basic_wanzi')
     .itemOutputs('4x gtceu:europium_spring')
     .duration(45)
     .EUt(64)//铕弹簧
@@ -1416,7 +1534,7 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:blueprint_ring',1000,500)
     .chancedInput('prts:blueprint_rod',1000,500)
-    .itemInputs('gtceu:aluminium_ingot','prts:type_one_wanzi')
+    .itemInputs('gtceu:europium_ingot','prts:type_one_wanzi')
     .itemOutputs('6x gtceu:europium_spring')
     .duration(45)
     .EUt(64)//铕弹簧
@@ -1626,7 +1744,7 @@ ServerEvents.recipes((event) => {
     event.recipes.gtceu.basic_wanzi_assembler('prts:wanzi_fine_wire_7')
     .circuit(1)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
-    .itemInputs('gtceu:waw_foil')
+    .itemInputs('gtceu:flt_foil')
     .itemOutputs('8x gtceu:fine_flt_wire')
     .duration(30)
     .EUt(96)//细菲利特瓦导线
@@ -1965,6 +2083,252 @@ ServerEvents.recipes((event) => {
     .itemOutputs('prts:high_voltage_universal_casing')
     .duration(145)
     .EUt(120)//HV万能机壳制作2
+    event.recipes.gtceu.basic_wanzi_assembler('prts:hv_wn_3')
+    .circuit(2)
+    .itemInputs('2x prts:ultra_high_stiffness_toughness_plate','2x gtceu:waw_quadruple_wire','prts:unconventional_crystal_plate','gtceu:hv_machine_hull','prts:high_voltage_wanzi_circuit')
+    .itemOutputs('4x prts:high_voltage_universal_casing')
+    .duration(145)
+    .EUt(120)//HV万能机壳制作3
+
+    // ---- EV 机器外壳快速制作（B型） ----
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_hull_1')
+    .circuit(1)
+    .itemInputs('gtceu:ev_machine_casing','2x gtceu:aluminium_single_cable','2x prts:type_b_conductive_circuit','prts:type_b_resistor')
+    .itemOutputs('3x gtceu:ev_machine_hull')
+    .duration(40)
+    .EUt(256)//EV机器外壳
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_hull_2')
+    .circuit(1)
+    .itemInputs('gtceu:ev_machine_casing','2x gtceu:aluminium_single_cable','2x prts:type_b_purified_conductive_circuit','prts:type_b_purified_resistor')
+    .itemOutputs('5x gtceu:ev_machine_hull')
+    .duration(34)
+    .EUt(256)//EV机器外壳（提纯导电线路+电阻）
+
+    // ---- 自动维护仓（EV，B型专型特化线路组） ----
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_auto_maintenance_1')
+    .circuit(1)
+    .chancedInput('prts:type_b_specialized_circuit_group',1000,-500)
+    .itemInputs('gtceu:ev_machine_hull','2x gtceu:maintenance_hatch','2x gtceu:hv_robot_arm')
+    .itemOutputs('2x gtceu:auto_maintenance_hatch')
+    .duration(200)
+    .EUt(256)//自动维护仓（EV）
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_hv_auto_maintenance_2')
+    .circuit(1)
+    .chancedInput('prts:type_b_purified_specialized_circuit_group',1000,-500)
+    .itemInputs('gtceu:ev_machine_hull','gtceu:maintenance_hatch','gtceu:hv_robot_arm')
+    .itemOutputs('4x gtceu:auto_maintenance_hatch')
+    .duration(60)
+    .EUt(256)//自动维护仓（EV·高速·提纯线路组）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_inert_casing_1')
+    .circuit(16)
+    .notConsumable('prts:type_b_packaging_unit')
+    .itemInputs('8x gtceu:titanium_plate','gtceu:titanium_frame','2x prts:advanced_wanzi_redirection_plate','prts:type_b_directed_chemical_reaction_device')
+    .itemOutputs('8x gtceu:inert_machine_casing')
+    .duration(50)
+    .EUt(256)//聚四氟乙烯化学惰性方块（进阶）
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_inert_casing_2')
+    .circuit(16)
+    .notConsumable('prts:type_b_purified_packaging_unit')
+    .itemInputs('12x gtceu:titanium_plate','gtceu:titanium_frame','2x prts:advanced_wanzi_redirection_plate','prts:type_b_purified_directed_chemical_reaction_device')
+    .itemOutputs('16x gtceu:inert_machine_casing')
+    .duration(45)
+    .EUt(256)//聚四氟乙烯化学惰性方块（进阶·提纯）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_advanced_wanzi_film_coating_sprayer_2')
+    .circuit(1)
+    .itemInputs('prts:type_b_purified_wanzi_emission_concentrator','prts:type_b_purified_conductive_circuit','gtceu:flt_ingot','prts:type_two_wanzi')
+    .inputFluids(Fluid.of('gtceu:flt',144))
+    .itemOutputs('2x prts:advanced_wanzi_film_coating_sprayer')
+    .duration(120)
+    .EUt(256)//进阶型万子覆膜喷涂器（提纯）
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_motor_1')
+    .circuit(1)
+    .itemInputs('2x gtceu:aluminium_single_cable','4x gtceu:waw_double_wire','2x gtceu:aluminium_rod','gtceu:magnetic_steel_rod','prts:type_b_resistor')
+    .itemOutputs('2x gtceu:ev_electric_motor')
+    .duration(100)
+    .EUt(128)//EV电动马达
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_piston_1')
+    .circuit(1)
+    .itemInputs('3x gtceu:titanium_plate','2x gtceu:aluminium_single_cable','2x gtceu:waw_rod','gtceu:ev_electric_motor','gtceu:small_waw_gear','prts:type_b_conductive_circuit')
+    .itemOutputs('2x gtceu:ev_electric_piston')
+    .duration(100)
+    .EUt(128)//EV电力活塞
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_robot_arm_1')
+    .circuit(1)
+    .itemInputs('3x gtceu:waw_double_wire','2x gtceu:ev_electric_motor','2x gtceu:waw_rod','#gtceu:circuits/hv','gtceu:ev_electric_piston','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:ev_robot_arm')
+    .duration(100)
+    .EUt(128)//EV机械臂
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_conveyor_1')
+    .circuit(1)
+    .itemInputs('3x gtceu:rubber_plate','gtceu:ev_electric_motor','gtceu:waw_double_wire','prts:type_b_packaging_unit')
+    .itemOutputs('2x gtceu:ev_conveyor_module')
+    .duration(100)
+    .EUt(128)//EV传送带
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_pump_1')
+    .circuit(1)
+    .itemInputs('2x gtceu:aluminium_rod','gtceu:ev_electric_motor','2x gtceu:gold_single_cable','gtceu:small_aluminium_gear','prts:type_b_circuit_cross_domain_actuator')
+    .itemOutputs('2x gtceu:ev_electric_pump')
+    .duration(100)
+    .EUt(128)//EV电动泵
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_emitter_1')
+    .circuit(1)
+    .itemInputs('2x gtceu:ev_electric_motor','4x gtceu:fine_gold_wire','4x #gtceu:iron_yuan','4x #gtceu:copper_yuan','prts:type_b_wanzi_emission_concentrator')
+    .itemOutputs('2x gtceu:ev_emitter')
+    .duration(100)
+    .EUt(128)//EV发射器
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_sensor_1')
+    .circuit(1)
+    .itemInputs('2x gtceu:ev_electric_motor','4x gtceu:fine_gold_wire','4x #gtceu:iron_yuan','4x #gtceu:copper_yuan','prts:type_b_risk_management_unit')
+    .itemOutputs('2x gtceu:ev_sensor')
+    .duration(100)
+    .EUt(128)//EV传感器
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_field_gen_1')
+    .circuit(1)
+    .itemInputs('2x gtceu:ev_electric_motor','4x gtceu:gold_single_cable','4x #gtceu:iron_yuan','4x #gtceu:copper_yuan','prts:type_b_phase_change_device')
+    .itemOutputs('2x gtceu:ev_field_generator')
+    .duration(100)
+    .EUt(128)//EV场发生器
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_motor_2')
+    .circuit(1)
+    .itemInputs('2x gtceu:aluminium_single_cable','4x gtceu:waw_double_wire','2x gtceu:aluminium_rod','gtceu:magnetic_steel_rod','prts:type_b_purified_resistor')
+    .itemOutputs('4x gtceu:ev_electric_motor')
+    .duration(80)
+    .EUt(128)//EV电动马达
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_piston_2')
+    .circuit(1)
+    .itemInputs('3x gtceu:titanium_plate','2x gtceu:aluminium_single_cable','2x gtceu:waw_rod','gtceu:ev_electric_motor','gtceu:small_waw_gear','prts:type_b_purified_conductive_circuit')
+    .itemOutputs('4x gtceu:ev_electric_piston')
+    .duration(80)
+    .EUt(128)//EV电力活塞
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_robot_arm_2')
+    .circuit(1)
+    .itemInputs('3x gtceu:waw_double_wire','2x gtceu:ev_electric_motor','2x gtceu:waw_rod','#gtceu:circuits/hv','gtceu:ev_electric_piston','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:ev_robot_arm')
+    .duration(80)
+    .EUt(128)//EV机械臂
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_conveyor_2')
+    .circuit(1)
+    .itemInputs('3x gtceu:rubber_plate','gtceu:ev_electric_motor','gtceu:waw_double_wire','prts:type_b_purified_packaging_unit')
+    .itemOutputs('4x gtceu:ev_conveyor_module')
+    .duration(80)
+    .EUt(128)//EV传送带
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_pump_2')
+    .circuit(1)
+    .itemInputs('2x gtceu:aluminium_rod','gtceu:ev_electric_motor','2x gtceu:gold_single_cable','gtceu:small_aluminium_gear','prts:type_b_purified_circuit_cross_domain_actuator')
+    .itemOutputs('4x gtceu:ev_electric_pump')
+    .duration(80)
+    .EUt(128)//EV电动泵
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_emitter_2')
+    .circuit(1)
+    .itemInputs('2x gtceu:ev_electric_motor','4x gtceu:fine_gold_wire','4x #gtceu:iron_yuan','4x #gtceu:copper_yuan','prts:type_b_purified_wanzi_emission_concentrator')
+    .itemOutputs('4x gtceu:ev_emitter')
+    .duration(80)
+    .EUt(128)//EV发射器
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_sensor_2')
+    .circuit(1)
+    .itemInputs('2x gtceu:ev_electric_motor','4x gtceu:fine_gold_wire','4x #gtceu:iron_yuan','4x #gtceu:copper_yuan','prts:type_b_purified_risk_management_unit')
+    .itemOutputs('4x gtceu:ev_sensor')
+    .duration(80)
+    .EUt(128)//EV传感器
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_field_gen_2')
+    .circuit(1)
+    .itemInputs('2x gtceu:ev_electric_motor','4x gtceu:gold_single_cable','4x #gtceu:iron_yuan','4x #gtceu:copper_yuan','prts:type_b_purified_phase_change_device')
+    .itemOutputs('3x gtceu:ev_field_generator')
+    .duration(80)
+    .EUt(128)//EV场发生器
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_energy_output_hatch_4a')
+    .circuit(1)
+    .chancedInput('prts:blueprint_single_wire',3500,1500)
+    .chancedInput('prts:blueprint_fine_wire',3500,1500)
+    .notConsumable('prts:type_b_risk_management_unit')
+    .itemInputs('gtceu:ev_transformer_1a','gtceu:ev_energy_output_hatch','4x #forge:ingots/stainless_steel','4x prts:type_two_wanzi')
+    .itemOutputs('gtceu:ev_energy_output_hatch_4a')
+    .duration(40)
+    .EUt(256)//EV-4A动力仓制作
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ev_energy_output_hatch_16a')
+    .circuit(1)
+    .chancedInput('prts:blueprint_single_wire',3500,1500)
+    .chancedInput('prts:blueprint_fine_wire',3500,1500)
+    .notConsumable('prts:type_b_purified_risk_management_unit')
+    .itemInputs('gtceu:ev_transformer_4a','4x gtceu:ev_energy_output_hatch','8x #forge:ingots/stainless_steel','8x prts:type_two_wanzi')
+    .itemOutputs('gtceu:ev_energy_output_hatch_16a')
+    .duration(40)
+    .EUt(256)//EV-16A动力仓制作
+
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_iv_casing_1')
+    .circuit(16)
+    .itemInputs('4x gtceu:titanium_plate','gtceu:titanium_frame','2x prts:advanced_wanzi_resistor_plate','prts:type_b_specialized_circuit_group')
+    .itemOutputs('2x gtceu:iv_machine_casing')
+    .duration(50)
+    .EUt(256)//IV机械方块
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_iv_casing_2')
+    .circuit(16)
+    .itemInputs('6x gtceu:titanium_plate','gtceu:titanium_frame','2x prts:advanced_wanzi_resistor_plate','prts:type_b_purified_specialized_circuit_group')
+    .itemOutputs('4x gtceu:iv_machine_casing')
+    .duration(45)
+    .EUt(256)//IV机械方块
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_iv_hull_1')
+    .circuit(1)
+    .itemInputs('gtceu:iv_machine_casing','2x gtceu:titanium_single_cable','2x prts:type_b_conductive_circuit','prts:type_b_resistor')
+    .itemOutputs('3x gtceu:iv_machine_hull')
+    .duration(40)
+    .EUt(256)//IV机器外壳
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_iv_hull_2')
+    .circuit(1)
+    .itemInputs('gtceu:iv_machine_casing','2x gtceu:titanium_single_cable','2x prts:type_b_purified_conductive_circuit','prts:type_b_purified_resistor')
+    .itemOutputs('5x gtceu:iv_machine_hull')
+    .duration(34)
+    .EUt(256)//IV机器外壳
+
+    // ---- 耐热/耐寒机械方块（B型反应定向装置） ----
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_heatproof_casing_1')
+    .circuit(16)
+    .notConsumable('prts:type_b_packaging_unit')
+    .itemInputs('8x gtceu:invar_plate','gtceu:invar_frame','2x prts:advanced_wanzi_redirection_plate','prts:type_b_directed_chemical_reaction_device')
+    .itemOutputs('8x gtceu:heatproof_machine_casing')
+    .duration(50)
+    .EUt(256)//耐热机械方块（B型反应定向装置）
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_heatproof_casing_2')
+    .circuit(16)
+    .notConsumable('prts:type_b_purified_packaging_unit')
+    .itemInputs('12x gtceu:invar_plate','gtceu:invar_frame','2x prts:advanced_wanzi_redirection_plate','prts:type_b_purified_directed_chemical_reaction_device')
+    .itemOutputs('16x gtceu:heatproof_machine_casing')
+    .duration(45)
+    .EUt(256)//耐热机械方块（B型提纯反应定向装置）
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_frostproof_casing_1')
+    .circuit(16)
+    .notConsumable('prts:type_b_packaging_unit')
+    .itemInputs('8x gtceu:aluminium_plate','gtceu:aluminium_frame','2x prts:advanced_wanzi_redirection_plate','prts:type_b_directed_chemical_reaction_device')
+    .itemOutputs('8x gtceu:frostproof_machine_casing')
+    .duration(50)
+    .EUt(256)//耐寒机械方块（B型反应定向装置）
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_frostproof_casing_2')
+    .circuit(16)
+    .notConsumable('prts:type_b_purified_packaging_unit')
+    .itemInputs('12x gtceu:aluminium_plate','gtceu:aluminium_frame','2x prts:advanced_wanzi_redirection_plate','prts:type_b_purified_directed_chemical_reaction_device')
+    .itemOutputs('16x gtceu:frostproof_machine_casing')
+    .duration(45)
+    .EUt(256)//耐寒机械方块（B型提纯反应定向装置）
+
+    // ---- AE2 设备强化（B型） ----
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ae2_interface')
+    .circuit(1)
+    .itemInputs('4x #forge:dusts/gold','3x minecraft:redstone','2x ae2:fluix_dust','#forge:dusts/certus_quartz','gtceu:nether_quartz_dust','4x #gtceu:iron_yuan','2x #forge:glass','2x prts:type_two_wanzi','prts:type_b_conductive_circuit')
+    .itemOutputs('10x ae2:interface')
+    .duration(140)
+    .EUt(128)//ME接口制作（B型导电线路强化）
+    event.recipes.gtceu.basic_wanzi_assembler('prts:typeb_ae2_pattern_provider')
+    .circuit(1)
+    .chancedInput('prts:type_b_wanzi_emission_concentrator',1000,1000)
+    .itemInputs('2x ae2:fluix_crystal','4x minecraft:iron_ingot','4x minecraft:gold_ingot','2x prts:type_two_wanzi')
+    .itemOutputs('8x ae2:pattern_provider')
+    .duration(140)
+    .EUt(128)//样板供应器制作（B型发射集中器催化）
 })
 
 
@@ -1983,6 +2347,8 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_single_wire',1000,1000)
     .itemInputs('2x #forge:ingots/steel','2x #gtceu:copper_yuan')
     .itemOutputs('8x gtceu:lv_electric_motor')//LV电动马达
+    .duration(30)
+    .EUt(12)
     bbwz('gtceu:lv_electric_piston')
     .circuit(1)
     .chancedInput('prts:blueprint_small_gear',1000,1000)
@@ -1992,6 +2358,8 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_fine_wire',1000,1000)
     .itemInputs('2x gtceu:lv_electric_motor','2x #forge:ingots/steel','2x #gtceu:copper_yuan')
     .itemOutputs('8x gtceu:lv_electric_piston')//LV电力活塞
+    .duration(30)
+    .EUt(12)
     bbwz('gtceu:lv_conveyor_module')
     .circuit(1)
     .chancedInput('prts:blueprint_ball',1000,1000)
@@ -2001,7 +2369,9 @@ ServerEvents.recipes((event) => {
     .inputFluids(Fluid.of('gtceu:rubber',512))
     .itemInputs('2x gtceu:lv_electric_motor','2x #forge:ingots/steel','2x #gtceu:copper_yuan')
     .itemOutputs('8x gtceu:lv_conveyor_module')//LV传送带
-    bbwz('gtceu:lv_electric_piston')
+    .duration(30)
+    .EUt(12)
+    bbwz('gtceu:lv_robot_arm')
     .circuit(1)
     .chancedInput('prts:blueprint_small_gear',1000,1000)
     .chancedInput('prts:blueprint_gear',1000,1000)
@@ -2009,7 +2379,9 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_single_wire',1000,1000)
     .chancedInput('prts:blueprint_fine_wire',1000,1000)
     .itemInputs('2x gtceu:lv_electric_motor','2x gtceu:lv_electric_piston','prts:low_voltage_wanzi_circuit','2x #gtceu:copper_yuan')
-    .itemOutputs('8x gtceu:lv_electric_piston')//LV机械臂
+    .itemOutputs('8x gtceu:lv_robot_arm')//LV机械臂
+    .duration(30)
+    .EUt(12)
     bbwz('gtceu:lv_electric_pump')
     .circuit(1)
     .chancedInput('prts:blueprint_small_gear',1000,1000)
@@ -2020,6 +2392,8 @@ ServerEvents.recipes((event) => {
     .inputFluids(Fluid.of('gtceu:rubber',144))
     .itemInputs('2x gtceu:lv_electric_motor','2x #gtceu:copper_yuan')
     .itemOutputs('8x gtceu:lv_electric_pump')//LV电动泵
+    .duration(30)
+    .EUt(12)
     
     // === MV组件制作 === //
     bbwz('gtceu:mv_electric_motor')
@@ -2030,7 +2404,9 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_plate',1000,1000)
     .chancedInput('prts:blueprint_single_wire',1000,1000)
     .itemInputs('2x gtceu:aluminium_ingot','2x #gtceu:copper_yuan')
-    .itemOutputs('8x gtceu:mv_electric_motor')//LV电动马达
+    .itemOutputs('8x gtceu:mv_electric_motor')//MV电动马达
+    .duration(30)
+    .EUt(12)
     bbwz('gtceu:mv_electric_piston')
     .circuit(1)
     .chancedInput('prts:blueprint_small_gear',1000,1000)
@@ -2039,7 +2415,9 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_single_wire',1000,1000)
     .chancedInput('prts:blueprint_fine_wire',1000,1000)
     .itemInputs('2x gtceu:mv_electric_motor','2x gtceu:aluminium_ingot','2x #gtceu:copper_yuan')
-    .itemOutputs('8x gtceu:mv_electric_piston')//LV电力活塞
+    .itemOutputs('8x gtceu:mv_electric_piston')//MV电力活塞
+    .duration(30)
+    .EUt(12)
     bbwz('gtceu:mv_conveyor_module')
     .circuit(1)
     .chancedInput('prts:blueprint_ball',1000,1000)
@@ -2048,8 +2426,10 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_fine_wire',1000,1000)
     .inputFluids(Fluid.of('gtceu:rubber',512))
     .itemInputs('2x gtceu:lv_electric_motor','2x gtceu:aluminium_ingot','2x #gtceu:copper_yuan')
-    .itemOutputs('8x gtceu:mv_conveyor_module')//LV传送带
-    bbwz('gtceu:mv_electric_piston')
+    .itemOutputs('8x gtceu:mv_conveyor_module')//MV传送带
+    .duration(30)
+    .EUt(12)
+    bbwz('gtceu:mv_robot_arm')
     .circuit(1)
     .chancedInput('prts:blueprint_small_gear',1000,1000)
     .chancedInput('prts:blueprint_gear',1000,1000)
@@ -2057,7 +2437,9 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_single_wire',1000,1000)
     .chancedInput('prts:blueprint_fine_wire',1000,1000)
     .itemInputs('2x gtceu:mv_electric_motor','2x gtceu:mv_electric_piston','prts:low_voltage_wanzi_circuit','2x #gtceu:copper_yuan')
-    .itemOutputs('8x gtceu:mv_electric_piston')//LV机械臂
+    .itemOutputs('8x gtceu:mv_robot_arm')//MV机械臂
+    .duration(30)
+    .EUt(12)
     bbwz('gtceu:mv_electric_pump')
     .circuit(1)
     .chancedInput('prts:blueprint_small_gear',1000,1000)
@@ -2067,7 +2449,9 @@ ServerEvents.recipes((event) => {
     .chancedInput('prts:blueprint_fine_wire',1000,1000)
     .inputFluids(Fluid.of('gtceu:rubber',144))
     .itemInputs('2x gtceu:mv_electric_motor','2x #gtceu:copper_yuan')
-    .itemOutputs('8x gtceu:mv_electric_pump')//LV电动泵
+    .itemOutputs('8x gtceu:mv_electric_pump')//MV电动泵
+    .duration(30)
+    .EUt(12)
 
     // === 机器外壳快速制作 === //
     bbwz('prts:wanzi_lv_hull_1')
@@ -2354,6 +2738,65 @@ ServerEvents.recipes((event) => {
     .itemOutputs('3x gtceu:mv_transformer_16a')
     .duration(20)
     .EUt(32)//4A => 16A
+
+    // ---- ↓ HV变压器快速制作 ↓ ---- //
+    bbwz('prts:typeb_hv_1a_transformer_1')
+    .circuit(3)
+    .itemInputs('gtceu:hv_machine_hull','2x gtceu:gold_single_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('4x gtceu:hv_transformer_1a')
+    .duration(40)
+    .EUt(256)//1A
+    bbwz('prts:typeb_hv_1a_transformer_2')
+    .circuit(3)
+    .itemInputs('gtceu:hv_machine_hull','4x gtceu:gold_single_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('6x gtceu:hv_transformer_1a')
+    .duration(34)
+    .EUt(256)//1A（提纯高压变电组件）
+
+    bbwz('prts:typeb_hv_2a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_1a','2x gtceu:gold_double_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:hv_transformer_2a')
+    .duration(40)
+    .EUt(256)//1A => 2A
+    bbwz('prts:typeb_hv_2a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_1a','4x gtceu:gold_double_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:hv_transformer_2a')
+    .duration(34)
+    .EUt(256)//1A => 2A（提纯）
+
+    bbwz('prts:typeb_hv_4a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_2a','2x gtceu:gold_quadruple_cable','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:hv_transformer_4a')
+    .duration(40)
+    .EUt(256)//2A => 4A
+    bbwz('prts:typeb_hv_4a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_2a','4x gtceu:gold_quadruple_cable','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:hv_transformer_4a')
+    .duration(34)
+    .EUt(256)//2A => 4A（提纯）
+
+    bbwz('prts:typeb_hv_16a_transformer_1')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_4a','gtceu:gold_hex_cable','gtceu:small_aluminium_spring','prts:type_b_high_voltage_transformation_component')
+    .itemOutputs('2x gtceu:hv_transformer_16a')
+    .duration(40)
+    .EUt(256)//4A => 16A
+    bbwz('prts:typeb_hv_16a_transformer_2')
+    .circuit(3)
+    .notConsumable('prts:type_b_phase_change_device')
+    .itemInputs('gtceu:hv_transformer_4a','gtceu:gold_hex_cable','gtceu:small_aluminium_spring','prts:type_b_purified_high_voltage_transformation_component')
+    .itemOutputs('3x gtceu:hv_transformer_16a')
+    .duration(34)
+    .EUt(256)//4A => 16A（提纯）
 
     //  ↓  ↓  LV能量转换器制作
     bbwz('prts:lv_1a_energy_converter_1')
@@ -3117,7 +3560,7 @@ ServerEvents.recipes((event) => {
 
     // === 螺栓快速制作 ===
     bbwz('wanzi_mv_bolt_1')
-    .circuit(4)
+    .circuit(5)
     .chancedInput('prts:blueprint_rod',1000,500)
     .itemInputs('gtceu:aluminium_rod')
     .itemOutputs('10x gtceu:aluminium_bolt')
@@ -3133,7 +3576,7 @@ ServerEvents.recipes((event) => {
     .EUt(64)//钢螺栓
 
     bbwz('wanzi_mv_bolt_3')
-    .circuit(4)
+    .circuit(6)
     .chancedInput('prts:blueprint_rod',1000,500)
     .itemInputs('gtceu:stainless_steel_ingot')
     .itemOutputs('10x gtceu:stainless_steel_bolt')
@@ -3478,7 +3921,7 @@ ServerEvents.recipes((event) => {
     .circuit(3)
     .chancedInput('prts:blueprint_ring',1000,500)
     .chancedInput('prts:blueprint_rod',1000,500)
-    .itemInputs('gtceu:aluminium_ingot','prts:basic_wanzi')
+    .itemInputs('gtceu:europium_ingot','prts:basic_wanzi')
     .itemOutputs('4x gtceu:europium_spring')
     .duration(45)
     .EUt(64)//铕弹簧
@@ -3486,7 +3929,7 @@ ServerEvents.recipes((event) => {
     .circuit(3)
     .chancedInput('prts:blueprint_ring',1000,500)
     .chancedInput('prts:blueprint_rod',1000,500)
-    .itemInputs('gtceu:aluminium_ingot','prts:type_one_wanzi')
+    .itemInputs('gtceu:europium_ingot','prts:type_one_wanzi')
     .itemOutputs('6x gtceu:europium_spring')
     .duration(45)
     .EUt(64)//铕弹簧
@@ -3512,7 +3955,7 @@ ServerEvents.recipes((event) => {
     .circuit(3)
     .chancedInput('prts:blueprint_ring',1000,500)
     .chancedInput('prts:blueprint_rod',1000,500)
-    .itemInputs('gtceu:gold_ingot','prts:basic_wanzi')
+    .itemInputs('minecraft:gold_ingot','prts:basic_wanzi')
     .itemOutputs('4x gtceu:gold_spring')
     .duration(45)
     .EUt(64)//金弹簧
@@ -3520,7 +3963,7 @@ ServerEvents.recipes((event) => {
     .circuit(3)
     .chancedInput('prts:blueprint_ring',1000,500)
     .chancedInput('prts:blueprint_rod',1000,500)
-    .itemInputs('gtceu:gold_ingot','prts:type_one_wanzi')
+    .itemInputs('minecraft:gold_ingot','prts:type_one_wanzi')
     .itemOutputs('6x gtceu:gold_spring')
     .duration(45)
     .EUt(64)//金弹簧
@@ -3652,7 +4095,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('8x gtceu:fine_copper_wire')
     .duration(25)
     .EUt(64)//细铜导线
-
     bbwz('prts:wanzi_fine_wire_2')
     .circuit(3)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
@@ -3660,7 +4102,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('8x gtceu:fine_cupronickel_wire')
     .duration(30)
     .EUt(64)//细白铜导线
-
     bbwz('prts:wanzi_fine_wire_3')
     .circuit(3)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
@@ -3668,7 +4109,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('8x gtceu:fine_annealed_copper_wire')
     .duration(30)
     .EUt(64)//细退火铜导线
-
     bbwz('prts:wanzi_fine_wire_4')
     .circuit(3)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
@@ -3676,7 +4116,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('8x gtceu:fine_silver_wire')
     .duration(25)
     .EUt(80)//细银导线
-
     bbwz('prts:wanzi_fine_wire_5')
     .circuit(3)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
@@ -3684,7 +4123,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('8x gtceu:fine_gold_wire')
     .duration(25)
     .EUt(80)//细金导线
-
     bbwz('prts:wanzi_fine_wire_6')
     .circuit(3)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
@@ -3692,70 +4130,13 @@ ServerEvents.recipes((event) => {
     .itemOutputs('8x gtceu:fine_waw_wire')
     .duration(30)
     .EUt(96)//细瓦拉帕斯导线
-
     bbwz('prts:wanzi_fine_wire_7')
     .circuit(3)
     .chancedInput('prts:blueprint_fine_wire',1000,500)
-    .itemInputs('gtceu:waw_foil')
+    .itemInputs('gtceu:flt_foil')
     .itemOutputs('8x gtceu:fine_flt_wire')
     .duration(30)
     .EUt(96)//细菲利特瓦导线
-
-    bbwz('wanzi_assembler_11')
-    .circuit(2)
-    .itemInputs('2x prts:basic_wanzi_resistance_plate','prts:type_d_circuit_cross_domain_actuator','prts:basic_wanjing','prts:basic_wanzi_redirection_plate')
-    .inputFluids(Fluid.of('gtceu:steel',288))
-    .itemOutputs('prts:basic_wanzi_impact_resistant_plate')
-    .duration(200)
-    .EUt(15)
-    //基础万子抗冲击板
-
-    bbwz('wanzi_assembler_10')
-    .circuit(2)
-    .itemInputs('4x prts:basic_wanzi','prts:basic_wanzi_holder','prts:basic_wanzi_resistance_plate','2x #gtceu:iron_yuan','2x #gtceu:copper_yuan')
-    .itemOutputs('prts:basic_wanzi_absorber_plate')
-    .inputFluids(Fluid.of('minecraft:lava',100))
-    .duration(300)
-    .EUt(20)
-    //基础万子吸收板
-
-    bbwz('wanzi_assemler_12')
-    .circuit(1)
-    .itemInputs('4x prts:basic_wanzi','prts:type_d_packaging_unit','2x prts:type_d_conductive_circuit','2x #gtceu:iron_yuan')
-    .itemOutputs('prts:basic_wanzi_film_coating_sprayer')
-    .inputFluids(Fluid.of('gtceu:tin',144))
-    .duration(300)
-    .EUt(30)
-    //基础覆膜喷涂器
-
-    bbwz('prts:zhengshiwanzixishouban_1')
-    .circuit(1)
-    .itemInputs('prts:production_type_wanzi_resistor_board','prts:production_type_wanzi_holder','3x prts:type_one_wanzi','3x #gtceu:waw_yuan','#gtceu:iron_yuan')
-    .inputFluids(Fluid.of('prts:yisanwanzi',144))
-    .inputFluids(Fluid.of('minecraft:lava',288))
-    .itemOutputs('prts:production_type_wanzi_absorber_plate')
-    .duration(120)
-    .EUt(96)
-    //正式万子吸收板
-
-    bbwz('prts:zhengshiwanzikangchongjiban_1')
-    .circuit(1)
-    .itemInputs('2x prts:production_type_wanzi_resistor_board','prts:production_type_wanzi_redirection_plate','prts:type_c_circuit_cross_domain_actuator','prts:alpha_wanjing')
-    .inputFluids(Fluid.of('gtceu:steel',288))
-    .inputFluids(Fluid.of('gtceu:aluminium',576))
-    .itemOutputs('prts:production_type_wanzi_impact_resistant_plate')
-    .duration(120)
-    .EUt(120)
-    //正式万子抗冲击板
-
-    bbwz('prts:zhengshiwanzifumopentuqi_1')
-    .circuit(1)
-    .itemInputs('4x prts:type_one_wanzi','prts:type_c_packaging_unit','prts:type_c_conductive_circuit','#gtceu:waw_yuan')
-    .inputFluids(Fluid.of('gtceu:waw',144))
-    .itemOutputs('prts:production_type_wanzi_film_coating_sprayer')
-    .duration(120)
-    .EUt(120)
-    //正式万子覆膜喷涂器
 
     bbwz('prts:high_efficiency_isolation_component_1')
     .circuit(1)
@@ -3804,8 +4185,66 @@ ServerEvents.recipes((event) => {
     .itemOutputs('prts:high_voltage_universal_casing')
     .duration(145)
     .EUt(120)//HV万能机壳制作2
+    bbwz('prts:hv_wn_3')
+    .circuit(2)
+    .itemInputs('2x prts:ultra_high_stiffness_toughness_plate','2x gtceu:waw_quadruple_wire','prts:unconventional_crystal_plate','gtceu:hv_machine_hull','prts:high_voltage_wanzi_circuit')
+    .itemOutputs('4x prts:high_voltage_universal_casing')
+    .duration(145)
+    .EUt(120)//HV万能机壳制作3
 
     // === 万子系列 === //
+
+    bbwz('wanzi_assembler_11')
+    .circuit(2)
+    .itemInputs('2x prts:basic_wanzi_resistance_plate','prts:type_d_circuit_cross_domain_actuator','prts:basic_wanjing','prts:basic_wanzi_redirection_plate')
+    .inputFluids(Fluid.of('gtceu:steel',288))
+    .itemOutputs('prts:basic_wanzi_impact_resistant_plate')
+    .duration(200)
+    .EUt(15)
+    //基础万子抗冲击板
+    bbwz('wanzi_assembler_10')
+    .circuit(2)
+    .itemInputs('4x prts:basic_wanzi','prts:basic_wanzi_holder','prts:basic_wanzi_resistance_plate','2x #gtceu:iron_yuan','2x #gtceu:copper_yuan')
+    .itemOutputs('prts:basic_wanzi_absorber_plate')
+    .inputFluids(Fluid.of('minecraft:lava',100))
+    .duration(300)
+    .EUt(20)
+    //基础万子吸收板
+    bbwz('wanzi_assemler_12')
+    .circuit(1)
+    .itemInputs('4x prts:basic_wanzi','prts:type_d_packaging_unit','2x prts:type_d_conductive_circuit','2x #gtceu:iron_yuan')
+    .itemOutputs('prts:basic_wanzi_film_coating_sprayer')
+    .inputFluids(Fluid.of('gtceu:tin',144))
+    .duration(300)
+    .EUt(30)
+    //基础覆膜喷涂器
+
+    bbwz('prts:zhengshiwanzixishouban_1')
+    .circuit(1)
+    .itemInputs('prts:production_type_wanzi_resistor_board','prts:production_type_wanzi_holder','3x prts:type_one_wanzi','3x #gtceu:waw_yuan','#gtceu:iron_yuan')
+    .inputFluids(Fluid.of('prts:yisanwanzi',144))
+    .inputFluids(Fluid.of('minecraft:lava',288))
+    .itemOutputs('prts:production_type_wanzi_absorber_plate')
+    .duration(120)
+    .EUt(96)
+    //正式万子吸收板
+    bbwz('prts:zhengshiwanzikangchongjiban_1')
+    .circuit(1)
+    .itemInputs('2x prts:production_type_wanzi_resistor_board','prts:production_type_wanzi_redirection_plate','prts:type_c_circuit_cross_domain_actuator','prts:alpha_wanjing')
+    .inputFluids(Fluid.of('gtceu:steel',288))
+    .inputFluids(Fluid.of('gtceu:aluminium',576))
+    .itemOutputs('prts:production_type_wanzi_impact_resistant_plate')
+    .duration(120)
+    .EUt(120)
+    //正式万子抗冲击板
+    bbwz('prts:zhengshiwanzifumopentuqi_1')
+    .circuit(1)
+    .itemInputs('4x prts:type_one_wanzi','prts:type_c_packaging_unit','prts:type_c_conductive_circuit','#gtceu:waw_yuan')
+    .inputFluids(Fluid.of('gtceu:waw',144))
+    .itemOutputs('prts:production_type_wanzi_film_coating_sprayer')
+    .duration(120)
+    .EUt(120)
+    //正式万子覆膜喷涂器
 
     bbwz('prts:basic_wanzi_emitter_assembler')
     .circuit(1)
@@ -3834,7 +4273,22 @@ ServerEvents.recipes((event) => {
     .EUt(12)//基础万子容纳器制造
 
     //AE系列//
-
+    bbwz('prts:ae2_pattern_provider')
+    .circuit(1)
+    .chancedInput('prts:advanced_wanzi_film_coating_sprayer',1000,1000)
+    .chancedInput('prts:type_b_wanzi_emission_concentrator',1000,1000)
+    .itemInputs('2x ae2:fluix_crystal','4x minecraft:iron_ingot','4x minecraft:gold_ingot','2x prts:type_two_wanzi')
+    .itemOutputs('4x ae2:pattern_provider')//样板供应器制作
+    .duration(140)
+    .EUt(128)
+    bbwz('prts:advanced_ae_small_adv_pattern_provider')
+    .circuit(1)
+    .chancedInput('prts:advanced_wanzi_film_coating_sprayer',1000,1000)
+    .chancedInput('prts:type_b_wanzi_emission_concentrator',1000,1000)
+    .itemInputs('2x ae2:pattern_provider','4x minecraft:iron_ingot','4x minecraft:gold_ingot','2x prts:type_two_wanzi')
+    .itemOutputs('2x advanced_ae:small_adv_pattern_provider')//高级样板供应器制作
+    .duration(140)
+    .EUt(128)
     bbwz('prts:ae2_interface')
     .circuit(1)
     .itemInputs('2x #forge:dusts/gold','2x minecraft:redstone','ae2:fluix_dust','#forge:dusts/certus_quartz','gtceu:nether_quartz_dust','4x #gtceu:iron_yuan','2x #forge:glass','2x prts:type_one_wanzi')
@@ -3899,6 +4353,715 @@ ServerEvents.recipes((event) => {
     .itemOutputs('gtceu:me_pattern_buffer_proxy')
     .duration(140)
     .EUt(1024)//GT-ME镜像样板供应器制作
+
+    //其他组件组装
+    bbwz('fluxnetworks:flux_plug')
+    .circuit(1)
+    .chancedInput('prts:type_c_wanzi_emission_concentrator',1000,2000)
+    .itemInputs('2x #forge:dusts/obsidian','4x minecraft:redstone','gtceu:ender_pearl_dust')
+    .itemOutputs('4x fluxnetworks:flux_plug')
+    .duration(30)
+    .EUt(128)//通量网络输入点
+    bbwz('fluxnetworks:flux_point')
+    .circuit(1)
+    .chancedInput('prts:type_c_wire_guide_connection_device',1000,2000)
+    .itemInputs('2x #forge:dusts/obsidian','4x minecraft:redstone','gtceu:ender_pearl_dust')
+    .itemOutputs('4x fluxnetworks:flux_point')
+    .duration(30)
+    .EUt(128)//通量网络接入点
+
+    //枪械弹药组装
+    let ammo_68x51fury = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:68x51fury",Level:2}')
+    let ammo_40mm = Item.of('tacz:ammo_box', '{AmmoCount:80,AmmoId:"tacz:40mm",Level:2}')
+    let ammo_12g = Item.of('tacz:ammo_box', '{AmmoCount:480,AmmoId:"tacz:12g",Level:2}')
+    let ammo_rpg_rocket = Item.of('tacz:ammo_box', '{AmmoCount:80,AmmoId:"tacz:rpg_rocket",Level:2}')
+    let ammo_57x28 = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:57x28",Level:2}')
+    let ammo_46x30 = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:46x30",Level:2}')
+    /*步枪弹↓*/ 
+    let ammo_308 = Item.of('tacz:ammo_box', '{AmmoCount:640,AmmoId:"tacz:308",Level:2}')
+    let ammo_762x54 = Item.of('tacz:ammo_box', '{AmmoCount:890,AmmoId:"tacz:762x54",Level:2}')
+    let ammo_545x39 = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:545x39",Level:2}')
+    let ammo_762x39 = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:762x39",Level:2}')
+    let ammo_58x42 = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:58x42",Level:2}')
+    let ammo_556x45 = Item.of('tacz:ammo_box', '{AmmoCount:640,AmmoId:"tacz:556x45",Level:2}')
+    /*狙击弹↓*/
+    let ammo_50bmg = Item.of('tacz:ammo_box', '{AmmoCount:400,AmmoId:"tacz:50bmg",Level:2}')
+    let ammo_338 = Item.of('tacz:ammo_box', '{AmmoCount:400,AmmoId:"tacz:338",Level:2}')
+    let ammo_30_06 = Item.of('tacz:ammo_box', '{AmmoCount:480,AmmoId:"tacz:30_06",Level:2}')
+    let ammo_45x70 = Item.of('tacz:ammo_box', '{AmmoCount:640,AmmoId:"tacz:45_70",Level:2}')
+    /*手枪弹↓*/
+    let ammo_50ae = Item.of('tacz:ammo_box', '{AmmoCount:640,AmmoId:"tacz:50ae",Level:2}')
+    let ammo_357mag = Item.of('tacz:ammo_box', '{AmmoCount:640,AmmoId:"tacz:357mag",Level:2}')
+    let ammo_9mm = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:9mm",Level:2}')
+    let ammo_45acp = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"tacz:45acp",Level:2}')
+    /*枪包弹药（机动军械师/Create Armorer）↓*/
+    let ammo_gas_pistol_ammo = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"create_armorer:gas_pistol_ammo",Level:2}')
+    let ammo_rbapb = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"create_armorer:rbapb",Level:2}')
+    let ammo_slap = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"create_armorer:slap",Level:2}')
+    /*枪包弹药（地狱潜兵2/HellDiver2）↓*/
+    let ammo_hd2_pistol = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"helldiver2:pistol_normal",Level:2}')
+    let ammo_hd2_rifle = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"helldiver2:rifle_normal",Level:2}')
+    let ammo_hd2_rifle_ap = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"helldiver2:rifle_ap",Level:2}')
+    let ammo_hd2_shotgun = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"helldiver2:shotgun_normal",Level:2}')
+    let ammo_hd2_explode_ap = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"helldiver2:explode_ap",Level:2}')
+    /*枪包弹药（沉浸军械师/Immersive Armorer）↓*/
+    let ammo_454_casul = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"immersive_armorer:454_casul",Level:2}')
+    let ammo_ap_ammo = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"immersive_armorer:ap_ammo",Level:2}')
+    let ammo_burst_capacitor = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"immersive_armorer:burst_capacitor",Level:2}')
+    let ammo_chemical = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"immersive_armorer:chemical",Level:2}')
+    let ammo_cut_steel_rod = Item.of('tacz:ammo_box', '{AmmoCount:533,AmmoId:"immersive_armorer:cut_steel_rod",Level:2}')
+    let ammo_high_power_capacitor = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"immersive_armorer:high_power_capacitor",Level:2}')
+    let ammo_stream_capacitor = Item.of('tacz:ammo_box', '{AmmoCount:800,AmmoId:"immersive_armorer:stream_capacitor",Level:2}')
+    
+    const ammoIds = [];
+
+    event.forEachRecipe({}, r => {
+        const id = String(r.getId());
+        if (id.startsWith('tacz:ammo/') ||
+            id.startsWith('immersive_armorer:ammo/') ||
+            id.startsWith('create_armorer:ammo/') ||
+            id.startsWith('helldiver2:ammo/')) {
+            ammoIds.push(id);
+        }
+    });
+    ammoIds.forEach(id => {
+        event.remove({ id : id });
+    });//移除全部枪包的弹药配方
+
+    bbwz('prts:ammo_50ae_1')
+    .circuit(2)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '5x gtceu:stainless_steel_plate',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_50ae)
+    .duration(20)
+    .EUt(12)//50ae子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_9mm_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '4x #forge:ingots/iron',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_9mm)
+    .duration(20)
+    .EUt(12)//9mm子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_357mag_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '2x #forge:ingots/gold',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_357mag)
+    .duration(20)
+    .EUt(12)//357马格南子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_45acp_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:plates/copper',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_45acp)
+    .duration(20)
+    .EUt(12)//.45手枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_50bmg_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '3x #forge:ingots/netherite',
+        '15x #forge:plates/copper',
+        '8x #forge:plates/titanium',
+        '10x gtceu:gelled_toluene',
+        '20x minecraft:gunpowder',
+        '2x prts:type_one_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_50bmg)
+    .duration(20)
+    .EUt(12)//.50BMG狙击弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_30_06_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '5x #forge:double_plates/copper',
+        '5x #forge:double_plates/steel',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_30_06)
+    .duration(20)
+    .EUt(12)//.30_06春田步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_45x70_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:ingots/steel',
+        '5x #forge:ingots/copper',
+        '5x #forge:plates/iron',
+        '5x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_45x70)
+    .duration(20)
+    .EUt(12)//.45-70"政府"步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_338_1')
+    .circuit(1)
+    .itemInputs(
+        '5x #forge:double_plates/steel',
+        '10x #forge:double_plates/copper',
+        '5x gtceu:double_magnalium_plate',
+        '5x gtceu:gelled_toluene',
+        '3x #forge:foils/gold',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_338)
+    .duration(20)
+    .EUt(12)//.338拉普马格南狙击弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_762x39_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:double_plates/magnalium',
+        '10x #forge:plates/stainless_steel',
+        '5x #forge:plates/steel',
+        '5x gtceu:gelled_toluene',
+        '2x minecraft:gunpowder',
+        '8x #forge:foils/copper',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_762x39)
+    .duration(20)
+    .EUt(12)//7.62x39mm步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_762x54_1')
+    .circuit(2)
+    .itemInputs(
+        '10x #forge:double_plates/magnalium',
+        '10x #forge:plates/stainless_steel',
+        '5x #forge:plates/steel',
+        '5x gtceu:gelled_toluene',
+        '2x minecraft:gunpowder',
+        '8x #forge:foils/copper',
+        '10x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_762x54)
+    .duration(20)
+    .EUt(12)//7.62x54mm步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_58x42_1')
+    .circuit(1)
+    .itemInputs(
+        '8x #forge:double_plates/magnalium',
+        '8x #forge:plates/stainless_steel',
+        '8x #forge:plates/steel',
+        '6x gtceu:gelled_toluene',
+        '6x minecraft:gunpowder',
+        '6x #forge:foils/bronze',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_58x42)
+    .duration(20)
+    .EUt(12)//5.8mm步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_556x45_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:double_plates/magnalium',
+        '10x #forge:plates/stainless_steel',
+        '10x #forge:double_plates/steel',
+        '5x gtceu:gelled_toluene',
+        '5x minecraft:gunpowder',
+        '20x #forge:foils/bronze',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_556x45)
+    .duration(20)
+    .EUt(12)//5.56x45mm步枪弹组装（附赠弹药盒）
+    bbwz('prts:ammo_545x39_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:double_plates/magnalium',
+        '10x #forge:plates/stainless_steel',
+        '10x #forge:double_plates/steel',
+        '5x gtceu:gelled_toluene',
+        '5x minecraft:gunpowder',
+        '5x #forge:plates/bismuth_bronze',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_545x39)
+    .duration(20)
+    .EUt(12)//5.45x39mm步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_308_1')
+    .circuit(1)
+    .itemInputs(
+        '40x #forge:ingots/steel',
+        '20x #forge:ingots/copper',
+        '10x gtceu:stainless_steel_plate',
+        '5x gtceu:magnalium_plate',
+        '10x gtceu:gelled_toluene',
+        '20x minecraft:gunpowder',
+        '4x prts:beta_wanjing',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_308)
+    .duration(20)
+    .EUt(12)//308子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_46x30_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '20x #forge:ingots/copper',
+        '5x gtceu:titanium_plate',
+        '5x gtceu:magnalium_plate',
+        '10x gtceu:gelled_toluene',
+        '10x minecraft:redstone',
+        '20x minecraft:gunpowder',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_46x30)
+    .duration(20)
+    .EUt(12)//4.6穿甲弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_57x28_1')
+    .circuit(2)
+    .itemInputs(
+        '10x #forge:double_plates/magnalium',
+        '10x #forge:plates/stainless_steel',
+        '5x #forge:plates/steel',
+        '5x gtceu:gelled_toluene',
+        '10x minecraft:redstone',
+        '8x #forge:foils/copper',
+        '10x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_57x28)
+    .duration(20)
+    .EUt(12)//57x28mm步枪弹子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_12g_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:ingots/steel',
+        '10x #forge:ingots/lead',
+        '10x #forge:ingots/copper',
+        '10x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_12g)
+    .duration(20)
+    .EUt(12)//12号霰弹组装(附赠弹药盒)
+    bbwz('prts:ammo_40mm_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:ingots/steel',
+        '10x #forge:ingots/copper',
+        '5x gtceu:titanium_plate',
+        '5x gtceu:gelled_toluene',
+        '10x minecraft:redstone',
+        '10x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_40mm)
+    .duration(20)
+    .EUt(12)//40mm榴弹组装(附赠弹药盒)
+    bbwz('prts:ammo_rpg_rocket_1')
+    .circuit(1)
+    .itemInputs(
+        '8x #forge:double_plates/steel',
+        '5x #forge:plates/titanium',
+        '3x #forge:ingots/netherite',
+        '8x gtceu:gelled_toluene',
+        '8x minecraft:redstone',
+        '4x minecraft:gunpowder',
+        '2x prts:type_one_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_rpg_rocket)
+    .duration(20)
+    .EUt(12)//RPG火箭弹组装(附赠弹药盒)
+    bbwz('prts:ammo_68x51fury_1')
+    .circuit(1)
+    .itemInputs(
+        '12x #forge:double_plates/magnalium',
+        '12x #forge:plates/stainless_steel',
+        '12x #forge:double_plates/steel',
+        '6x gtceu:gelled_toluene',
+        '6x minecraft:gunpowder',
+        '12x #forge:foils/copper'
+    )
+    .itemOutputs(ammo_68x51fury)
+    .duration(20)
+    .EUt(12)//.277 Fury步枪弹组装(附赠弹药盒)
+
+    //枪包弹药组装（机动军械师/Create Armorer）
+    bbwz('prts:ammo_gas_pistol_ammo_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '5x #forge:ingots/iron',
+        '5x minecraft:redstone',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_gas_pistol_ammo)
+    .duration(20)
+    .EUt(12)//气动手枪弹组装(附赠弹药盒)
+    bbwz('prts:ammo_rbapb_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:double_plates/magnalium',
+        '10x #forge:plates/stainless_steel',
+        '10x #forge:double_plates/steel',
+        '5x gtceu:gelled_toluene',
+        '5x minecraft:gunpowder',
+        '5x minecraft:redstone'
+    )
+    .itemOutputs(ammo_rbapb)
+    .duration(20)
+    .EUt(12)//凸缘钝头穿甲弹组装(附赠弹药盒)
+    bbwz('prts:ammo_slap_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '3x #forge:ingots/netherite',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_slap)
+    .duration(20)
+    .EUt(12)//次口径脱壳穿甲弹组装(附赠弹药盒)
+
+    //枪包弹药组装（地狱潜兵2/HellDiver2）
+    bbwz('prts:ammo_hd2_pistol_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '5x #forge:ingots/iron',
+        '5x #forge:ingots/lead',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_hd2_pistol)
+    .duration(20)
+    .EUt(12)//地狱潜兵2手枪子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_hd2_rifle_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '10x gtceu:stainless_steel_plate',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_hd2_rifle)
+    .duration(20)
+    .EUt(12)//地狱潜兵2步枪子弹组装(附赠弹药盒)
+    bbwz('prts:ammo_hd2_rifle_ap_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '5x #forge:ingots/iron',
+        '5x gtceu:titanium_plate',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_hd2_rifle_ap)
+    .duration(20)
+    .EUt(12)//地狱潜兵2穿甲步枪弹组装(附赠弹药盒)
+    bbwz('prts:ammo_hd2_shotgun_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:ingots/steel',
+        '10x #forge:ingots/copper',
+        '10x #forge:ingots/lead',
+        '5x gtceu:rubber_plate',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_hd2_shotgun)
+    .duration(20)
+    .EUt(12)//地狱潜兵2霰弹组装(附赠弹药盒)
+    bbwz('prts:ammo_hd2_explode_ap_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '5x gtceu:gelled_toluene',
+        '5x minecraft:redstone',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_hd2_explode_ap)
+    .duration(20)
+    .EUt(12)//地狱潜兵2穿甲高爆弹组装(附赠弹药盒)
+
+    //枪包弹药组装（沉浸军械师/Immersive Armorer）
+    bbwz('prts:ammo_454_casul_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/steel',
+        '15x #forge:ingots/copper',
+        '5x #forge:ingots/gold',
+        '5x gtceu:stainless_steel_plate',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_454_casul)
+    .duration(20)
+    .EUt(12)//.454卡苏尔弹组装(附赠弹药盒)
+    bbwz('prts:ammo_ap_ammo_1')
+    .circuit(1)
+    .itemInputs(
+        '10x #forge:double_plates/steel',
+        '15x #forge:ingots/copper',
+        '5x gtceu:titanium_plate',
+        '20x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_ap_ammo)
+    .duration(20)
+    .EUt(12)//穿甲弹组装(附赠弹药盒)
+    bbwz('prts:ammo_burst_capacitor_1')
+    .circuit(1)
+    .itemInputs(
+        '5x #forge:glass',
+        '10x minecraft:redstone',
+        '10x #forge:ingots/iron',
+        '5x #forge:ingots/copper',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_burst_capacitor)
+    .duration(20)
+    .EUt(12)//猝发电容组装(附赠弹药盒)
+    bbwz('prts:ammo_chemical_1')
+    .circuit(1)
+    .itemInputs(
+        '15x #forge:ingots/copper',
+        '5x minecraft:blaze_powder',
+        '10x minecraft:slime_ball',
+        '10x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_chemical)
+    .duration(20)
+    .EUt(12)//易燃化学品组装(附赠弹药盒)
+    bbwz('prts:ammo_cut_steel_rod_1')
+    .circuit(1)
+    .itemInputs(
+        '20x #forge:ingots/iron',
+        '5x #forge:ingots/steel',
+        '10x minecraft:gunpowder',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_cut_steel_rod)
+    .duration(20)
+    .EUt(12)//截短钢棒组装(附赠弹药盒)
+    bbwz('prts:ammo_high_power_capacitor_1')
+    .circuit(2)
+    .itemInputs(
+        '5x #forge:glass',
+        '10x minecraft:redstone',
+        '5x minecraft:quartz',
+        '10x #forge:ingots/iron',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_high_power_capacitor)
+    .duration(20)
+    .EUt(12)//高功率电容组装(附赠弹药盒)
+    bbwz('prts:ammo_stream_capacitor_1')
+    .circuit(1)
+    .itemInputs(
+        '5x #forge:glass',
+        '10x minecraft:redstone',
+        '10x #forge:ingots/iron',
+        '5x #forge:ingots/gold',
+        '2x prts:basic_wanzi',
+        '#gtceu:diamond_yuan',
+        '8x #minecraft:planks'
+    )
+    .itemOutputs(ammo_stream_capacitor)
+    .duration(20)
+    .EUt(12)//流电容组装(附赠弹药盒)
+
+    //食物……的组装
+    bbwz('farmersdelight:shepherds_pie')
+    .circuit(1)
+    .itemInputs('3x #forge:cooked_mutton','2x minecraft:potato','2x farmersdelight:onion','#forge:milk')
+    .itemOutputs('6x farmersdelight:shepherds_pie')
+    .duration(20)
+    .EUt(12)//盘装牧羊人派
+    bbwz('farmersdelight:honey_glazed_ham')
+    .circuit(1)
+    .inputFluids(Fluid.of('cyclic:honey',144))
+    .itemInputs('4x minecraft:sweet_berries','farmersdelight:smoked_ham','farmersdelight:rice')
+    .itemOutputs('6x farmersdelight:honey_glazed_ham')
+    .duration(20)
+    .EUt(12)//盘装蜜汁火腿
+    bbwz('farmersdelight:stuffed_pumpkin')
+    .circuit(1)
+    .itemInputs('minecraft:sweet_berries','minecraft:carrot','minecraft:potato','farmersdelight:rice','farmersdelight:onion','minecraft:brown_mushroom','minecraft:pumpkin')
+    .itemOutputs('6x farmersdelight:stuffed_pumpkin')
+    .duration(20)
+    .EUt(12)//碗装填陷南瓜
+    bbwz('farmersdelight:grilled_salmon')
+    .circuit(1)
+    .itemInputs('minecraft:sweet_berries','#forge:salad_ingredients','farmersdelight:onion','#forge:cooked_fishes/salmon')
+    .itemOutputs('3x farmersdelight:grilled_salmon')
+    .duration(20)
+    .EUt(12)//香烤鲑鱼
+    bbwz('farmersdelight:roast_chicken')
+    .circuit(1)
+    .itemInputs('minecraft:baked_potato','minecraft:bread','minecraft:cooked_chicken','minecraft:carrot','farmersdelight:onion','#forge:eggs')
+    .itemOutputs('6x farmersdelight:roast_chicken')
+    .duration(20)
+    .EUt(12)//盘装烤鸡
+    bbwz('farmersdelight:squid_ink_pasta')
+    .circuit(1)
+    .itemInputs('#minecraft:fishes','farmersdelight:raw_pasta','farmersdelight:tomato','minecraft:ink_sac')
+    .itemOutputs('3x farmersdelight:squid_ink_pasta')
+    .duration(20)
+    .EUt(12)//鱿鱼墨面
+    bbwz('farmersdelight:ratatouille')
+    .circuit(1)
+    .itemInputs('farmersdelight:tomato','farmersdelight:onion','minecraft:beetroot','#forge:vegetables')
+    .itemOutputs('3x farmersdelight:ratatouille')
+    .duration(20)
+    .EUt(12)//蔬菜杂烩
+    bbwz('farmersdelight:vegetable_noodles')
+    .circuit(1)
+    .itemInputs('minecraft:carrot','minecraft:brown_mushroom','farmersdelight:raw_pasta','#forge:crops/cabbage','#forge:vegetables')
+    .itemOutputs('3x farmersdelight:vegetable_noodles')
+    .duration(20)
+    .EUt(12)//蔬菜面
+    bbwz('farmersdelight:roasted_mutton_chops')
+    .circuit(1)
+    .itemInputs('farmersdelight:cooked_mutton_chops','minecraft:beetroot','farmersdelight:tomato','farmersdelight:rice')
+    .itemOutputs('3x farmersdelight:roasted_mutton_chops')
+    .duration(20)
+    .EUt(12)//烤羊排
+    bbwz('farmersdelight:mushroom_rice')
+    .circuit(1)
+    .itemInputs('minecraft:brown_mushroom','minecraft:red_mushroom','farmersdelight:rice','minecraft:carrot')
+    .itemOutputs('3x farmersdelight:mushroom_rice')
+    .duration(20)
+    .EUt(12)//蘑菇饭
+    bbwz('farmersdelight:pasta_with_mutton_chop')
+    .circuit(1)
+    .itemInputs('#forge:raw_mutton','farmersdelight:raw_pasta','farmersdelight:tomato_sauce')
+    .itemOutputs('3x farmersdelight:pasta_with_mutton_chop')
+    .duration(20)
+    .EUt(12)//羊排意面
+    bbwz('farmersdelight:pasta_with_meatballs')
+    .circuit(1)
+    .itemInputs('farmersdelight:minced_beef','farmersdelight:raw_pasta','farmersdelight:tomato_sauce')
+    .itemOutputs('3x farmersdelight:pasta_with_meatballs')
+    .duration(20)
+    .EUt(12)//肉丸意面
+    bbwz('farmersdelight:minced_beef')
+    .circuit(1)
+    .itemInputs('minecraft:baked_potato','minecraft:cooked_beef','farmersdelight:onion','farmersdelight:rice')
+    .itemOutputs('3x farmersdelight:minced_beef')
+    .duration(20)
+    .EUt(12)//牛排配土豆
+    bbwz('farmersdelight:fried_rice')
+    .circuit(1)
+    .itemInputs('#forge:eggs','farmersdelight:rice','minecraft:carrot','farmersdelight:onion')
+    .itemOutputs('3x farmersdelight:fried_rice')
+    .duration(20)
+    .EUt(12)//炒饭
+    bbwz('farmersdelight:fish_stew')
+    .circuit(1)
+    .itemInputs('#minecraft:fishes','farmersdelight:tomato_sauce','farmersdelight:onion')
+    .itemOutputs('3x farmersdelight:fish_stew')
+    .duration(20)
+    .EUt(12)//鱼肉炖
+    bbwz('farmersdelight:vegetable_soup')
+    .circuit(1)
+    .itemInputs('minecraft:carrot','minecraft:potato','minecraft:beetroot','#forge:crops/cabbage')
+    .itemOutputs('3x farmersdelight:vegetable_soup')
+    .duration(20)
+    .EUt(12)//蔬菜汤
+    bbwz('farmersdelight:beef_stew')
+    .circuit(1)
+    .itemInputs('#forge:raw_beef','minecraft:carrot','minecraft:potato')
+    .itemOutputs('3x farmersdelight:beef_stew')
+    .duration(20)
+    .EUt(12)//牛肉炖
+    bbwz('farmersdelight:bone_broth')
+    .circuit(1)
+    .itemInputs('#minecraft:fox_food','#forge:bones')
+    .itemOutputs('3x farmersdelight:bone_broth')
+    .duration(20)
+    .EUt(12)//大骨汤
+    bbwz('farmersdelight:cabbage_rolls')
+    .circuit(1)
+    .itemInputs('#forge:crops/cabbage','#farmersdelight:cabbage_roll_ingredients')
+    .itemOutputs('3x farmersdelight:cabbage_rolls')
+    .duration(20)
+    .EUt(12)//卷心菜卷
 
     avaritia.shaped_table(2,
         "gtceu:bigger_wanzi_assembler",

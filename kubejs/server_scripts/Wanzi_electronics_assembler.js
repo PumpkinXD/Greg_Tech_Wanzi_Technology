@@ -62,7 +62,7 @@ ServerEvents.recipes((event) => {
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:mv_reload_mv_1')
     .circuit(1)
     .itemInputs('gtceu:good_electronic_circuit','gtceu:phenolic_printed_circuit_board','2x gtceu:fine_gold_wire','2x gtceu:silver_bolt','prts:basic_wanzi')
-    .itemOutputs('gtceu:good_integrated_circuit')
+    .itemOutputs('2x gtceu:good_integrated_circuit')
     .duration(154)
     .EUt(82)
     //优质电子电路=>优质集成电路Ⅰ
@@ -70,7 +70,7 @@ ServerEvents.recipes((event) => {
     .circuit(1)
     .itemInputs('gtceu:good_electronic_circuit','gtceu:phenolic_printed_circuit_board','2x gtceu:fine_gold_wire','2x gtceu:silver_bolt')
     .inputFluids(Fluid.of('prts:yisanwanzi',144))
-    .itemOutputs('gtceu:good_integrated_circuit')
+    .itemOutputs('2x gtceu:good_integrated_circuit')
     .duration(154)
     .EUt(82)
     //优质电子电路=>优质集成电路Ⅱ
@@ -159,7 +159,6 @@ ServerEvents.recipes((event) => {
     .duration(128)
     .EUt(60)
     //中压万子电路组装_1
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:zy_2')
     .circuit(2)
     .itemInputs('3x prts:type_c_resistor','3x prts:type_c_conductive_circuit')
@@ -170,7 +169,6 @@ ServerEvents.recipes((event) => {
     .duration(160)
     .EUt(80)
     //中压万子电路组装_2
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:zy_3')
     .circuit(3)
     .itemInputs('4x prts:type_c_resistor','4x prts:type_c_conductive_circuit')
@@ -219,14 +217,13 @@ ServerEvents.recipes((event) => {
 
     // === 二极管快速制作 ===
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_diode_1')
-    .circuit(12)
+    .circuit(2)
     .itemInputs('gtceu:silicon_wafer','gtceu:copper_single_wire','prts:type_c_conductive_circuit')
     .itemOutputs('6x gtceu:diode')
     .duration(28)
     .EUt(64)
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_diode_2')
-    .circuit(12)
+    .circuit(2)
     .itemInputs('gtceu:silicon_wafer','gtceu:silver_single_wire','prts:type_c_purified_conductive_circuit')
     .itemOutputs('9x gtceu:diode')
     .duration(24)
@@ -234,14 +231,13 @@ ServerEvents.recipes((event) => {
 
     // === 电容快速制作 ===
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_capacitor_1')
-    .circuit(13)
+    .circuit(3)
     .itemInputs('2x gtceu:aluminium_foil','gtceu:polyethylene_plate','prts:type_c_packaging_unit')
     .itemOutputs('6x gtceu:capacitor')
     .duration(28)
     .EUt(64)
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_capacitor_2')
-    .circuit(13)
+    .circuit(3)
     .itemInputs('2x gtceu:aluminium_foil','gtceu:polyethylene_plate','prts:type_c_purified_packaging_unit')
     .itemOutputs('9x gtceu:capacitor')
     .duration(24)
@@ -249,19 +245,17 @@ ServerEvents.recipes((event) => {
 
     // === 晶体管快速制作 ===
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_transistor_1')
-    .circuit(14)
+    .circuit(4)
     .itemInputs('gtceu:silicon_plate','3x gtceu:copper_single_wire','prts:type_c_conductive_circuit')
-    .itemOutputs('6x gtceu:transistor')
+    .itemOutputs('18x gtceu:transistor')
     .duration(32)
     .EUt(64)
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_transistor_2')
-    .circuit(14)
-    .itemInputs('gtceu:silicon_plate','2x gtceu:silver_single_wire','prts:type_c_purified_conductive_circuit')
-    .itemOutputs('9x gtceu:transistor')
+    .circuit(4)
+    .itemInputs('gtceu:silicon_plate','2x gtceu:silver_single_wire','prts:type_c_conductive_circuit')
+    .itemOutputs('24x gtceu:transistor')
     .duration(28)
     .EUt(80)
-
 
     // === SMD电阻快速制作 ===
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_smd_resistor_1')
@@ -270,7 +264,6 @@ ServerEvents.recipes((event) => {
     .itemOutputs('2x gtceu:smd_resistor')
     .duration(30)
     .EUt(80)
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_smd_resistor_2')
     .circuit(15)
     .itemInputs('gtceu:resistor','minecraft:glowstone_dust','prts:type_c_purified_packaging_unit')
@@ -296,15 +289,14 @@ ServerEvents.recipes((event) => {
     // === SMD晶体管快速制作 ===
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_smd_transistor_1')
     .circuit(17)
-    .itemInputs('gtceu:transistor','minecraft:glowstone_dust','prts:type_c_packaging_unit')
-    .itemOutputs('2x gtceu:smd_transistor')
+    .itemInputs('4x gtceu:transistor','minecraft:glowstone_dust','prts:type_c_packaging_unit')
+    .itemOutputs('18x gtceu:smd_transistor')
     .duration(30)
     .EUt(80)
-
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:wanzi_mv_smd_transistor_2')
     .circuit(17)
-    .itemInputs('gtceu:transistor','minecraft:glowstone_dust','prts:type_c_purified_packaging_unit')
-    .itemOutputs('3x gtceu:smd_transistor')
+    .itemInputs('3x gtceu:transistor','minecraft:glowstone_dust','prts:type_c_purified_packaging_unit')
+    .itemOutputs('24x gtceu:smd_transistor')
     .duration(25)
     .EUt(96)
 
@@ -532,7 +524,7 @@ ServerEvents.recipes((event) => {
         'prts:type_d_packaging_unit',
         '2x prts:type_d_high_voltage_transformation_component'
     ],['prts:low_voltage_wanzi_circuit'],300,30)
-    basic_model_wanzi_electronics_assembler('ass_4',1,[
+    basic_model_wanzi_electronics_assembler('ass_4',2,[
         '5x prts:type_d_resistor',
         '5x prts:type_d_conductive_circuit',
         '2x prts:type_d_packaging_unit',
@@ -606,10 +598,7 @@ ServerEvents.recipes((event) => {
         F:'prts:advanced_wanzi_resistor_plate',
         S:'gtceu:good_electronic_circuit'
     })//进阶型万子电路组装机配方
-
-    // ==================== DSV型组件合成配方 ====================
-    // DSV型组件 - 万子电路组装厂制作（高效方法，产量最高）
-    
+ 
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('dsv_component_electronics_1')
         .circuit(2)
         .itemInputs(
@@ -621,9 +610,7 @@ ServerEvents.recipes((event) => {
         .inputFluids(Fluid.of('gtceu:soldering_alloy', 288))
         .itemOutputs('3x prts:dsv_component')
         .duration(180)
-        .EUt(128)
-    
-    // DSV型实验组件 - 万子电路组装厂制作（使用异常数据）
+        .EUt(128)//DSV组件
     
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('dsv_experimental_electronics_1')
         .circuit(10)
@@ -637,16 +624,44 @@ ServerEvents.recipes((event) => {
         .inputFluids(Fluid.of('gtceu:soldering_alloy', 144))
         .itemOutputs('4x prts:experimental_dsv_component')
         .duration(120)
-        .EUt(32)
-
-    // ==================== 拓展用途配方 ====================
+        .EUt(32)//DSV实验组件
     
-    // 电路通用信息块 - 万子电路组装厂制作
     event.recipes.gtceu.basic_model_wanzi_electronics_assembler('wanzi_circuit_info')
         .circuit(1)
         .itemInputs('2x prts:general_purpose_circuit_unit', 'gtceu:ram_chip', 'prts:type_c_circuit_cross_domain_actuator')
         .itemOutputs('2x prts:general_purpose_circuit_information_module')
         .duration(150)
-        .EUt(128)
+        .EUt(128)//电路通用信息块
+
+    event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:typeb_gy_1')
+    .circuit(1)
+    .itemInputs('2x prts:type_b_resistor','2x prts:type_b_conductive_circuit')
+    .inputFluids(Fluid.of('gtceu:flt',144))
+    .inputFluids(Fluid.of('prts:yisanwanzi',144))
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .notConsumable('prts:type_b_specialized_circuit_group')
+    .itemOutputs('2x prts:high_voltage_wanzi_circuit')
+    .duration(128)
+    .EUt(256)
+    //高压万子电路组装_1
+    event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:typeb_gy_2')
+    .circuit(2)
+    .itemInputs('3x prts:type_b_resistor','3x prts:type_b_conductive_circuit')
+    .inputFluids(Fluid.of('gtceu:flt',288))
+    .inputFluids(Fluid.of('prts:yisanwanzi',288))
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemOutputs('3x prts:high_voltage_wanzi_circuit')
+    .duration(160)
+    .EUt(256)
+    //高压万子电路组装_2
+    event.recipes.gtceu.basic_model_wanzi_electronics_assembler('prts:typeb_gy_3')
+    .circuit(3)
+    .itemInputs('4x prts:type_b_resistor','4x prts:type_b_conductive_circuit')
+    .inputFluids(Fluid.of('gtceu:flt',576))
+    .inputFluids(Fluid.of('prts:yisanwanzi',576))
+    .itemOutputs('4x prts:high_voltage_wanzi_circuit')
+    .duration(240)
+    .EUt(256)
+    //高压万子电路组装_3
 
 })

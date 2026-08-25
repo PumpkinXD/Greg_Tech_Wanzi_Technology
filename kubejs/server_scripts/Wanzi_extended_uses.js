@@ -42,12 +42,14 @@ ServerEvents.recipes(event => {
     
     // 基础万子发射器 - 用于发射和传输设备
     event.recipes.gtceu.assembler('gtceu_wanzi_emitter_boost')
+        .circuit(1)
         .itemInputs('gtceu:lv_electric_motor', '2x gtceu:steel_rod', 'prts:basic_wanzi_emitter')
         .itemOutputs('2x gtceu:lv_emitter')  // 原版1个
         .duration(150)
         .EUt(32)
     
     event.recipes.gtceu.assembler('gtceu_wanzi_sensor_boost')
+        .circuit(2)
         .itemInputs('gtceu:lv_electric_motor', 'gtceu:steel_rod', 'prts:basic_wanzi_emitter')
         .itemOutputs('2x gtceu:lv_sensor')  // 原版1个
         .duration(150)

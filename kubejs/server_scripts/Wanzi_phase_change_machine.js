@@ -196,6 +196,99 @@ ServerEvents.recipes((event) => {//格雷科技部分
     .itemOutputs('32x gtceu:cupronickel_single_cable')
     .duration(120)
     .EUt(16)//白铜线缆制作Ⅴ
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_aluminium_cable_1')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:aluminium_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:aluminium_single_cable')
+    .duration(80)
+    .EUt(256)//铝线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_aluminium_cable_2')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:aluminium_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:aluminium_single_cable')
+    .duration(80)
+    .EUt(256)//铝线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_aluminium_cable_3')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:aluminium_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:aluminium_single_cable')
+    .duration(80)
+    .EUt(256)//铝线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_aluminium_cable_4')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:aluminium_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:aluminium_single_cable')
+    .duration(80)
+    .EUt(256)//铝线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_aluminium_cable_5')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:aluminium_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:aluminium_single_cable')
+    .duration(80)
+    .EUt(256)//铝线缆制作Ⅴ
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_silver_cable_1')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:silver_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:silver_single_cable')
+    .duration(80)
+    .EUt(256)//银线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_silver_cable_2')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:silver_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:silver_single_cable')
+    .duration(80)
+    .EUt(256)//银线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_silver_cable_3')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:silver_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:silver_single_cable')
+    .duration(80)
+    .EUt(256)//银线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_silver_cable_4')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:silver_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:silver_single_cable')
+    .duration(80)
+    .EUt(256)//银线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_silver_cable_5')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:silver_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:silver_single_cable')
+    .duration(80)
+    .EUt(256)//银线缆制作Ⅴ
+
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_electrum_cable_1')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:electrum_ingot','2x gtceu:sticky_resin')
+    .itemOutputs('8x gtceu:electrum_single_cable')
+    .duration(80)
+    .EUt(256)//琥珀金线缆制作Ⅰ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_electrum_cable_2')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:electrum_ingot','2x gtceu:rubber_ingot')
+    .itemOutputs('12x gtceu:electrum_single_cable')
+    .duration(80)
+    .EUt(256)//琥珀金线缆制作Ⅱ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_electrum_cable_3')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:electrum_ingot','2x gtceu:silicone_rubber_ingot')
+    .itemOutputs('16x gtceu:electrum_single_cable')
+    .duration(80)
+    .EUt(256)//琥珀金线缆制作Ⅲ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_electrum_cable_4')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:electrum_ingot','2x gtceu:polyethylene_ingot')
+    .itemOutputs('16x gtceu:electrum_single_cable')
+    .duration(80)
+    .EUt(256)//琥珀金线缆制作Ⅳ
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:typeb_electrum_cable_5')
+    .notConsumable('prts:type_b_wire_guide_connection_device')
+    .itemInputs('gtceu:electrum_ingot','2x gtceu:styrene_butadiene_rubber_ingot')
+    .itemOutputs('32x gtceu:electrum_single_cable')
+    .duration(80)
+    .EUt(256)//琥珀金线缆制作Ⅴ
 })
 
 ServerEvents.recipes((event) => {//万子科技部分
@@ -489,11 +582,11 @@ basic_model_wanzi_phase_change_machine('wanzi_phase_change_25',1,[
     '2x #gtceu:iron_yuan',
     '2x #gtceu:copper_yuan'
 ],'prts:type_c_wanzi_emission_concentrator',120,80)
-basic_model_wanzi_phase_change_machine('wanzi_phase_change_26',1,[
+basic_model_wanzi_phase_change_machine('wanzi_phase_change_26',2,[
     '2x #gtceu:waw_yuan',
     '2x #gtceu:aluminium',
     '4x prts:type_one_wanzi',
-    '3x #gtceu:coppper_yuan'
+    '3x #gtceu:copper_yuan'
 ],'2x prts:type_c_wire_guide_connection_device',120,80)
 basic_model_wanzi_phase_change_machine('wanzi_phase_change_27',1,[
     '3x #gtceu:waw_yuan',
@@ -545,7 +638,7 @@ basic_model_wanzi_phase_change_machine('wanzi_phase_change_32',2,[
     // DSV型实验组件 - 万子相变机制作（使用基础万子校正器作为催化剂）
     
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('dsv_experimental_phase_1')
-        .circuit(9)
+        .circuit(11)
         .notConsumable('prts:basic_wanzi_position_corrector')
         .itemInputs(
             '3x prts:type_d_conductive_circuit',

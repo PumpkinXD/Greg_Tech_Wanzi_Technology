@@ -543,7 +543,7 @@ ServerEvents.recipes(event => {
     .EUt(64)//硅藻土粉电解
     bweo('prts:bigger_wanzi_electrolyzer_ores_over_69')
     .circuit(1)
-    .itemInputs('prts:type_one_wanzi','gtceu:pollucite_dust')
+    .itemInputs('prts:type_one_wanzi','gtceu:hematite_dust')
     .itemOutputs('2x gtceu:iron_dust')
     .outputFluids(Fluid.of('gtceu:oxygen',2000))
     .duration(100)
@@ -1147,7 +1147,7 @@ ServerEvents.recipes(event => {
     .EUt(64)//硅藻土粉电解
     bweo('prts:bigger_wanzi_electrolyzer_big_ores_over_69')
     .circuit(2)
-    .itemInputs('32x prts:type_one_wanzi','32x gtceu:pollucite_dust')
+    .itemInputs('32x prts:type_one_wanzi','32x gtceu:hematite_dust')
     .itemOutputs('64x gtceu:iron_dust')
     .outputFluids(Fluid.of('gtceu:oxygen',64000))
     .duration(800)

@@ -77,6 +77,14 @@ ServerEvents.recipes(event => {
     .EUt(256)
     //ME控制器高效合成配方2↑
 
+    event.recipes.gtceu.chemical_bath('gtceu:black_bronze_ingot')
+    .itemInputs('gtceu:hot_black_bronze_ingot')
+    .itemOutputs('gtceu:black_bronze_ingot')
+    .inputFluids(Fluid.of('minecraft:water',288))
+    .duration(200)
+    .EUt(64)
+    //黑青铜锭制作
+
     event.remove({output:'gtceu:crushed_aluminium_ore'})
     event.remove({output:'gtceu:crushed_beryllium_ore'})
     event.remove({output:'gtceu:crushed_cobalt_ore'})
@@ -2017,6 +2025,18 @@ ServerEvents.recipes(event => {
         ['','prts:blueprint','']
     ])//杆材蓝图制作
 
+    event.shaped(Item.of('prts:blueprint_single_wire',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#prts:single_wire',''],
+        ['','prts:blueprint','']
+    ])//线缆蓝图制作
+
+/*    event.shaped(Item.of('prts:blueprint_fine_wire',1),[
+        ['','prts:dedicated_blueprint_pen',''],
+        ['','#forge:fine_wire',''],
+        ['','prts:blueprint','']
+    ])*///杆材蓝图制作
+
     event.recipes.gtceu.assembler('gtceu:wanzi_coated_plate_1')
     .notConsumable('prts:basic_wanzi_film_coating_sprayer')
     .itemInputs('4x gtceu:steel_plate','prts:basic_wanzi')
@@ -2259,6 +2279,7 @@ ServerEvents.recipes(event => {
     .EUt(12)
 
     event.recipes.gtceu.thermal_centrifuge('prts:jichuwanjinglixin_1')
+    .circuit(1)
     .itemInputs('prts:basic_wanjing')
     .itemOutputs('3x gtceu:iron_dust')
     .itemOutputs('3x gtceu:copper_dust')
@@ -2267,6 +2288,7 @@ ServerEvents.recipes(event => {
     .EUt(30)
 
     event.recipes.gtceu.thermal_centrifuge('prts:jichuwanjinglixin_2')
+    .circuit(2)
     .itemInputs('prts:basic_wanjing')
     .itemOutputs('2x gtceu:gold_dust')
     .itemOutputs('2x gtceu:silver_dust')
@@ -2275,6 +2297,7 @@ ServerEvents.recipes(event => {
     .EUt(60)
 
     event.recipes.gtceu.thermal_centrifuge('prts:jichuwanjinglixin_3')
+    .circuit(3)
     .itemInputs('prts:basic_wanjing')
     .itemOutputs('gtceu:arsenic_dust')
     .itemOutputs('gtceu:gallium_dust')
@@ -2283,6 +2306,7 @@ ServerEvents.recipes(event => {
     .EUt(240)
 
     event.recipes.gtceu.thermal_centrifuge('prts:jichuwanjinglixin_4')
+    .circuit(1)
     .itemInputs('prts:purified_basic_wanjing')
     .itemOutputs('5x gtceu:iron_dust')
     .itemOutputs('5x gtceu:copper_dust')
@@ -2291,6 +2315,7 @@ ServerEvents.recipes(event => {
     .EUt(30)
 
     event.recipes.gtceu.thermal_centrifuge('prts:jichuwanjinglixin_5')
+    .circuit(2)
     .itemInputs('prts:purified_basic_wanjing')
     .itemOutputs('3x gtceu:gold_dust')
     .itemOutputs('3x gtceu:silver_dust')
@@ -2299,6 +2324,7 @@ ServerEvents.recipes(event => {
     .EUt(60)
 
     event.recipes.gtceu.thermal_centrifuge('prts:jichuwanjinglixin_6')
+    .circuit(3)
     .itemInputs('prts:purified_basic_wanjing')
     .itemOutputs('2x gtceu:arsenic_dust')
     .itemOutputs('2x gtceu:gallium_dust')
@@ -2360,12 +2386,6 @@ ServerEvents.recipes(event => {
     .chancedOutput('2x gtceu:biphenyl_dust',1000,500)
     .duration(50)
     .EUt(15)//箭毒毒液电解
-
-    event.recipes.gtceu.compressor('prts:teshuhejinkuai')
-    .itemInputs('9x prts:type_one_wanzi_special_alloy')
-    .itemOutputs('prts:teshuhejinkuai')
-    .duration(300)
-    .EUt(32)//特殊合金块Ⅰ型制作1
 
     event.recipes.gtceu.forge_hammer('prts:teshuhejinkuai')
     .itemInputs('prts:teshuhejinkuai')
@@ -2541,6 +2561,7 @@ ServerEvents.recipes(event => {
     event.shapeless(Item.of('prts:type_c_conductive_circuit',4),[
         'gtceu:cupronickel_single_wire','gtceu:waw_ingot','gtceu:cupronickel_single_wire'
     ])//手搓C型导电线路12
+    
     event.shaped(Item.of('prts:type_c_packaging_unit',1),[
         ['','gtceu:waw_ingot',''],
         ['prts:deformable_plastic_block','prts:type_one_wanzi','prts:deformable_plastic_block'],
@@ -2551,6 +2572,16 @@ ServerEvents.recipes(event => {
         ['','prts:type_d_purified_packaging_unit',''],
         ['','minecraft:iron_ingot','']
     ])//手搓C型封装单元2
+    event.shaped(Item.of('prts:type_b_packaging_unit',1),[
+        ['','gtceu:flt_ingot',''],
+        ['prts:adhesive_plastic','prts:type_two_wanzi','prts:adhesive_plastic'],
+        ['','gtceu:stainless_steel_ingot','']
+    ])//手搓B型封装单元1
+    event.shaped(Item.of('prts:type_b_packaging_unit',1),[
+        ['','gtceu:flt_ingot',''],
+        ['','prts:type_c_purified_packaging_unit',''],
+        ['','gtceu:stainless_steel_ingot','']
+    ])//手搓B型封装单元2（C型提纯封装单元升级）
 
     event.shapeless(Item.of('prts:type_b_conductive_circuit',2),[
         'gtceu:gold_single_wire','gtceu:gold_single_wire','gtceu:flt_ingot'
@@ -2575,7 +2606,6 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板再造1
-
     event.recipes.gtceu.laser_engraver('gtceu:zizhi_ram_2')
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:ilc_wafer')
@@ -2583,7 +2613,6 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板再造2
-
     event.recipes.gtceu.laser_engraver('gtceu:zizhi_ram_3')
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:cpu_wafer')
@@ -2591,7 +2620,6 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板再造3
-
     event.recipes.gtceu.laser_engraver('gtceu:zizhi_ram_4')
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:ulpic_wafer')
@@ -2599,7 +2627,6 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板再造4
-
     event.recipes.gtceu.laser_engraver('gtceu:zizhi_ram_5')
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:lpic_wafer')
@@ -2607,7 +2634,6 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板再造5
-
     event.recipes.gtceu.laser_engraver('gtceu:zizhi_ram_6')
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:simple_soc_wafer')
@@ -2621,25 +2647,47 @@ ServerEvents.recipes(event => {
     .outputFluids(Fluid.of('prts:yisanwanzi',144))
     .duration(200)
     .EUt(20)
-
     event.recipes.gtceu.extractor('prts:wanziyisan_2')
     .itemInputs('prts:type_one_wanzi')
     .outputFluids(Fluid.of('prts:yisanwanzi',288))
     .duration(200)
     .EUt(36)
-
     event.recipes.gtceu.extractor('prts:wanziyisan_3')
     .itemInputs('prts:purified_basic_wanzi')
     .outputFluids(Fluid.of('prts:yisanwanzi',144))
     .duration(200)
     .EUt(20)
-
     event.recipes.gtceu.extractor('prts:wanziyisan_4')
     .itemInputs('prts:purified_type_one_wanzi')
     .outputFluids(Fluid.of('prts:yisanwanzi',288))
     .duration(200)
     .EUt(36)
     //逸散万子制作
+
+    event.recipes.gtceu.cutter('gtceu:pork_1')
+    .inputFluids(Fluid.of('minecraft:water',100))
+    .itemInputs('minecraft:porkchop')
+    .itemOutputs('8x farmersdelight:bacon')
+    .duration(40)
+    .EUt(16)//生培根制作
+    event.recipes.gtceu.cutter('gtceu:beef_1')
+    .inputFluids(Fluid.of('minecraft:water',100))
+    .itemInputs('minecraft:beef')
+    .itemOutputs('8x farmersdelight:minced_beef')
+    .duration(40)
+    .EUt(16)//生牛肉饼制作
+    event.recipes.gtceu.cutter('gtceu:mutton_1')
+    .inputFluids(Fluid.of('minecraft:water',100))
+    .itemInputs('minecraft:mutton')
+    .itemOutputs('8x farmersdelight:mutton_chops')
+    .duration(40)
+    .EUt(16)//生羊肉排制作
+    event.recipes.gtceu.cutter('gtceu:chicken_1')
+    .inputFluids(Fluid.of('minecraft:water',100))
+    .itemInputs('minecraft:chicken')
+    .itemOutputs('8x farmersdelight:chicken_cuts')
+    .duration(40)
+    .EUt(16)//生鸡肉丁制作
 
     event.shaped('gtceu:mv_electric_furnace',[
         "ABA",
@@ -4685,5 +4733,12 @@ ServerEvents.recipes(event => {
     .itemOutputs('5x gtceu:mv_sensor')
     .duration(120)
     .EUt(64)//MV传感器Ⅱ
+
+    event.remove({output:'gtceu:vacuum_freezer'})
+    event.shaped('gtceu:vacuum_freezer',[
+        ['gtceu:mv_electric_pump','gtceu:mv_electric_pump','gtceu:mv_electric_pump'],
+        ['#gtceu:circuits/mv','gtceu:frostproof_machine_casing','#gtceu:circuits/mv'],
+        ['gtceu:gold_single_cable','#gtceu:circuits/mv','gtceu:gold_single_cable']
+    ])//真空冷冻机
     
 })

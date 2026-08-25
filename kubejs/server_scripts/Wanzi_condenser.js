@@ -185,7 +185,7 @@ ServerEvents.recipes((event) => {
     bwc_d('prts:basic_wanzi_46','64x minecraft:redstone','42x prts:basic_wanzi',160,12,1)
     bwc_d('prts:basic_wanzi_47','64x #gtceu:aluminium','192x prts:basic_wanzi',72,40,1)
 
-    bwc_d('prts:type_one_wanzi_1','64x gtceu:wood_dust','8x prts:type_one_wanzi',160,12,1)
+    bwc_d('prts:type_one_wanzi_1','64x gtceu:wood_dust','8x prts:type_one_wanzi',160,12,2)
     bwc_d('prts:type_one_wanzi_2','64x gtceu:uvarovite_dust','16x prts:type_one_wanzi',160,40,2)
     bwc_d('prts:type_one_wanzi_3','64x gtceu:spessartine_dust','16x prts:type_one_wanzi',160,40,2)
     bwc_d('prts:type_one_wanzi_4','64x gtceu:glauconite_sand_dust','16x prts:type_one_wanzi',160,40,2)

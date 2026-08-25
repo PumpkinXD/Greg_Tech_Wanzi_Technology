@@ -18,7 +18,11 @@ ServerEvents.entityLootTables(event => {
         "minecraft:stray", "minecraft:cave_spider", "minecraft:zombie_villager", "minecraft:endermite",
         "minecraft:slime","touhou_little_maid:fairy"
     ]
-    const bossMobs = ["minecraft:wither", "minecraft:ender_dragon", "minecraft:warden"]
+    const bossMobs = [
+        "minecraft:wither", "minecraft:ender_dragon", "minecraft:warden","twilightforest:hydra",
+        "twilightforest:ur_ghast","twilightforest:snow_queen","twilightforest:naga","twilightforest:lich",
+        "twilightforest:alpha_yeti","twilightforest:minoshroom","twilightforest:knight_phantom"
+    ]
     
     hostileMobs.forEach(mob => {
         event.modifyEntity(mob, loot => {
@@ -51,7 +55,6 @@ ServerEvents.entityLootTables(event => {
             })
         })
     })//普通生物使用基础万子剑击杀后掉落
-
     hostileMobs.forEach(mob => {
         event.modifyEntity(mob, loot => {
             loot.addPool(pool => {
@@ -70,7 +73,6 @@ ServerEvents.entityLootTables(event => {
             })
         })
     })//普通生物使用压缩型万子剑击杀后掉落
-
     hostileMobs.forEach(mob => {
         event.modifyEntity(mob, loot => {
             loot.addPool(pool => {
@@ -112,8 +114,29 @@ ServerEvents.entityLootTables(event => {
             })
         })
     })//普通生物使用数据撕裂剑击杀后掉落
-        
-
+    hostileMobs.forEach(mob => {
+        event.modifyEntity(mob, loot => {
+            loot.addPool(pool => {
+                pool.setUniformRolls(30,40)
+                pool.entityProperties("killer", {
+                    equipment: {
+                        mainhand: {
+                            items: ["prts:data_assembler_sword"]
+                        }
+                    }
+                })
+                pool.addTag("prts:type_d_prts", true).weight(30).count([3,6])
+                pool.addTag("prts:type_c_prts", true).weight(30).count([2,6])
+                pool.addTag("prts:type_b_prts", true).weight(30).count([1,6])
+                pool.addTag("prts:lv_treasure", true).weight(5).count([1,3])
+                pool.addTag("prts:mv_treasure", true).weight(5).count([1,3])
+                pool.addTag("prts:hv_treasure", true).weight(5).count([1,3])
+                pool.addTag("prts:type_d_purified_prts",true).weight(10).count([3,6])
+                pool.addTag("prts:type_c_purified_prts",true).weight(10).count([2,6])
+                pool.addTag("prts:type_b_purified_prts",true).weight(10).count([1,6])
+            })
+        })
+    })//普通生物使用数据组装剑击杀后掉落
 
     bossMobs.forEach(mob => {
         event.modifyEntity(mob, loot => {
@@ -138,6 +161,30 @@ ServerEvents.entityLootTables(event => {
     bossMobs.forEach(mob => {
         event.modifyEntity(mob, loot => {
             loot.addPool(pool => {
+                pool.setUniformRolls(30,40)
+                pool.entityProperties("killer", {
+                    equipment: {
+                        mainhand: {
+                            items: ["prts:data_assembler_sword"]
+                        }
+                    }
+                })
+                pool.addTag("prts:type_d_prts", false).weight(30).count([9,18])
+                pool.addTag("prts:type_c_prts", true).weight(30).count([6,18])
+                pool.addTag("prts:type_b_prts", true).weight(30).count([6,18])
+                pool.addTag("prts:lv_treasure", false).weight(10).count([6,9])
+                pool.addTag("prts:mv_treasure", true).weight(10).count([6,9])
+                pool.addTag("prts:hv_treasure", true).weight(10).count([6,9])
+                pool.addTag("prts:type_d_purified_prts",true).weight(10).count([9,18])
+                pool.addTag("prts:type_c_purified_prts",true).weight(10).count([6,18])
+                pool.addTag("prts:type_b_purified_prts",true).weight(10).count([6,18])
+            })
+        })
+    })  // Boss级使用数据组装剑特殊掉落
+
+    bossMobs.forEach(mob => {
+        event.modifyEntity(mob, loot => {
+            loot.addPool(pool => {
                 pool.setUniformRolls(10,15)
                 pool.entityProperties("killer", {
                     type: "minecraft:player"
@@ -150,6 +197,6 @@ ServerEvents.entityLootTables(event => {
                 pool.addTag("prts:type_c_purified_prts",true).weight(10).count([2,3])
             })
         })
-    })  //BOSS级不使用数据撕裂剑掉落
+    })  //BOSS级不使用万子系列武器掉落
 
 })

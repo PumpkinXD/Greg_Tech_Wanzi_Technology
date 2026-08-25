@@ -2,7 +2,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:polyethylene_1')
     .circuit(1)
     .itemInputs('2x gtceu:carbon_dust')
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',576))
     .outputFluids(Fluid.of('gtceu:polyethylene',576))
     .duration(100)
@@ -10,7 +10,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:polyethylene_2')
     .circuit(2)
     .itemInputs('2x gtceu:carbon_dust')
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',576))
     .itemOutputs('4x gtceu:polyethylene_plate')
     .duration(100)
@@ -35,7 +35,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_1')
     .circuit(1)
     .itemInputs('2x #forge:dusts/sulfur')
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',576))
     .inputFluids(Fluid.of('gtceu:oxygen',1152))
     .outputFluids(Fluid.of('gtceu:sulfuric_acid',1152))
@@ -44,7 +44,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_2')
     .circuit(2)
     .itemInputs('2x #forge:dusts/sulfur')
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('minecraft:water',1152))
     .outputFluids(Fluid.of('gtceu:sulfuric_acid',1152))
     .duration(100)
@@ -52,7 +52,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_bigger_1')
     .circuit(2)
     .itemInputs('20x #forge:dusts/sulfur')
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',5760))
     .inputFluids(Fluid.of('gtceu:oxygen',11520))
     .outputFluids(Fluid.of('gtceu:sulfuric_acid',11520))
@@ -61,7 +61,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:sulfuric_acid_bigger_2')
     .circuit(3)
     .itemInputs('20x #forge:dusts/sulfur')
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('minecraft:water',11520))
     .outputFluids(Fluid.of('gtceu:sulfuric_acid',11520))
     .duration(100)
@@ -69,7 +69,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',288))
     .inputFluids(Fluid.of('gtceu:nitrogen',288))
     .inputFluids(Fluid.of('gtceu:oxygen',864))
@@ -78,7 +78,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .EUt(64)//格雷科技硝酸定向制作Ⅰ
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_2')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',288))
     .inputFluids(Fluid.of('gtceu:nitrogen',288))
     .inputFluids(Fluid.of('mekanism:oxygen',864))
@@ -87,7 +87,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .EUt(64)//格雷科技硝酸定向制作Ⅱ
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_bigger_1')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',2880))
     .inputFluids(Fluid.of('gtceu:nitrogen',2880))
     .inputFluids(Fluid.of('gtceu:oxygen',8640))
@@ -96,7 +96,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .EUt(64)//格雷科技硝酸定向大批量制作Ⅰ
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:nitric_acid_bigger_2')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',2880))
     .inputFluids(Fluid.of('gtceu:nitrogen',2880))
     .inputFluids(Fluid.of('mekanism:oxygen',8640))
@@ -106,7 +106,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:hydrochloric_acid_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',288))
     .inputFluids(Fluid.of('gtceu:chlorine',288))
     .outputFluids(Fluid.of('gtceu:hydrochloric_acid',1152))
@@ -114,7 +114,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .EUt(64)//格雷科技盐酸定向制作Ⅰ
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:hydrochloric_acid_bigger_1')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:hydrogen',2880))
     .inputFluids(Fluid.of('gtceu:chlorine',2880))
     .outputFluids(Fluid.of('gtceu:hydrochloric_acid',11520))
@@ -123,7 +123,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:aqua_regia_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .notConsumableFluid(Fluid.of('gtceu:aqua_regia',1000))
     .inputFluids(Fluid.of('gtceu:chlorine',1440))
     .inputFluids(Fluid.of('gtceu:hydrogen',1440))
@@ -133,8 +133,8 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
     .duration(100)
     .EUt(64)//格雷科技王水定向制作Ⅰ
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:aqua_regia_2')
-    .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .circuit(2)
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .notConsumableFluid(Fluid.of('gtceu:aqua_regia',1000))
     .inputFluids(Fluid.of('gtceu:chlorine',14400))
     .inputFluids(Fluid.of('gtceu:hydrogen',14400))
@@ -146,7 +146,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('prts:magic_kc')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .itemInputs('gtceu:platinum_group_sludge_dust')
     .inputFluids(Fluid.of('gtceu:aqua_regia',2000))
     .inputFluids(Fluid.of('prts:magic_water',2000))
@@ -176,7 +176,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('prts:magic_kc_bigger')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .itemInputs('32x gtceu:platinum_group_sludge_dust')
     .inputFluids(Fluid.of('gtceu:aqua_regia',64000))
     .inputFluids(Fluid.of('prts:magic_water',64000))
@@ -208,7 +208,7 @@ ServerEvents.recipes(event =>{//常规化学反应（被特殊催化）
 ServerEvents.recipes(event =>{//特殊制作（如TNT等
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:tnt_max_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:toluene',1000))
     .inputFluids(Fluid.of('gtceu:wax',100))
     .itemInputs('9x minecraft:sugar','gtceu:polyethylene_dust')
@@ -218,19 +218,28 @@ ServerEvents.recipes(event =>{//特殊制作（如TNT等
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:tnt_1')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:toluene',1000))
     .inputFluids(Fluid.of('gtceu:wax',100))
     .itemInputs('9x minecraft:sugar','gtceu:polyethylene_dust')
     .itemOutputs('40x minecraft:tnt')
     .duration(200)
     .EUt(120)//TNT制作
+
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:gelled_toluene_1')
+    .circuit(3)
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
+    .inputFluids(Fluid.of('gtceu:toluene',1000))
+    .itemInputs('9x minecraft:sugar','gtceu:polyethylene_dust')
+    .itemOutputs('40x gtceu:gelled_toluene')
+    .duration(200)
+    .EUt(120)//凝胶甲苯制作
 })
 
 ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:heavy_fuel_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_heavy_fuel',10000))
     .outputFluids(Fluid.of('gtceu:heavy_fuel',10000))
     .itemOutputs('10x gtceu:sulfur_dust')
@@ -239,7 +248,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:heavy_fuel_2')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_heavy_fuel',1000))
     .outputFluids(Fluid.of('gtceu:heavy_fuel',1000))
     .itemOutputs('1x gtceu:sulfur_dust')
@@ -248,7 +257,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:heavy_fuel_3')
     .circuit(3)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_heavy_fuel',100))
     .outputFluids(Fluid.of('gtceu:heavy_fuel',100))
     .duration(50)
@@ -256,7 +265,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:heavy_fuel_4')
     .circuit(4)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_heavy_fuel',10))
     .outputFluids(Fluid.of('gtceu:heavy_fuel',10))
     .duration(25)
@@ -264,7 +273,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:heavy_fuel_5')
     .circuit(5)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_heavy_fuel',1))
     .outputFluids(Fluid.of('gtceu:heavy_fuel',1))
     .duration(12)
@@ -272,7 +281,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:light_fuel_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_light_fuel',10000))
     .outputFluids(Fluid.of('gtceu:light_fuel',10000))
     .itemOutputs('10x gtceu:sulfur_dust')
@@ -281,7 +290,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:light_fuel_2')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_light_fuel',1000))
     .outputFluids(Fluid.of('gtceu:light_fuel',1000))
     .itemOutputs('1x gtceu:sulfur_dust')
@@ -290,7 +299,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:light_fuel_3')
     .circuit(3)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_light_fuel',100))
     .outputFluids(Fluid.of('gtceu:light_fuel',100))
     .duration(50)
@@ -298,7 +307,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:light_fuel_4')
     .circuit(4)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_light_fuel',10))
     .outputFluids(Fluid.of('gtceu:light_fuel',10))
     .duration(25)
@@ -306,7 +315,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:light_fuel_5')
     .circuit(5)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_light_fuel',1))
     .outputFluids(Fluid.of('gtceu:light_fuel',1))
     .duration(12)
@@ -314,7 +323,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:naphtha_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_naphtha',10000))
     .outputFluids(Fluid.of('gtceu:naphtha',10000))
     .itemOutputs('10x gtceu:sulfur_dust')
@@ -323,7 +332,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:naphtha_2')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_naphtha',1000))
     .outputFluids(Fluid.of('gtceu:naphtha',1000))
     .itemOutputs('1x gtceu:sulfur_dust')
@@ -332,7 +341,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:naphtha_3')
     .circuit(3)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_naphtha',100))
     .outputFluids(Fluid.of('gtceu:naphtha',100))
     .duration(50)
@@ -340,7 +349,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:naphtha_4')
     .circuit(4)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_naphtha',10))
     .outputFluids(Fluid.of('gtceu:naphtha',10))
     .duration(25)
@@ -348,7 +357,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:naphtha_5')
     .circuit(5)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_naphtha',1))
     .outputFluids(Fluid.of('gtceu:naphtha',1))
     .duration(12)
@@ -356,7 +365,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:refinery_gas_1')
     .circuit(1)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_gas',10000))
     .outputFluids(Fluid.of('gtceu:refinery_gas',10000))
     .itemOutputs('10x gtceu:sulfur_dust')
@@ -365,7 +374,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:refinery_gas_2')
     .circuit(2)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_gas',1000))
     .outputFluids(Fluid.of('gtceu:refinery_gas',1000))
     .itemOutputs('1x gtceu:sulfur_dust')
@@ -374,7 +383,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:refinery_gas_3')
     .circuit(3)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_gas',100))
     .outputFluids(Fluid.of('gtceu:refinery_gas',100))
     .duration(50)
@@ -382,7 +391,7 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:refinery_gas_4')
     .circuit(4)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_gas',10))
     .outputFluids(Fluid.of('gtceu:refinery_gas',10))
     .duration(25)
@@ -390,11 +399,20 @@ ServerEvents.recipes(event =>{//脱硫配方、硫聚合（未来预计）配方
 
     event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:refinery_gas_5')
     .circuit(5)
-    .notConsumable('prts:type_c_directed_chemical_reaction_device')
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
     .inputFluids(Fluid.of('gtceu:sulfuric_gas',1))
     .outputFluids(Fluid.of('gtceu:refinery_gas',1))
     .duration(12)
     .EUt(12)//燃油气脱硫Ⅴ
+})
+ServerEvents.recipes(event =>{//独特配方
+    event.recipes.gtceu.zhidingxinghuaxuefanying('gtceu:steel_kcn')
+    .circuit(1)
+    .chancedInput('prts:type_c_directed_chemical_reaction_device',1000,4500)
+    .itemInputs('8x gtceu:iron_plate','gtceu:potassium_cyanide_dust','prts:basic_wanzi')
+    .itemOutputs('8x mekanism:ingot_steel')
+    .duration(12)
+    .EUt(12)//铁板特殊转化
 })
 
 ServerEvents.recipes(event =>{//控制器配方

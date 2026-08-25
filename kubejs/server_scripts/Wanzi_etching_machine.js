@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
     .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:cpu_wafer')
-    .notConsumable('#forge:lenses/red')
+    .notConsumable('#forge:lenses/light_blue')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造CPU 1
@@ -65,8 +65,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:basic_wanzi_emitter',5000,5000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
-    .itemOutputs('gtceu:cpu_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('2x gtceu:cpu_wafer')
+    .notConsumable('#forge:lenses/light_blue')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造CPU 2
@@ -74,8 +74,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
-    .itemOutputs('gtceu:cpu_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('4x gtceu:cpu_wafer')
+    .notConsumable('#forge:lenses/light_blue')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造CPU 3
@@ -84,7 +84,7 @@ ServerEvents.recipes((event) => {
     .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:ulpic_wafer')
-    .notConsumable('#forge:lenses/red')
+    .notConsumable('#forge:lenses/blue')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造ULPIC 1
@@ -92,8 +92,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:basic_wanzi_emitter',5000,5000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
-    .itemOutputs('gtceu:ulpic_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('2x gtceu:ulpic_wafer')
+    .notConsumable('#forge:lenses/blue')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造ULPIC 2
@@ -101,8 +101,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
-    .itemOutputs('gtceu:ulpic_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('4x gtceu:ulpic_wafer')
+    .notConsumable('#forge:lenses/blue')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造ULPIC 3
@@ -111,7 +111,7 @@ ServerEvents.recipes((event) => {
     .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
     .itemOutputs('gtceu:lpic_wafer')
-    .notConsumable('#forge:lenses/red')
+    .notConsumable('#forge:lenses/organe')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造LPIC 1
@@ -119,8 +119,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:basic_wanzi_emitter',5000,5000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
-    .itemOutputs('gtceu:lpic_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('2x gtceu:lpic_wafer')
+    .notConsumable('#forge:lenses/organe')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造LPIC 2
@@ -128,8 +128,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
-    .itemOutputs('gtceu:lpic_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('4x gtceu:lpic_wafer')
+    .notConsumable('#forge:lenses/organe')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造LPIC 3
@@ -137,8 +137,8 @@ ServerEvents.recipes((event) => {
     event.recipes.gtceu.basic_model_wanzi_etching_machine('gtceu:wanzi_soc_emitter_1')
     .circuit(1)
     .itemInputs('prts:type_one_wanjing_etched_substrate')
-    .itemOutputs('gtceu:soc_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('gtceu:simple_soc_wafer')
+    .notConsumable('#forge:lenses/cyan')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造SOC 1
@@ -146,8 +146,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:basic_wanzi_emitter',5000,5000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:basic_wanzi')
-    .itemOutputs('gtceu:soc_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('2x gtceu:simple_soc_wafer')
+    .notConsumable('#forge:lenses/cyan')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造SOC 2
@@ -155,8 +155,8 @@ ServerEvents.recipes((event) => {
     .circuit(2)
     .chancedInput('prts:production_type_wanzi_emitter',1000,1000)
     .itemInputs('prts:type_one_wanjing_etched_substrate','prts:type_one_wanzi')
-    .itemOutputs('gtceu:soc_wafer')
-    .notConsumable('#forge:lenses/red')
+    .itemOutputs('4x gtceu:simple_soc_wafer')
+    .notConsumable('#forge:lenses/cyan')
     .duration(600)
     .EUt(48)
     //一型蚀刻万晶基板造SOC 3
@@ -273,7 +273,7 @@ ServerEvents.recipes((event) => {
     .duration(150)
     .EUt(256)
     //拟化万晶蚀刻基板制作1
-    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:pseudo_wanjing_etched_substrate')
+    event.recipes.gtceu.basic_model_wanzi_etching_machine('prts:pseudo_wanjing_etched_substrate_1')
     .circuit(2)
     .chancedInput('prts:advanced_wanzi_emitter',2000,0)
     .chancedInput('prts:type_b_wanzi_emission_concentrator',2000,0)
@@ -293,7 +293,7 @@ ServerEvents.recipes((event) => {
              .chancedOutput(Ch1,CHT1,CHT3)
              .chancedOutput(Ch2,CHT2,CHT4)
     }//基础型万子蚀刻机代码，以下为万子蚀刻配方实现代码
-    basic_model_wanzi_etching_machine('wanzi_etching',1,[
+    basic_model_wanzi_etching_machine('wanzi_etching',2,[
         'prts:base_substrate_wanjing',
         'minecraft:iron_ingot',
         '2x minecraft:copper_ingot',

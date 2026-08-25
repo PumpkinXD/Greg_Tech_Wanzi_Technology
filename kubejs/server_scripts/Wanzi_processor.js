@@ -32,7 +32,7 @@ ServerEvents.recipes((event) => {
     //一型万子 => 钻石
 
     event.recipes.gtceu.basic_model_wanzi_processor('prts:yxcl_5')
-    .circuit(4)
+    .circuit(5)
     .itemInputs('8x prts:type_one_wanzi')
     .itemOutputs('gtceu:waw_dust')
     .duration(150)
