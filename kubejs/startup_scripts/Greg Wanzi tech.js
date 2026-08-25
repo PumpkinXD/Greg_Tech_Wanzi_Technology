@@ -11,7 +11,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {//材料
     // 次要颜色
     .secondaryColor(0x2e4352)
     .element('waw')
-    //该材料可以合成为板与双层板，
     .flags(
         GTMaterialFlags.GENERATE_PLATE,
         GTMaterialFlags.GENERATE_BOLT_SCREW,

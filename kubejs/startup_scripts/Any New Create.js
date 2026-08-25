@@ -107,6 +107,7 @@ StartupEvents.registry("item",event=>{
     event.create("prts:alpha_wanjing","basic");
     event.create("prts:alpha_compression_type_wanzi","basic");
     event.create("prts:purified_type_one_wanzi","basic");
+    event.create("prts:purified_type_two_wanzi","basic");
     event.create("prts:purified_alpha_wanjing","basic");
     event.create("prts:component_module","basic");
     event.create("prts:unconventional_sulphur_crystal");
@@ -162,7 +163,9 @@ StartupEvents.registry("item",event=>{
     event.create("prts:dedicated_blueprint_pen","basic");
     event.create("prts:pseudo_wanjing_etched_substrate","basic");
     event.create("prts:pseudo_wanjing_substrate","basic");
-    event.create("prts:beta_wanjing","basic")
+    event.create("prts:beta_wanjing","basic");
+    event.create("prts:purified_beta_wanjing","basic");
+    event.create("prts:high_voltage_wanzi_circuit","basic")
     
     event.create("prts:basic_wanzi_sword","sword")
          .speedBaseline(-2.4)           // 攻击速度：1.6
@@ -186,6 +189,12 @@ StartupEvents.registry("item",event=>{
          .speedBaseline(-0.1)           // 攻击速度：3.9
          .attackDamageBonus(40.5)       // 攻击伤害增加40.5
          .maxDamage(500)                // 耐久：500
+         .glow(true)
+         .rarity("uncommon")            //稀有度：少见
+     event.create("prts:data_assembler_sword","sword")
+         .speedBaseline(2)           // 攻击速度：6
+         .attackDamageBonus(146.5)       // 攻击伤害增加100.5
+         .maxDamage(1000)                // 耐久：1000
          .glow(true)
          .rarity("uncommon")            //稀有度：少见
 })
