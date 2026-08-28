@@ -592,19 +592,19 @@ ServerEvents.recipes((event) => {
         materials: [
             {
                 item: {
-                    tag: "forge:double_plates/steel",
+                    tag: "forge:double_plates/stainless_steel",
                 },
                 count: 21,
             },
             {
                 item: {
-                    tag: "forge:bolts/steel",
+                    tag: "forge:bolts/stainless_steel",
                 },
                 count: 8,
             },
             {
                 item: {
-                    tag: "forge:rods/steel",
+                    tag: "forge:rods/stainless_steel",
                 },
                 count: 1,
             },
@@ -613,6 +613,12 @@ ServerEvents.recipes((event) => {
                     tag: "forge:small_springs/steel",
                 },
                 count: 2,
+            },
+            {
+                item: {
+                    tag: "forge:plates/polycaprolactam",
+                },
+                count: 4,
             },
         ],
         result: {
@@ -1137,7 +1143,13 @@ ServerEvents.recipes((event) => {
             },
             {
                 item: {
-                    tag: "forge:bolts/steel",
+                    tag: "forge:double_plates/stainless_steel",
+                },
+                count: 6,
+            },
+            {
+                item: {
+                    tag: "forge:bolts/titanium",
                 },
                 count: 8,
             },
@@ -1149,7 +1161,7 @@ ServerEvents.recipes((event) => {
             },
             {
                 item: {
-                    tag: "forge:small_gears/steel",
+                    tag: "forge:small_gears/stainless_steel",
                 },
                 count: 2,
             },
@@ -2090,25 +2102,25 @@ ServerEvents.recipes((event) => {
         materials: [
             {
                 item: {
-                    tag: "forge:double_plates/stainless_steel",
+                    tag: "forge:double_plates/steel",
                 },
                 count: 10,
             },
             {
                 item: {
-                    tag: "forge:plates/polycaprolactam",
+                    tag: "forge:plates/rubber",
                 },
                 count: 8,
             },
             {
                 item: {
-                    tag: "forge:bolts/stainless_steel",
+                    tag: "forge:bolts/steel",
                 },
                 count: 4,
             },
             {
                 item: {
-                    tag: "forge:rods/stainless_steel",
+                    tag: "forge:rods/steel",
                 },
                 count: 1,
             },
@@ -2981,7 +2993,6 @@ ServerEvents.recipes((event) => {
 
 //Create Armorer && Immersive Armorer Recipes
 ServerEvents.recipes((event) => {
-    
     const gunIds = [];
     event.forEachRecipe({}, (r) => {
         const id = String(r.getId());
